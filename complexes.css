@@ -3,6 +3,9 @@ body {
   background-repeat: repeat;
 }
 
+
+/* HEADER */
+
 .header {
   padding: 0 5.5em 0 7.5em;
   display: flex;
@@ -11,7 +14,7 @@ body {
 }
 
 .header-logo {
-  margin: 1.25rem 0rem;
+  margin: 1.25rem 0;
   display: flex;
   justify-content: flex-start;
 }
@@ -28,6 +31,9 @@ body {
   margin-right: 2rem;
   text-decoration: none;
 }
+
+
+/* INTRO */
 
 .hero {
   padding: 5rem 31.875rem;
@@ -66,8 +72,15 @@ body {
   cursor: pointer;
 }
 
+
+/* OBJECTS */
+
+.objects {
+  margin: 0 7.5rem;
+}
+
 .object {
-  margin: 0 7.5rem 3rem;
+  margin-bottom: 3rem;
   display: flex;
   background-color: #fff;
 }
@@ -100,7 +113,11 @@ body {
   color: #3e4247;
 }
 
+
+/* FOOTER */
+
 .footer {
+  margin-top: 6rem;
   padding: 2rem 7.5rem 1.9375rem;
   font: 300 14px "Fira Sans";
   background-color: #111111;

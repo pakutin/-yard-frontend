@@ -1,0 +1,32 @@
+body {
+  background-color: white;
+}
+
+
+/* HEADER */
+
+.header {
+  padding: 0 5.5em 0 7.5em;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.header-logo {
+  margin: 1.25rem 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.header-nav {
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: flex-end;
+  font: 1rem/1.0 "Fira Sans";
+  color: #3e4247;
+}
+
+.header-nav-link {
+  margin-right: 2rem;
+  text-decoration: none;
+}
