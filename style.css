@@ -4,8 +4,7 @@ body {
 }
 
 .header {
-  padding-left: 7.5em;
-  padding-right: 5.5em;
+  padding: 0 5.5em 0 7.5em;
   display: flex;
   justify-content: space-between;
   background-color: #fff;
@@ -18,7 +17,7 @@ body {
 }
 
 .header-nav {
-  margin: 1.5rem 0rem;
+  margin: 1.5rem 0;
   display: flex;
   justify-content: flex-end;
   font: 1rem/1.0 "Fira Sans";
@@ -73,13 +72,16 @@ body {
   background-color: #fff;
 }
 
+.with-shadow {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
+
 .object-data {
   border-bottom: 2px solid #646971;
 }
 
 .object-location {
   margin: 1.5rem 0 1.5rem 2rem;
-  display: flex;
   font: 1rem "Monaco", "Lucida Console", monospace;
   text-transform: uppercase;
   color: #646971;
@@ -87,18 +89,18 @@ body {
 
 .object-address {
   margin: 0 0 .5rem 2rem;
-  display: flex;
   font: bold 2.5rem/1.4 "Fira Sans";
   color: #000000;
 }
 
 .object-description {
   margin-left: 2rem;
-  display: flex;
+  margin-right: 5.375rem;
   font: 1rem/1.5 "Fira Sans";
   color: #3e4247;
 }
 
+/*
 .footer {
   font: 300 14px "Fira Sans";
   background-color: #111111;
@@ -107,6 +109,10 @@ body {
 .footer-header {
   font-weight: bold;
   color: #646971;
+}
+
+.footer-phone {
+  margin-top: 2rem;
 }
 
 .footer-data {
@@ -122,3 +128,4 @@ body {
   font-size: 11px;
   color: #a9afb6;
 }
+*/
