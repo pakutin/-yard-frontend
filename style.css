@@ -100,10 +100,14 @@ body {
   color: #3e4247;
 }
 
-/*
 .footer {
+  padding-top: 2rem;
   font: 300 14px "Fira Sans";
   background-color: #111111;
+}
+
+.footer-details {
+  margin-left: 7.5rem;
 }
 
 .footer-header {
@@ -111,21 +115,27 @@ body {
   color: #646971;
 }
 
-.footer-phone {
-  margin-top: 2rem;
+.footer-detail {
+  color: #a9afb6;
 }
 
-.footer-data {
-  color: #a9afb6;
+.footer-nav {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  border-top: solid 2px #3e4247;
 }
 
 .footer-link {
   color: #ffffff;
+  text-decoration: none;
+}
+
+.with-padding {
+  padding-top: 1rem;
 }
 
 .footer-caption {
-  margin: 5.9375rem 7.5rem 1.9375rem 0rem;
-  font-size: 11px;
+  margin: 6rem 7.5rem 1.9375rem 0rem;
+  font: 300 11px/1.5 "Fira Sans";
   color: #a9afb6;
 }
-*/
