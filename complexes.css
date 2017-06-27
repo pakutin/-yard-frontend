@@ -101,13 +101,9 @@ body {
 }
 
 .footer {
-  padding-top: 2rem;
+  padding: 2rem 7.5rem 1.9375rem;
   font: 300 14px "Fira Sans";
   background-color: #111111;
-}
-
-.footer-details {
-  margin-left: 7.5rem;
 }
 
 .footer-header {
@@ -135,7 +131,7 @@ body {
 }
 
 .footer-caption {
-  margin: 6rem 7.5rem 1.9375rem 0rem;
+  padding-top: 6rem;
   font: 300 11px/1.5 "Fira Sans";
   color: #a9afb6;
 }
