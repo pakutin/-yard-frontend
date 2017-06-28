@@ -68,7 +68,7 @@ body {
   padding: 0.75rem 2rem 0.75rem;
   background-color: #000000;
   border: none;
-  font: 16px/1.0 "Fira Sans";
+  font: normal 16px/1.0 "Fira Sans";
   text-align: center;
   color: #fff;
   cursor: pointer;
@@ -97,8 +97,10 @@ body {
 }
 
 .complex-location {
-  margin: 1.5rem 0 1.5rem 2rem;
-  font: 1rem "Monaco", "Lucida Console", monospace;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-left: 2rem;
+  font: normal 1rem/1.25 "Monaco", "Lucida Console", monospace;
   text-transform: uppercase;
   color: #646971;
 }
@@ -113,7 +115,7 @@ body {
 .complex-description {
   margin-left: 2rem;
   margin-right: 5.375rem;
-  font: 1rem/1.5 "Fira Sans";
+  font: normal 1rem/1.5 "Fira Sans";
   color: #3e4247;
 }
 
