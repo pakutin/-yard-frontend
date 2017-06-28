@@ -16,6 +16,7 @@ body {
   display: flex;
   justify-content: space-between;
   background-color: #fff;
+  border-bottom: 1px solid #EAEBF0;
 }
 
 .header-logo {
@@ -45,7 +46,7 @@ body {
 }
 
 
-/* INTRO */
+/* MAIN LOGO */
 
 .main-logo {
   padding: 5rem 31.875rem;
@@ -54,6 +55,9 @@ body {
   justify-content: center;
   background-color: #161616;
 }
+
+
+/* INTRO */
 
 .intro {
   margin: 4rem 19.875rem;
@@ -66,10 +70,12 @@ body {
   margin-bottom: .5rem;
   font-weight: 700;
   font-size: 24px;
+  line-height: 1.4;
   color: #3e4247;
 }
 
 .intro-text {
+  margin-top: 0.5rem;
   margin-bottom: 1rem;
   font-size: 16px;
   line-height: 1.5;
@@ -78,6 +84,7 @@ body {
 
 .intro-button {
   padding: 0.75rem 2rem;
+  line-height: 1.0;
   font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
   color: #fff;
   background-color: #000000;
@@ -120,6 +127,7 @@ body {
 }
 
 .complex-address {
+  margin-top: 1.5rem;
   margin-bottom: .5rem;
   margin-left: 2rem;
   font-weight: 700;
@@ -129,6 +137,7 @@ body {
 }
 
 .complex-description {
+  margin-top: 0.5rem;
   margin-left: 2rem;
   margin-right: 5.375rem;
   font-size: 1rem;
@@ -141,14 +150,16 @@ body {
 
 .footer {
   margin-top: 6rem;
-  padding: 2rem 7.5rem 1.9375rem;
+  padding: 2rem 7.5rem;
   font-weight: 300;
   font-size: 14px;
+  line-height: 1.2;
   font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
   background-color: #111111;
 }
 
 .footer-heading {
+  margin-bottom: 1rem;
   font-weight: 700;
   color: #646971;
 }
@@ -158,8 +169,6 @@ body {
 }
 
 .footer-nav {
-  margin-left: .5rem;
-  margin-right: .5rem;
   border-top: solid 2px #3e4247;
 }
 
