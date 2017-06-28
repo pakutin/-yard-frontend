@@ -1,5 +1,8 @@
 body {
   background-color: white;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased;
+  -webkit-line-break: after-white-space;
 }
 
 
@@ -22,11 +25,249 @@ body {
   margin: 1.5rem 0;
   display: flex;
   justify-content: flex-end;
-  font: 1rem/1.0 "Fira Sans";
-  color: #3e4247;
 }
 
 .header-nav-link {
   margin-right: 2rem;
+  font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
+  font-size: 1rem;
+  color: #3e4247;
   text-decoration: none;
+}
+
+
+/* PROMO */
+
+.promo {
+  padding: 1.5rem 8rem 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.promo-name {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.125;
+  font-family: "Philosopher", "Iowan", serif;
+}
+
+.promo-address {
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.5625;
+  font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
+  color: #a9afb6;
+}
+
+.favorite-button {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  margin-bottom: 3.5rem;
+  padding: 0.5rem 1rem;
+  font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
+  color: #00779a;
+  background-color: #fff;
+  border: 1px solid #e0e0e1;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+
+/* COMPLEX */
+
+.complex {
+  padding-top: 2rem;
+  padding-right: 8rem;
+  padding-left: 8rem;
+  font-size: 1rem;
+  line-height: 1.5625;
+  font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
+}
+
+.complex-features {
+  margin-bottom: 3rem;
+}
+
+.complex-heading {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.125;
+  font-family: "Philosopher", "Iowan", serif;
+}
+
+.heading-above-grid {
+  margin-bottom: 1px;
+}
+
+.feature-list {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  width: 24rem;
+  overflow: visible;
+}
+
+.feature-type {
+  flex: 0 0 50%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 16px;
+  color: #a9afb6;
+}
+
+.feature-value {
+  margin-left: auto;
+  text-align: left;
+  flex: 0 0 50%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: 500;
+  line-height: 1.5625;
+}
+
+
+/* FLAT-CARDS */
+
+.flat-cards {
+  margin-top: 4rem;
+  padding: 4rem 8rem;
+  font-size: 1rem;
+  line-height: 1.5625;
+  font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
+  background-color: #f4f5f9;
+}
+
+.flat-cards-heading {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.125;
+  font-family: "Philosopher", "Iowan", serif;
+}
+
+.flat-card {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  padding-left: 2rem;
+  padding-bottom: 1.5rem;
+  background-color: #fff;
+}
+
+.flat-card-subheading {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-family: "Philosopher", "Iowan", serif;
+  font-size: 20px;
+  line-height: 1.1;
+}
+
+.flat-card-feature {
+  font-weight: 400;
+  line-height: 1.375;
+  color: #a9afb6;
+}
+
+.flat-card-button {
+  margin: 2rem 4rem 1.5rem 2rem;
+  padding: 0.75rem 2rem;
+  text-align: center;
+  font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
+  color: #fff;
+  background-color: #000000;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* GUIDE */
+
+.guide {
+  padding-left: 8rem;
+  padding-right: 8rem;
+  background-color: #3e4247;
+}
+
+.guide-name {
+  margin-top: 11.25rem;
+  font-family: "Philosopher", "Iowan", serif;
+}
+
+.guide-label {
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #a9afb6;
+}
+
+.guide-tagline {
+  font-size: 3rem;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.guide-link {
+  font-size: 1rem;
+  font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
+  color: #00779a;
+  text-decoration: none;
+}
+
+.guide-cover {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.guide-map {}
+
+.guide-sights {}
+
+.sight-name {}
+
+.sight-distance {}
+
+
+/* FOOTER */
+
+.footer {
+  padding: 2rem 7.5rem 1.9375rem;
+  font-weight: 300;
+  font-size: 14px;
+  font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
+  background-color: #111111;
+}
+
+.footer-heading {
+  font-weight: 700;
+  color: #646971;
+}
+
+.footer-detail {
+  color: #a9afb6;
+}
+
+.footer-nav {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  border-top: solid 2px #3e4247;
+}
+
+.footer-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.with-padding {
+  padding-top: 1rem;
+}
+
+.footer-caption {
+  padding-top: 6rem;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #a9afb6;
 }
