@@ -1,8 +1,8 @@
 body {
   background-image: url(./img/background.png);
+  background-color: #EAEBF0;
   background-size: 20px 10px;
   background-repeat: repeat;
-  background-color: white;
 }
 
 
@@ -66,7 +66,7 @@ body {
 
 .intro-title {
   margin-top: 0;
-  margin-bottom: 11px;
+  margin-bottom: 0.625rem;
   font-weight: 700;
   font-size: 24px;
   line-height: 1.4;
@@ -74,9 +74,8 @@ body {
 }
 
 .intro-text {
-  margin-top: 0;
+  margin-top: 0.625rem;
   margin-bottom: 1rem;
-  font-size: 16px;
   line-height: 1.5;
   color: #3e4247;
 }
@@ -126,7 +125,7 @@ body {
   color: #646971;
 }
 
-.complex-address {
+.complex-name {
   margin-top: 1.5rem;
   margin-bottom: .5rem;
   margin-left: 2rem;
@@ -152,37 +151,34 @@ body {
   margin-top: 6rem;
   padding: 2rem 7.5rem;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.2;
   font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
   background-color: #111;
 }
 
+.footer-company {
+  padding-top: 2px;
+}
+
 .footer-heading {
+  margin-top: 0rem;
   margin-bottom: 0.5rem;
   font-weight: 700;
   color: #646971;
-}
-
-.company-name {
-  margin-top: 0.25rem;
 }
 
 .footer-detail {
   color: #a9afb6;
 }
 
-.last-line {
+.footer-detail:last-child {
   margin-top: 1.375rem;
-}
-
-.detail-with-margin {
-  margin-top: 1rem;
-  color: #a9afb6;
 }
 
 .footer-nav {
   border-top: solid 2px #3e4247;
+  padding-top: 1.125rem;
 }
 
 .footer-link {
@@ -190,6 +186,10 @@ body {
   margin-top: 0.5rem;
   color: #ffffff;
   text-decoration: none;
+}
+
+.footer-link-last {
+  margin-top: 1.375rem;
 }
 
 .footer-caption {
