@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Compass Development</title>
   <link rel="stylesheet" href="complexes.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.css">
 </head>
@@ -48,7 +48,7 @@
         </div>
       </article>
 
-      <article class="complex card-with-shadow" onclick="location.href='#';" style="cursor: pointer;">
+      <article class="complex" onclick="location.href='#';" style="cursor: pointer;">
         <img src="./img/img1.jpg" srcset="img/img1@2x.jpg 2x, img/img1@3x.png 3x" alt="100 East 53rd Street">
         <div class="complex-data">
           <p class="complex-location">Midtown East, Manhattan</p>
@@ -76,18 +76,20 @@
     <div class="footer">
       <div class="row">
         <div class="col-xs-4">
-          <h4 class="footer-heading">ООО «Ярд»</h4>
+          <h4 class="footer-heading company-name">ООО «Ярд»</h4>
           <p class="footer-detail">ОГРН 1175074002531</p>
           <p class="footer-detail">ИНН 5036165365</p>
-          <p class="footer-detail with-padding">+7 (999) 821-14-88</p>
+          <p class="footer-detail last-line">+7 (999) 821-14-88</p>
         </div>
         <div class="col-xs-2">
           <div class="footer-nav">
             <h4 class="footer-heading">Жилые комплексы</h4>
-            <p><a class="footer-link" href="">ВТБ Арена Парк</a></p>
-            <p><a class="footer-link" href="">Садовые кварталы</a></p>
-            <p><a class="footer-link" href="">Резиденция Монэ</a></p>
-            <p class="with-padding"><a class="footer-link" href="">Все ЖК Москвы →</a></p>
+            <nav class="footer-links">
+              <p><a class="footer-link" href="">ВТБ Арена Парк</a></p>
+              <p><a class="footer-link" href="">Садовые кварталы</a></p>
+              <p><a class="footer-link" href="">Резиденция Монэ</a></p>
+              <p class="last-line"><a class="footer-link" href="">Все ЖК Москвы →</a>
+            </nav>
           </div>
         </div>
         <div class="col-xs-2">

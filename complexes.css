@@ -64,7 +64,8 @@ body {
 }
 
 .intro-title {
-  margin-bottom: .5rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
   font-weight: 700;
   font-size: 24px;
   line-height: 1.4;
@@ -72,7 +73,7 @@ body {
 }
 
 .intro-text {
-  margin-top: 0.5rem;
+  margin-top: 0;
   margin-bottom: 1rem;
   font-size: 16px;
   line-height: 1.5;
@@ -103,7 +104,7 @@ body {
   background-color: #fff;
 }
 
-.card-with-shadow {
+.complex:hover {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
 }
 
@@ -156,12 +157,25 @@ body {
 }
 
 .footer-heading {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-weight: 700;
   color: #646971;
 }
 
+.company-name {
+  margin-top: 0.25rem;
+}
+
 .footer-detail {
+  color: #a9afb6;
+}
+
+.last-line {
+  margin-top: 1.375rem;
+}
+
+.detail-with-margin {
+  margin-top: 1rem;
   color: #a9afb6;
 }
 
@@ -170,16 +184,15 @@ body {
 }
 
 .footer-link {
+  display: block;
+  margin-top: 0.5rem;
   color: #ffffff;
   text-decoration: none;
 }
 
-.with-padding {
-  padding-top: 1rem;
-}
-
 .footer-caption {
-  padding-top: 6rem;
+  margin-top: 5.25rem;
+  margin-bottom: 0;
   font-size: 11px;
   line-height: 1.5;
   color: #a9afb6;
