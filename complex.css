@@ -129,6 +129,10 @@ body {
   font-family: "Philosopher", "Iowan", serif;
 }
 
+.complex-architect {
+  width: 17.875rem;
+}
+
 .feature-heading {
   margin-top: 0;
   margin-bottom: -1px;
@@ -255,6 +259,7 @@ body {
 .guide {
   padding-left: 8rem;
   padding-right: 8rem;
+  padding-bottom: 9.5625rem;
   background-color: #3e4247;
 }
 
@@ -292,7 +297,7 @@ body {
 }
 
 .sights {
-  margin-top: 4rem;
+  margin-top: -5.5625rem;
   margin-left: 7.4rem;
   margin-right: 7.4rem;
   display: flex;
