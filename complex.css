@@ -40,7 +40,7 @@ body {
 /* PROMO */
 
 .promo {
-  padding: 1.5rem 8rem 1rem;
+  padding: 1.5rem 8rem 0;
   display: flex;
   justify-content: space-between;
 }
@@ -48,6 +48,7 @@ body {
 .promo-name {
   display: flex;
   justify-content: flex-start;
+  margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 700;
   font-size: 2rem;
@@ -56,6 +57,8 @@ body {
 }
 
 .promo-address {
+  margin-top: 0;
+  margin-bottom: 1rem;
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.5625;
@@ -66,11 +69,10 @@ body {
 .favorite-button {
   display: flex;
   justify-content: flex-end;
-  margin-top: 1.5rem;
-  margin-bottom: 3.5rem;
   padding: 0.5rem 1rem;
   font-weight: 300;
   font-size: 0.625rem;
+  line-height: 1.0;
   font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
   color: #00779a;
   background-color: #fff;
@@ -79,11 +81,15 @@ body {
   cursor: pointer;
 }
 
+.promo-gallery {
+  line-height: 0;
+}
+
 
 /* COMPLEX */
 
 .complex {
-  padding-top: 2rem;
+  margin-top: 0;
   padding-right: 8rem;
   padding-left: 8rem;
   font-size: 1rem;
@@ -91,19 +97,40 @@ body {
   font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
 }
 
-.complex-features {
-  margin-bottom: 3rem;
+.top-feature {
+  padding-right: 3rem;
+}
+
+.top-features {
+  display: flex;
+  margin-bottom: 2rem;
+  font-family: "Philosopher", "Iowan", serif;
+  border-bottom: 1px solid #E0E0E1;
+  color: #3e4247;
+}
+
+.top-feature-caption {
+  padding-top: 10px;
+  padding-bottom: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.57;
+  font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
+  color: #a9afb6;
 }
 
 .complex-heading {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 1.125;
   font-family: "Philosopher", "Iowan", serif;
 }
 
-.heading-above-grid {
-  margin-bottom: 1px;
+.feature-heading {
+  margin-top: 0;
+  margin-bottom: -1px;
 }
 
 .feature-list {
@@ -115,6 +142,7 @@ body {
 }
 
 .feature-type {
+  padding-bottom: 0.5rem;
   flex: 0 0 50%;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -132,6 +160,30 @@ body {
   line-height: 1.5625;
 }
 
+.complex-description {
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #E0E0E1;
+}
+
+.description-text {
+  margin-top: 0.5rem;
+}
+
+.facility-heading {
+  margin-bottom: 0.5rem;
+}
+
+.facility {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.375;
+}
+
+.facility:last-child {
+  margin-bottom: 0;
+}
+
 
 /* FLAT-CARDS */
 
@@ -145,6 +197,8 @@ body {
 }
 
 .flat-cards-heading {
+  margin-top: 0;
+  margin-bottom: 0;
   text-align: center;
   font-weight: 700;
   font-size: 1.5rem;
@@ -161,6 +215,7 @@ body {
 }
 
 .flat-card-subheading {
+  margin-top: 0;
   margin-bottom: 1.5rem;
   font-weight: 700;
   font-family: "Philosopher", "Iowan", serif;
@@ -169,18 +224,26 @@ body {
 }
 
 .flat-card-feature {
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: 400;
   line-height: 1.375;
   color: #a9afb6;
 }
 
+.flat-card-feature-value {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .flat-card-button {
-  margin: 2rem 4rem 1.5rem 2rem;
+  margin: 0.5rem 4rem 1.5rem 2rem;
   padding: 0.75rem 2rem;
   text-align: center;
   font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
   color: #fff;
   background-color: #000000;
+  border-radius: 2px;
   border: none;
   cursor: pointer;
 }
@@ -207,6 +270,7 @@ body {
 }
 
 .guide-tagline {
+  margin-bottom: 50px;
   font-size: 3rem;
   line-height: 1.25;
   font-weight: 700;
@@ -215,36 +279,81 @@ body {
 
 .guide-link {
   font-size: 1rem;
+  line-height: 1.1875;
   font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
   color: #00779a;
   text-decoration: none;
 }
 
 .guide-cover {
+  margin-bottom: -0.25rem;
   margin-top: 4rem;
-  margin-bottom: 4rem;
 }
 
-.guide-map {}
+.sights {
+  margin-top: 4rem;
+  margin-left: 7.4rem;
+  margin-right: 7.4rem;
+  display: flex;
+}
 
-.guide-sights {}
+.sights-map {
+  margin-bottom: -0.25rem;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
 
-.sight-name {}
+.sights-list {
+  background-color: #fff;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
 
-.sight-distance {}
+.sight {
+  padding-top: 1.5rem;
+  padding-bottom: 1.625rem;
+  padding-left: 1.5rem;
+  border-bottom: solid 1px #e0e0e1;
+}
+
+.sight-name {
+  margin-top: -1px;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.38;
+  font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
+  color: #3e4247;
+}
+
+.sight-distance {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.38;
+  font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
+  color: #a9afb6;
+}
 
 
 /* FOOTER */
 
 .footer {
-  padding: 2rem 7.5rem 1.9375rem;
+  margin-top: 4rem;
+  padding: 2rem 7.5rem;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.2;
   font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
-  background-color: #111111;
+  background-color: #111;
+}
+
+.footer-company {
+  padding-top: 2px;
 }
 
 .footer-heading {
+  margin-top: 0rem;
+  margin-bottom: 0.5rem;
   font-weight: 700;
   color: #646971;
 }
@@ -253,23 +362,29 @@ body {
   color: #a9afb6;
 }
 
+.footer-detail:last-child {
+  margin-top: 1.375rem;
+}
+
 .footer-nav {
-  margin-left: .5rem;
-  margin-right: .5rem;
   border-top: solid 2px #3e4247;
+  padding-top: 1.125rem;
 }
 
 .footer-link {
+  display: block;
+  margin-top: 0.5rem;
   color: #ffffff;
   text-decoration: none;
 }
 
-.with-padding {
-  padding-top: 1rem;
+.footer-link-last {
+  margin-top: 1.375rem;
 }
 
 .footer-caption {
-  padding-top: 6rem;
+  margin-top: 5.25rem;
+  margin-bottom: 0;
   font-size: 11px;
   line-height: 1.5;
   color: #a9afb6;
