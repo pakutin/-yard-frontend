@@ -71,7 +71,7 @@ body {
 .favorite-button {
   display: flex;
   justify-content: flex-end;
-  padding: 7px 14px 0.5rem 18px;
+  padding: 0.4375rem 0.875rem 0.5rem 1.125rem;
   width: 5.625rem;
   height: 1.625rem;
   font-weight: 300;
@@ -184,7 +184,7 @@ body {
   flex: 0 0 50%;
   text-overflow: ellipsis;
   overflow: hidden;
-  font-size: 16px;
+  font-size: 1rem;
   color: #a9afb6;
 }
 
@@ -268,7 +268,7 @@ body {
   margin-bottom: 1.375rem;
   font-weight: 700;
   font-family: "Philosopher", "Iowan", serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 1.1;
 }
 
@@ -356,13 +356,13 @@ body {
   margin-top: 1px;
   margin-left: 3px;
   display: block;
-  box-shadow: 0 0 20px 0.25rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 1.25rem 0.25rem rgba(0, 0, 0, 0.3);
 }
 
 .sights-list {
   margin-right: 3px;
   background-color: #fff;
-  box-shadow: 0 0 20px 0.25rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 1.25rem 0.25rem rgba(0, 0, 0, 0.3);
 }
 
 .sight {
@@ -385,7 +385,7 @@ body {
 .sight-distance {
   margin-top: 0.5rem;
   margin-bottom: 0;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 1.38;
   font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
@@ -397,7 +397,7 @@ body {
 
 .footer {
   margin-top: 4.0625rem;
-  padding: 32px 7.5rem 2rem 7.5rem;
+  padding: 2rem 7.5rem;
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.2;
@@ -447,7 +447,7 @@ body {
 .footer-caption {
   margin-top: 5.375rem;
   margin-bottom: 0;
-  font-size: 11px;
+  font-size: 0.6875rem;
   line-height: 1.5;
   color: #a9afb6;
 }
