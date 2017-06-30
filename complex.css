@@ -116,7 +116,7 @@ body {
 }
 
 
-/* COMPLEX */
+/* COMPLEX TOP FEATURES */
 
 .complex {
   margin-top: 0;
@@ -128,15 +128,15 @@ body {
   color: #3e4247;
 }
 
-.top-feature {
-  padding-right: 3rem;
-}
-
-.top-features {
+.complex-top-features {
   display: flex;
   margin-bottom: 2.125rem;
   font-family: "Philosopher", "Iowan", serif;
   border-bottom: 1px solid #E0E0E1;
+}
+
+.top-feature {
+  padding-right: 3rem;
 }
 
 .top-feature-caption {
@@ -163,7 +163,10 @@ body {
   width: 17.875rem;
 }
 
-.feature-heading {
+
+/* COMPLEX FEATURES */
+
+.features-heading {
   margin-top: 0;
   margin-bottom: -1px;
 }
@@ -195,6 +198,9 @@ body {
   line-height: 1.5625;
 }
 
+
+/* COMPLEX DESCRIPTION */
+
 .complex-description {
   margin-bottom: 2rem;
   padding-bottom: 0.5625rem;
@@ -208,6 +214,9 @@ body {
 .description-text {
   margin-top: 0.5rem;
 }
+
+
+/* COMPLEX FACILITIES */
 
 .facilities-heading {
   margin-top: 2.125rem;
@@ -332,6 +341,9 @@ body {
   margin-bottom: -0.25rem;
   margin-top: 4rem;
 }
+
+
+/* SIGHTS */
 
 .sights {
   margin-top: -9.625rem;
