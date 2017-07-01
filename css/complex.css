@@ -1,12 +1,18 @@
+.container {
+  width: 74rem;
+}
+
+.complex-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+
 /* PROMO */
 
 .promo {
   padding-top: 1.5rem;
-  padding-left: 8rem;
-  padding-right: 8rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
 }
 
 .promo-name {
@@ -78,8 +84,6 @@
 
 .complex {
   margin-top: 0;
-  padding-right: 8rem;
-  padding-left: 8rem;
   font-size: 1rem;
   line-height: 1.5;
   font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
@@ -184,7 +188,8 @@
 
 .complex-flat-cards {
   margin-top: 4.125rem;
-  padding: 4rem 8rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   font-size: 1rem;
   line-height: 1.5625;
   font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
@@ -293,8 +298,6 @@
 
 .sights {
   margin-top: -9.625rem;
-  margin-left: 7.5625rem;
-  margin-right: 7.5625rem;
   display: flex;
 }
 
@@ -310,9 +313,9 @@
 }
 
 .sight {
+  padding-left: 1.5rem;
   padding-top: 1.5rem;
   padding-bottom: 1.625rem;
-  padding-left: 1.5rem;
   border-bottom: solid 1px #e0e0e1;
 }
 
