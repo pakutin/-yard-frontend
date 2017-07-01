@@ -1,14 +1,16 @@
 /* PROMO */
 
 .promo {
-  padding: 1.5rem 8rem 0;
+  padding-top: 1.5rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .promo-name {
   display: flex;
-  justify-content: flex-start;
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 700;
@@ -23,32 +25,28 @@
   margin-bottom: 1rem;
   font-weight: 300;
   font-size: 0.875rem;
-  line-height: 1.5625;
+  line-height: 1.5;
   font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
   color: #a9afb6;
 }
 
 .promo-favorite-button {
-  display: flex;
-  justify-content: flex-end;
-  padding: 0.4375rem 0.875rem 0.5rem 1.125rem;
-  width: 5.625rem;
-  height: 1.625rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #e0e0e1;
+  box-sizing: border-box;
   font-weight: 300;
   font-size: 0.625rem;
   line-height: 1.0;
   font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
+  text-decoration: none;
   color: #00779a;
-  background-color: #fff;
-  border: 1px solid #e0e0e1;
+  background: #fff;
   border-radius: 2px;
   cursor: pointer;
 }
 
 .promo-gallery {
-  margin-top: 1px;
-  margin-bottom: 1px;
-  line-height: 0;
+  padding-top: 1px;
 }
 
 .gallery-picture {
@@ -57,13 +55,12 @@
 
 .gallery-overlay {
   margin-left: 8rem;
-  margin-top: -2.625rem;
+  margin-top: -2.875rem;
 }
 
 .gallery-button {
   padding: 0.5rem 1rem;
-  width: 6.4375rem;
-  height: 1.625rem;
+  box-sizing: border-box;
   font-weight: 300;
   font-size: 0.625rem;
   line-height: 1.0;
@@ -83,7 +80,7 @@
   padding-right: 8rem;
   padding-left: 8rem;
   font-size: 1rem;
-  line-height: 1.5625;
+  line-height: 1.5;
   font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
   color: #3e4247;
 }
@@ -100,7 +97,8 @@
 
 .complex-top-features {
   display: flex;
-  margin-bottom: 2.125rem;
+  margin-bottom: 2.25rem;
+  box-sizing: border-box;
   font-family: "Philosopher", "Iowan", serif;
   border-bottom: 1px solid #E0E0E1;
 }
@@ -110,8 +108,8 @@
 }
 
 .complex-top-feature-caption {
-  padding-top: 0.5625rem;
-  padding-bottom: 1.5625rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1.5rem;
   font-size: 0.875rem;
   font-weight: 300;
   line-height: 1.5625;
