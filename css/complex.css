@@ -47,6 +47,7 @@
 
 .promo-gallery {
   padding-top: 1px;
+  padding-bottom: 2px;
 }
 
 .gallery-picture {
@@ -86,7 +87,7 @@
 }
 
 .complex-heading {
-  margin-top: 2.5rem;
+  margin-top: 0;
   margin-bottom: 0;
   font-weight: 700;
   font-size: 1.5rem;
@@ -97,7 +98,8 @@
 
 .complex-top-features {
   display: flex;
-  margin-bottom: 2.25rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.125rem;
   box-sizing: border-box;
   font-family: "Philosopher", "Iowan", serif;
   border-bottom: 1px solid #E0E0E1;
@@ -109,7 +111,7 @@
 
 .complex-top-feature-caption {
   padding-top: 0.5rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.625rem;
   font-size: 0.875rem;
   font-weight: 300;
   line-height: 1.5625;
@@ -121,12 +123,8 @@
   width: 17.875rem;
 }
 
-.complex-feature-heading {
-  margin-top: 0;
-  margin-bottom: -1px;
-}
-
 .complex-feature-list {
+  margin-bottom: 0;
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
@@ -135,7 +133,7 @@
 }
 
 .complex-feature-type {
-  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
   flex: 0 0 50%;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -154,17 +152,19 @@
 }
 
 .complex-description {
+  margin-top: 2.625rem;
   margin-bottom: 2rem;
-  padding-bottom: 0.5625rem;
+  padding-bottom: 0.5rem;
   border-bottom: 1px solid #E0E0E1;
 }
 
 .complex-description-heading {
-  margin-top: 1.6rem;
+  margin-top: 0;
 }
 
 .complex-description-text {
-  margin-top: 0.5rem;
+  margin-top: 0;
+  line-height: 1.5625;
 }
 
 .complex-facilities-heading {
