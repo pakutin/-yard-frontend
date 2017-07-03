@@ -1,12 +1,16 @@
 import React from "react";
 import "./complexes.css";
+import Header from "./Header";
+import Footer from "./Footer";
 import heroLogo from "./img/hero-logo.svg";
 import img from "./img/img1.jpg";
 import img_2x from "./img/img1@2x.jpg";
 import img_3x from "./img/img1@3x.jpg";
+import { Complex } from "react-router-dom";
 export default () => {
   return (
     <div>
+      <Header />
       <main>
         <section className="main-logo">
           <img src={heroLogo} width="418.9px" height="131px" />
@@ -82,6 +86,7 @@ export default () => {
           </article>
         </section>
       </main>
+      <Footer />
     </div>
   );
 };
