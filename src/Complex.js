@@ -1,8 +1,8 @@
 import React from "react";
 import "./complex.css";
 import Header from "./Header";
-import Promo from "./Promo";
-import PromoGallery from "./PromoGallery";
+import ComplexPromo from "./ComplexPromo";
+import ComplexPromoGallery from "./ComplexPromoGallery";
 import ComplexFeatures from "./ComplexFeatures";
 import ComplexTopFeatures from "./ComplexTopFeatures";
 import ComplexDescription from "./ComplexDescription";
@@ -16,8 +16,8 @@ export default () => {
   return (
     <div>
       <Header />
-      <Promo />
-      <PromoGallery />
+      <ComplexPromo />
+      <ComplexPromoGallery />
       <article className="complex">
         <div class="container">
           <ComplexTopFeatures />

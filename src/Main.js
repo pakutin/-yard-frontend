@@ -1,8 +1,9 @@
 import React from "react";
 import "./complexes.css";
 import Header from "./Header";
+import Intro from "./Intro";
+import Complexes from "./Complexes";
 import Footer from "./Footer";
-import { Complex } from "react-router-dom";
 export default () => {
   return (
     <div>
