@@ -1,5 +1,5 @@
 import React from "react";
-import arrow from "./img/arrow.svg";
+import arrow from "./arrow.svg";
 export default () => {
   return (
     <footer>

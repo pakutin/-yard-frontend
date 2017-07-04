@@ -1,6 +1,5 @@
 import React from "react";
-import "./complex.css";
-import heroLogo from "./img/hero-logo.svg";
+import heroLogo from "./hero-logo.svg";
 export default () => {
   return (
     <div>

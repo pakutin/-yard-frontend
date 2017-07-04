@@ -1,5 +1,4 @@
-import React from "react";
-import "./complex.css";
+import React from 'react';
 export default () => {
   return (
     <section className="promo">

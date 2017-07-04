@@ -1,8 +1,5 @@
 import React from "react";
-import navLogo from "./img/nav-logo.svg";
-import heroLogo from "./img/hero-logo.svg";
-import img1 from "./img/img1.jpg";
-import arrow from "./img/arrow.svg";
+import navLogo from "./nav-logo.svg";
 export default () => {
   return (
     <div>

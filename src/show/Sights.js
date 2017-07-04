@@ -1,8 +1,4 @@
 import React from "react";
-import "./complex.css";
-import map from "./img/map.png";
-import map_2x from "./img/map@2x.png";
-import map_3x from "./img/map@3x.png";
 export default () => {
   return (
     <section className="sights">
@@ -11,8 +7,8 @@ export default () => {
           <div className="col-xs-6">
             <img
               className="sights-map"
-              src={map}
-              srcSet={`${map_2x} 2x, ${map_3x} 3x`}
+              src={process.env.PUBLIC_URL + './map.png'}
+              srcSet={`${process.env.PUBLIC_URL + './map@2x.png'} 2x, ${process.env.PUBLIC_URL + './map@3x.png'} 3x`}
             />
           </div>
           <div className="col-xs-6">

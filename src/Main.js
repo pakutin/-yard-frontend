@@ -1,16 +1,18 @@
 import React from "react";
-import "./complexes.css";
+import "./css/complexes.css";
 import Header from "./Header";
-import Intro from "./Intro";
-import Complexes from "./Complexes";
 import Footer from "./Footer";
+import Banner from "./list/Banner";
+import Card from "./list/Card";
 export default () => {
   return (
     <div>
       <main>
         <Header />
-        <Intro />
-        <Complexes />
+        <Banner />
+        <Card />
+        <Card />
+        <Card />
       </main>
       <Footer />
     </div>

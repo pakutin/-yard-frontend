@@ -1,32 +1,31 @@
 import React from "react";
-import "./complex.css";
+import "./css/complex.css";
 import Header from "./Header";
-import ComplexPromo from "./ComplexPromo";
-import ComplexPromoGallery from "./ComplexPromoGallery";
-import ComplexFeatures from "./ComplexFeatures";
-import ComplexTopFeatures from "./ComplexTopFeatures";
-import ComplexDescription from "./ComplexDescription";
-import ComplexFacilities from "./ComplexFacilities";
-import ComplexFlatCards from "./ComplexFlatCards";
-import ComplexGuide from "./ComplexGuide";
-import ComplexSights from "./ComplexSights";
+import Name from "./show/Name";
+import Gallery from "./show/Gallery";
+import TopFeatures from "./show/TopFeatures";
+import Features from "./show/Features";
+import Description from "./show/Description";
+import Facilities from "./show/Facilities";
+import Offers from "./show/Offers";
+import Guide from "./show/Guide";
+import Sights from "./show/Sights";
 import Footer from "./Footer";
-import arrow from "./img/arrow.svg";
 export default () => {
   return (
     <div>
       <Header />
-      <ComplexPromo />
-      <ComplexPromoGallery />
+      <Name />
+      <Gallery />
       <article className="complex">
         <div class="container">
-          <ComplexTopFeatures />
-          <ComplexFeatures />
-          <ComplexDescription />
-          <ComplexFacilities />
-          <ComplexFlatCards />
-          <ComplexGuide />
-          <ComplexSights />
+          <TopFeatures />
+          <Features />
+          <Description />
+          <Facilities />
+          <Offers />
+          <Guide />
+          <Sights />
         </div>
       </article>
       <Footer />

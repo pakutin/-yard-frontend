@@ -1,8 +1,4 @@
-import React from "react";
-import "./complex.css";
-import guide from "./img/polyankaPhoto.jpg";
-import guide_2x from "./img/polyankaPhoto@2x.jpg";
-import guide_3x from "./img/polyankaPhoto@3x.jpg";
+import React from 'react';
 export default () => {
   return (
     <section className="guide">
@@ -21,7 +17,8 @@ export default () => {
           </div>
           <div className="col-xs-6">
             <div className="guide-cover">
-              <img src={guide} srcSet={`${guide_2x} 2x, ${guide_3x} 3x`} />
+              <img src={process.env.PUBLIC_URL + './polyankaPhoto.jpg'}
+                srcSet={`${process.env.PUBLIC_URL + './polyankaPhoto@2x.jpg'} 2x, ${process.env.PUBLIC_URL + './polyankaPhoto@3x.jpg'} 3x`} />
             </div>
           </div>
         </div>

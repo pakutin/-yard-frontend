@@ -1,5 +1,4 @@
 import React from "react";
-import "./complex.css";
 export default () => {
   return (
     <section className="complex-description">
