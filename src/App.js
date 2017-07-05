@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import List from "./List";
 import Header from "./Header";
 import Footer from "./Footer";
-import Index from "./Show";
+import List from "./Complexes/List";
+import Show from "./Complexes/Show";
 import "./style.css";
 
 class App extends Component {
@@ -13,7 +13,7 @@ class App extends Component {
         <div className="App">
           <Header />
           <Route exact path="/" component={List} />
-          <Route exact path="/complex" component={Index} />
+          <Route exact path="/complex" component={Show} />
           <Footer />
         </div>
       </Router>
