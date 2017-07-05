@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import "normalize.css";
+
 import Header from "./Header";
 import Footer from "./Footer";
-import List from "./Complexes/List";
-import Show from "./Complexes/Show";
+import Complexes from "./Complexes/List";
+import Complex from "./Complexes/Show";
+
 import "./style.css";
 
 class App extends Component {
@@ -12,8 +15,8 @@ class App extends Component {
       <Router>
         <div className="App">
           <Header />
-          <Route exact path="/" component={List} />
-          <Route exact path="/complex" component={Show} />
+          <Route exact path="/" component={Complexes} />
+          <Route exact path="/complex" component={Complex} />
           <Footer />
         </div>
       </Router>
