@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid, Row, Col } from "react-flexbox-grid";
+import Sight from "./Sight";
 
 export default () => {
   return (
@@ -14,20 +15,9 @@ export default () => {
           />
         </Col>
         <Col lg={6}>
-          <div className="sights-list">
-            <div className="sight">
-              <p className="sight-name">Красный Октябрь</p>
-              <p className="sight-distance">24 минуты, 6 км</p>
-            </div>
-            <div className="sight">
-              <p className="sight-name">World class</p>
-              <p className="sight-distance">2 минуты, 300 м</p>
-            </div>
-            <div className="sight">
-              <p className="sight-name">Третьяковская галерея</p>
-              <p className="sight-distance">14 минут, 4 км</p>
-            </div>
-          </div>
+          <Sight name="Красный Октябрь" distance="24 минуты, 6 км" />
+          <Sight name="World Class" distance="2 минуты, 300 м" />
+          <Sight name="Третьяковская галерея" distance="14 минут, 4 км" />
         </Col>
       </Row>
     </section>

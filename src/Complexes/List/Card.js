@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default props =>
-  <Link to="/complex">
+  <Link to={"/complex" + props.id}>
     <article className="complex">
       <img
         src={process.env.PUBLIC_URL + "./img1.jpg"}
@@ -18,7 +18,7 @@ export default props =>
           {props.name}
         </h3>
         <p className="complex-description">
-          {props.description}
+          {props.children}
         </p>
       </div>
     </article>

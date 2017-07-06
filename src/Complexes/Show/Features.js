@@ -1,12 +1,11 @@
 import React from "react";
 import { Grid, Row, Col } from "react-flexbox-grid";
+import SectionTitle from "./SectionTitle";
 
 export default () => {
   return (
     <section className="complex-features">
-      <h2 className="complex-heading complex-feature-heading">
-        Характеристики
-      </h2>
+      <SectionTitle>Характеристики</SectionTitle>
       <Row>
         <Col lg={4}>
           <dl className="complex-feature-list">

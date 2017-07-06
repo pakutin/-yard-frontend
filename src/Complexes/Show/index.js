@@ -16,7 +16,9 @@ import "./complex.css";
 export default () => {
   return (
     <main>
-      <Name />
+      <Name address="Район Якиманка, улица Большая Полянка, дом 44 • 119180">
+        Жилой комплекс «Полянка/44»
+      </Name>
       <Gallery />
       <article className="complex">
         <Grid>

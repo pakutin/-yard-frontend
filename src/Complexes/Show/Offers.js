@@ -1,13 +1,12 @@
 import React from "react";
 import { Grid, Row, Col } from "react-flexbox-grid";
+import Heading from "./SectionTitle";
 import Offer from "./Offer";
 
 export default () => {
   return (
     <section className="complex-flat-cards">
-      <h2 className="complex-heading complex-flat-cards-heading">
-        Предложения в ЖК «Полянка/44»
-      </h2>
+      <SectionTitle>Предложения в ЖК «Полянка/44»</SectionTitle>
       <Row>
         <Col lg={4}>
           <Offer

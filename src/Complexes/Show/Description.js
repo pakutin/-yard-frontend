@@ -1,14 +1,13 @@
 import React from "react";
 import { Grid, Row, Col } from "react-flexboxgrid";
+import SectionTitle from "./SectionTitle";
 
 export default () => {
   return (
     <section className="complex-description">
       <Row>
         <Col lg={2}>
-          <h2 className="complex-heading complex-description-heading">
-            Описание
-          </h2>
+          <SectionTitle>Описание</SectionTitle>
         </Col>
         <Col lg={10}>
           <p className="complex-description-text">

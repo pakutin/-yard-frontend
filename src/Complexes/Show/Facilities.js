@@ -1,33 +1,33 @@
 import React from "react";
 import { Grid, Row, Col } from "react-flexbox-grid";
+import SectionTitle from "./SectionTitle";
+import Facility from "./Facility";
 
 export default () => {
   return (
     <section className="complex-facilities">
-      <h2 className="complex-heading complex-facilities-heading">
-        Инфраструктура
-      </h2>
+      <SectionTitle>Инфраструктура</SectionTitle>
       <Row>
         <Col lg={2}>
-          <p className="complex-facility">Бассейн</p>
-          <p className="complex-facility">Частная школа</p>
+          <Facility>Бассейн</Facility>
+          <Facility>Частная школа</Facility>
         </Col>
         <Col lg={2}>
-          <p className="complex-facility">Детский сад</p>
-          <p className="complex-facility">Частная школа</p>
+          <Facility>Детский сад</Facility>
+          <Facility>Частная школа</Facility>
         </Col>
         <Col lg={2}>
-          <p className="complex-facility">Частная школа</p>
-          <p className="complex-facility">Частная школа</p>
+          <Facility>Частная школа</Facility>
+          <Facility>Частная школа</Facility>
         </Col>
         <Col lg={2}>
-          <p className="complex-facility">Бассейн</p>
+          <Facility>Бассейн</Facility>
         </Col>
         <Col lg={2}>
-          <p className="complex-facility">Детский сад</p>
+          <Facility>Детский сад</Facility>
         </Col>
         <Col lg={2}>
-          <p className="complex-facility">Частная школа</p>
+          <Facility>Частная школа</Facility>
         </Col>
       </Row>
     </section>
