@@ -1,12 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import "normalize.css";
-
 import Header from "./Header";
 import Footer from "./Footer";
 import Complexes from "./Complexes/List";
 import Complex from "./Complexes/Show";
-
 import "./style.css";
 
 class App extends Component {

@@ -17,32 +17,42 @@ export default () => {
             <Col lg={2}>
               <nav className="footer-nav">
                 <h4 className="footer-heading">Жилые комплексы</h4>
-                <p><a className="footer-link" href>ВТБ Арена Парк</a></p>
-                <p><a className="footer-link" href>Садовые кварталы</a></p>
-                <p><a className="footer-link" href>Резиденция Монэ</a></p>
-                <p className="footer-link-last">
-                  <a className="footer-link" href>
-                    Все ЖК Москвы
+                <a className="footer-link" href>
+                  ВТБ Арена Парк
+                </a>
+                <a className="footer-link" href>
+                  Садовые кварталы
+                </a>
+                <a className="footer-link" href>
+                  Резиденция Монэ
+                </a>
+                <a className="footer-link footer-link-last" href>
+                  Все ЖК Москвы
                   <img className="link-arrow" src={arrow} />
-                  </a>
-                </p>
+                </a>
               </nav>
             </Col>
             <Col lg={2}>
               <nav className="footer-nav">
                 <h4 className="footer-heading">Компания</h4>
-                <p><a className="footer-link" href>Команда</a></p>
-                <p><a className="footer-link" href>О компании</a></p>
+                <a className="footer-link" href>
+                  Команда
+                </a>
+                <a className="footer-link" href>
+                  О компании
+                </a>
               </nav>
             </Col>
           </Row>
           <Row>
             <Col lgOffset={4} lg={8}>
               <p className="footer-caption">
-                Любая информация, представленная на&nbsp;данном сайте, носит исключительно информационный характер и&nbsp;ни&nbsp;при&nbsp;каких
-              условиях не&nbsp;является публичной офертой, определяемой положениями статьи 437&nbsp;ГК&nbsp;РФ. © ООО&nbsp;«Ярд»,
-              2017
-            </p>
+                Любая информация, представленная на&nbsp;данном сайте, носит
+                исключительно информационный характер
+                и&nbsp;ни&nbsp;при&nbsp;каких условиях не&nbsp;является
+                публичной офертой, определяемой положениями статьи
+                437&nbsp;ГК&nbsp;РФ. © ООО&nbsp;«Ярд», 2017
+              </p>
             </Col>
           </Row>
         </Grid>

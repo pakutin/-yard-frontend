@@ -12,7 +12,7 @@ export default () => {
       <div className="complex-top-feature complex-top-feature-architect">
         <h2 className="complex-heading">
           John McAslan + Partners<br />
-          <div className="complex-top-feature-caption">архитектор</div>
+          <small className="complex-top-feature-caption">архитектор</small>
         </h2>
       </div>
       <div className="complex-top-feature">

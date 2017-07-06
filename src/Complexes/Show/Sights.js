@@ -8,8 +8,9 @@ export default () => {
         <Col lg={6}>
           <img
             className="sights-map"
-            src={process.env.PUBLIC_URL + './map.png'}
-            srcSet={`${process.env.PUBLIC_URL + './map@2x.png'} 2x, ${process.env.PUBLIC_URL + './map@3x.png'} 3x`}
+            src={process.env.PUBLIC_URL + "./map.png"}
+            srcSet={`${process.env.PUBLIC_URL + "./map@2x.png"} 2x, ${process
+              .env.PUBLIC_URL + "./map@3x.png"} 3x`}
           />
         </Col>
         <Col lg={6}>

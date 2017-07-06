@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { Grid, Row, Col } from "react-flexbox-grid";
 
 export default () => {
@@ -12,9 +12,7 @@ export default () => {
               Район Якиманка, улица Большая Полянка, дом 44 • 119180
             </p>
           </div>
-          <button className="promo-favorite-button">
-            В&nbsp;избранное
-          </button>
+          <button className="promo-favorite-button">В&nbsp;избранное</button>
         </div>
       </Grid>
     </section>

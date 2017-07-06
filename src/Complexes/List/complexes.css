@@ -1,5 +1,5 @@
 body {
-  background-image: url(%PUBLIC_URL%/background.png);
+  background-image: url(./background.png);
   background-color: #EAEBF0;
   background-size: 20px 10px;
   background-repeat: repeat;
@@ -56,13 +56,12 @@ body {
 
 /* COMPLEXES */
 
-.complexes {
-  margin-left: 7.5rem;
-  margin-right: 7.5rem;
-}
-
 .complex {
   margin-bottom: 3rem;
+  margin-left: 7.5rem;
+  margin-right: 7.5rem;
+  cursor: pointer;
+  text-decoration: none;
   display: flex;
   background-color: #fff;
 }

@@ -15,7 +15,7 @@ import "./complex.css";
 
 export default () => {
   return (
-    <div>
+    <main>
       <Name />
       <Gallery />
       <article className="complex">
@@ -29,6 +29,6 @@ export default () => {
           <Sights />
         </Grid>
       </article>
-    </div >
+    </main>
   );
 };
