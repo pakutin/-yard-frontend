@@ -6,7 +6,7 @@ export default () => {
       <div className="complex-top-feature">
         <h2 className="complex-heading">
           950<br />
-          <div className="complex-top-feature-caption">предложений</div>
+          <small className="complex-top-feature-caption">предложений</small>
         </h2>
       </div>
       <div className="complex-top-feature complex-top-feature-architect">
@@ -18,7 +18,7 @@ export default () => {
       <div className="complex-top-feature">
         <h2 className="complex-heading">
           Группа «ПСН»<br />
-          <div className="complex-top-feature-caption">застройщик</div>
+          <small className="complex-top-feature-caption">застройщик</small>
         </h2>
       </div>
     </section>
