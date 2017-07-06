@@ -27,7 +27,11 @@ export default () => {
           <Description />
           <Facilities />
           <Offers />
-          <Guide />
+          <Guide
+            district="Якиманка"
+            tagline="Исторический центр Москвы в&nbsp;двух километрах от&nbsp;Кремля"
+            link="Гид по Якиманке"
+          />
           <Sights />
         </Grid>
       </article>

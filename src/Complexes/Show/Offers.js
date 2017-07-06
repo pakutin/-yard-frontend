@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Row, Col } from "react-flexbox-grid";
-import Heading from "./SectionTitle";
+import SectionTitle from "./SectionTitle";
 import Offer from "./Offer";
 
 export default () => {

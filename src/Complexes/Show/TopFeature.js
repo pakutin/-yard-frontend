@@ -1,5 +1,5 @@
 import React from "react";
-import Heading from "./SectionTitle";
+import SectionTitle from "./SectionTitle";
 
 export default props =>
   <div className="complex-top-feature">

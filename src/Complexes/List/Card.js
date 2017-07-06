@@ -8,7 +8,7 @@ export default props =>
         src={process.env.PUBLIC_URL + "./img1.jpg"}
         srcSet={`${process.env.PUBLIC_URL + "./img1@2x.jpg"} 2x, 
             ${process.env.PUBLIC_URL + "./img1@3x.jpg"} 3x`}
-        alt="764 Metropolitan Avenue"
+        alt={props.name}
       />
       <div className="complex-data">
         <p className="complex-location">
