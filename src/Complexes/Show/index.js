@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid } from "react-flexboxgrid";
 
-import Name from "./Name";
+import Header from "./Header";
 import Gallery from "./Gallery";
 import TopFeatures from "./TopFeatures";
 import Features from "./Features";
@@ -16,9 +16,9 @@ import "./complex.css";
 export default () => {
   return (
     <main>
-      <Name address="Район Якиманка, улица Большая Полянка, дом 44 • 119180">
+      <Header address="Район Якиманка, улица Большая Полянка, дом 44 • 119180">
         Жилой комплекс «Полянка/44»
-      </Name>
+      </Header>
       <Gallery />
       <article className="complex">
         <Grid>
