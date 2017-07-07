@@ -1,4 +1,5 @@
 import React from "react";
+import { Grid, Row, Col } from "react-flexboxgrid";
 
 export default props =>
   <div className="complex-flat-card">

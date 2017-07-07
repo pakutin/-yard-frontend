@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from "react-flexbox-grid";
+import { Grid, Row, Col } from "react-flexboxgrid";
 
 export default props =>
   <section className="promo">

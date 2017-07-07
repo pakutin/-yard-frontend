@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col } from "react-flexbox-grid";
+import { Grid, Row, Col } from "react-flexboxgrid";
 import SectionTitle from "./SectionTitle";
 import Offer from "./Offer";
 

@@ -6,12 +6,7 @@ export default () => {
   return (
     <div>
       <section className="main-logo">
-        <img
-          src={heroLogo}
-          alt="Compass Development"
-          width="418.9px"
-          height="131px"
-        />
+        <img src={heroLogo} width="418.9px" height="131px" />
       </section>
       <Intro />
     </div>
