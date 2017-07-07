@@ -1,11 +1,20 @@
 import React from "react";
+import styled from "styled-components";
 import Banner from "./Banner";
 import Card from "./Card";
-import "./complexes.css";
+import background from "./background.png";
+
+const Complexes = styled.main`
+  padding-bottom: 3rem;
+  background-image: url(${background});
+  background-color: #eaebf0;
+  background-size: 20px 10px;
+  background-repeat: repeat;
+`;
 
 export default () => {
   return (
-    <main>
+    <Complexes>
       <Banner />
       <Card
         location="South Beach, San Francisco"
@@ -29,6 +38,6 @@ export default () => {
         32,000-square-foot building will stand as a profound architectural
         statement and embrace the industrial character of the neighborhood.
       </Card>
-    </main>
+    </Complexes>
   );
 };
