@@ -1,6 +1,5 @@
 import React from "react";
-import { Grid } from "react-flexboxgrid";
-
+import styled from "styled-components";
 import Header from "./Header";
 import Gallery from "./Gallery";
 import TopFeatures from "./TopFeatures";
@@ -13,6 +12,14 @@ import Sights from "./Sights";
 
 import "./complex.css";
 
+const Complex = styled.article`
+  margin-top: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
+  color: #3e4247;
+`;
+
 export default () => {
   return (
     <main>
@@ -20,21 +27,19 @@ export default () => {
         Жилой комплекс «Полянка/44»
       </Header>
       <Gallery />
-      <article className="complex">
-        <Grid>
-          <TopFeatures />
-          <Features />
-          <Description />
-          <Facilities />
-          <Offers />
-          <Guide
-            district="Якиманка"
-            tagline="Исторический центр Москвы в&nbsp;двух километрах от&nbsp;Кремля"
-            link="Гид по Якиманке"
-          />
-          <Sights />
-        </Grid>
-      </article>
+      <Complex>
+        <TopFeatures />
+        <Features />
+        <Description />
+        <Facilities />
+        <Offers />
+        <Guide
+          district="Якиманка"
+          tagline="Исторический центр Москвы в&nbsp;двух километрах от&nbsp;Кремля"
+          link="Гид по Якиманке"
+        />
+        <Sights />
+      </Complex>
     </main>
   );
 };
