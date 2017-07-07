@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Row, Col } from "react-flexboxgrid";
+import { Row, Col } from "react-flexbox-grid";
 
 export default props =>
   <section className="guide">
@@ -22,6 +22,7 @@ export default props =>
       <Col lg={6}>
         <div className="guide-cover">
           <img
+            alt=""
             src={process.env.PUBLIC_URL + "./polyankaPhoto.jpg"}
             srcSet={`${process.env.PUBLIC_URL +
               "./polyankaPhoto@2x.jpg"} 2x, ${process.env.PUBLIC_URL +

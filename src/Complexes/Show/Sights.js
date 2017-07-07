@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Row, Col } from "react-flexbox-grid";
+import { Row, Col } from "react-flexbox-grid";
 import Sight from "./Sight";
 
 export default () => {
@@ -9,6 +9,7 @@ export default () => {
         <Col lg={6}>
           <img
             className="sights-map"
+            alt=""
             src={process.env.PUBLIC_URL + "./map.png"}
             srcSet={`${process.env.PUBLIC_URL + "./map@2x.png"} 2x, ${process
               .env.PUBLIC_URL + "./map@3x.png"} 3x`}
