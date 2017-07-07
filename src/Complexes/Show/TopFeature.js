@@ -1,13 +1,26 @@
 import React from "react";
+import styled from "styled-components";
 import SectionTitle from "./SectionTitle";
 
+const TopFeature = styled.div`padding-right: 3rem;`;
+
+const Caption = styled.small`
+  padding-top: 1rem;
+  padding-bottom: 1.75rem;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.5;
+  font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
+  color: #a9afb6;
+`;
+
 export default props =>
-  <div className="complex-top-feature">
+  <TopFeature>
     <SectionTitle>
       {props.value}
       <br />
-      <small className="complex-top-feature-caption">
+      <Caption>
         {props.label}
-      </small>
+      </Caption>
     </SectionTitle>
-  </div>;
+  </TopFeature>;
