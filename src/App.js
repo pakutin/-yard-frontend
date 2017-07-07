@@ -4,7 +4,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Complexes from "./Complexes/List";
 import Complex from "./Complexes/Show";
-import "./style.css";
+import "./App.css";
 
 class App extends Component {
   render() {
