@@ -55,7 +55,7 @@ export default props =>
               {props.tagline}
             </Tagline>
             <GuideLink to="/">
-              {props.link + "→"}
+              {props.link} →
             </GuideLink>
           </Text>
         </Col>
