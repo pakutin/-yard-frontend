@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Card = styled.div`
-  margin-top: 1.625rem;
+  margin-top: 1.5rem;
   padding-top: 1.625rem;
   padding-left: 2rem;
   background-color: #fff;

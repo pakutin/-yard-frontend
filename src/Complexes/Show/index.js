@@ -10,8 +10,6 @@ import Offers from "./Offers";
 import Guide from "./Guide";
 import Sights from "./Sights";
 
-import "./complex.css";
-
 const Complex = styled.article`
   margin-top: 0;
   font-size: 1rem;
@@ -35,7 +33,7 @@ export default () => {
         <Offers />
         <Guide
           district="Якиманка"
-          tagline="Исторический центр Москвы в&nbsp;двух километрах от&nbsp;Кремля"
+          tagline="Исторический центр Москвы в&nbsp;двух километрах&nbsp;от&nbsp;Кремля"
           link="Гид по Якиманке"
         />
         <Sights />
