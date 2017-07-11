@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 const Card = styled(Link)`
   text-decoration: none;
@@ -53,12 +53,12 @@ const Description = styled.p`
 `;
 
 export default props =>
-  <Card to={"/complex" + props.id}>
+  (<Card to={`/complex${props.id}`}>
     <Complex>
       <img
-        src={process.env.PUBLIC_URL + "./img1.jpg"}
-        srcSet={`${process.env.PUBLIC_URL + "./img1@2x.jpg"} 2x, 
-            ${process.env.PUBLIC_URL + "./img1@3x.jpg"} 3x`}
+        src={`${process.env.PUBLIC_URL}./img1.jpg`}
+        srcSet={`${`${process.env.PUBLIC_URL}./img1@2x.jpg`} 2x, 
+            ${`${process.env.PUBLIC_URL}./img1@3x.jpg`} 3x`}
         alt={props.name}
       />
       <Data>
@@ -73,4 +73,4 @@ export default props =>
         </Description>
       </Data>
     </Complex>
-  </Card>;
+  </Card>);

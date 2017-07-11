@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import SectionTitle from "./SectionTitle";
+import React from 'react';
+import styled from 'styled-components';
+import SectionTitle from './SectionTitle';
 
 const TopFeature = styled.div`padding-right: 3rem;`;
 
@@ -15,7 +15,7 @@ const Caption = styled.small`
 `;
 
 export default props =>
-  <TopFeature>
+  (<TopFeature>
     <SectionTitle>
       {props.value}
       <br />
@@ -23,4 +23,4 @@ export default props =>
         {props.label}
       </Caption>
     </SectionTitle>
-  </TopFeature>;
+  </TopFeature>);

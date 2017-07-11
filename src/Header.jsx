@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import navLogo from "./nav-logo.svg";
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import navLogo from './nav-logo.svg';
 
 const Header = styled.header`
   padding-left: 7.5em;
@@ -39,17 +39,15 @@ const NavItem = styled(Link)`
   text-decoration: none;
 `;
 
-export default () => {
-  return (
-    <Header>
-      <Logo>
-        <img src={navLogo} alt="Compass" width="179px" height="24px" />
-      </Logo>
-      <Nav>
-        <NavItem to="/">Купить</NavItem>
-        <NavItem to="/">Снять</NavItem>
-        <NavItem to="/">Наши агенты</NavItem>
-      </Nav>
-    </Header>
+export default () => (
+  <Header>
+    <Logo>
+      <img src={navLogo} alt="Compass" width="179px" height="24px" />
+    </Logo>
+    <Nav>
+      <NavItem to="/">Купить</NavItem>
+      <NavItem to="/">Снять</NavItem>
+      <NavItem to="/">Наши агенты</NavItem>
+    </Nav>
+  </Header>
   );
-};

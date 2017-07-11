@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import { Grid, Row, Col } from "react-flexbox-grid";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 const Guide = styled.section`
   padding-bottom: 13.5rem;
@@ -43,7 +43,7 @@ const Cover = styled.img`
 `;
 
 export default props =>
-  <Guide>
+  (<Guide>
     <Grid>
       <Row>
         <Col lg={6}>
@@ -62,12 +62,11 @@ export default props =>
         <Col lg={6}>
           <Cover
             alt=""
-            src={process.env.PUBLIC_URL + "./polyankaPhoto.jpg"}
-            srcSet={`${process.env.PUBLIC_URL +
-              "./polyankaPhoto@2x.jpg"} 2x, ${process.env.PUBLIC_URL +
-              "./polyankaPhoto@3x.jpg"} 3x`}
+            src={`${process.env.PUBLIC_URL}./polyankaPhoto.jpg`}
+            srcSet={`${`${process.env.PUBLIC_URL}./polyankaPhoto@2x.jpg`} 2x, ${`${process.env
+              .PUBLIC_URL}./polyankaPhoto@3x.jpg`} 3x`}
           />
         </Col>
       </Row>
     </Grid>
-  </Guide>;
+  </Guide>);

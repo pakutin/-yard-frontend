@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Facility = styled.p`
   margin-top: 0.5rem;
@@ -8,6 +8,6 @@ const Facility = styled.p`
 `;
 
 export default props =>
-  <Facility>
+  (<Facility>
     {props.children}
-  </Facility>;
+  </Facility>);

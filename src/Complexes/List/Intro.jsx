@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Intro = styled.section`
   margin: 4rem 19.875rem;
@@ -35,16 +35,14 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-export default () => {
-  return (
-    <Intro>
-      <Title>Discover Our New Developments</Title>
-      <Text>
-        Compass brings a modern approach to new development marketing and sales.
-        From boutique rental conversions to luxurious ground-up condominiums,
-        browse our portfolio of current offerings.
+export default () => (
+  <Intro>
+    <Title>Discover Our New Developments</Title>
+    <Text>
+        Compass brings a modern approach to new development marketing and sales. From boutique
+        rental conversions to luxurious ground-up condominiums, browse our portfolio of current
+        offerings.
       </Text>
-      <Button>Contact The Team</Button>
-    </Intro>
+    <Button>Contact The Team</Button>
+  </Intro>
   );
-};

@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { Grid } from "react-flexbox-grid";
+import React from 'react';
+import styled from 'styled-components';
+import { Grid } from 'react-flexbox-grid';
 
 const Header = styled.div`
   padding-top: 1.5rem;
@@ -45,7 +45,7 @@ const Button = styled.button`
 `;
 
 export default props =>
-  <Grid>
+  (<Grid>
     <Header>
       <Complex>
         <Name>
@@ -57,4 +57,4 @@ export default props =>
       </Complex>
       <Button>В&nbsp;избранное</Button>
     </Header>
-  </Grid>;
+  </Grid>);

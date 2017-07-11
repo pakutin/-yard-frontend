@@ -1,6 +1,5 @@
-import React from "react";
-import { Grid } from "react-flexbox-grid";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Sight = styled.div`
   padding-left: 1.5rem;
@@ -30,11 +29,11 @@ const Distance = styled.p`
 `;
 
 export default props =>
-  <Sight>
+  (<Sight>
     <Name>
       {props.name}
     </Name>
     <Distance>
       {props.distance}
     </Distance>
-  </Sight>;
+  </Sight>);

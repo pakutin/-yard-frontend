@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Card = styled.div`
   margin-top: 1.5rem;
@@ -49,7 +49,7 @@ const Button = styled.button`
 `;
 
 export default props =>
-  <Card>
+  (<Card>
     <Rooms>
       {props.room}-комнатные квартиры
     </Rooms>
@@ -62,4 +62,4 @@ export default props =>
       от {props.price.min} до {props.price.max} млн руб
     </Value>
     <Button>Посмотреть&nbsp;предложения</Button>
-  </Card>;
+  </Card>);

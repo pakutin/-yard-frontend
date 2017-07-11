@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const SectionTitle = styled.h2`
   margin-top: 0;
@@ -12,6 +12,6 @@ const SectionTitle = styled.h2`
 `;
 
 export default props =>
-  <SectionTitle>
+  (<SectionTitle>
     {props.children}
-  </SectionTitle>;
+  </SectionTitle>);
