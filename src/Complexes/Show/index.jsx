@@ -35,49 +35,50 @@ class Complex extends Component {
       });
   }
   render() {
-    if (this.state.data === undefined) {
+    const complex = this.state.data;
+    if (complex === undefined) {
       return <Header />;
     }
     return (
       <main>
         <Header
-          name={this.state.data.name}
-          address={`${this.state.data.location.subLocalityName}, ${this.state.data.location
-            .street}, ${this.state.data.location.house}`}
+          name={complex.name}
+          address={`${complex.location.subLocalityName}, ${complex.location.street}, ${complex
+            .location.house}`}
         />
-        <Gallery images={this.state.data.images} name={this.state.data.name} />
+        <Gallery images={complex.images} name={complex.name} />
         <Characteristics>
           <TopFeatures
-            architect={this.state.data.details.architect}
-            offers={this.state.data.statistics.resalePropertiesCount}
+            architect={complex.details.architect}
+            offers={complex.statistics.resalePropertiesCount}
           />
           <Features
-            flats={this.state.data.statistics.propertiesCount}
-            security={securityKinds[this.state.data.details.security]}
-            construction={constructionKinds[this.state.data.details.constructionKind]}
+            flats={complex.statistics.propertiesCount}
+            security={securityKinds[complex.details.security]}
+            construction={constructionKinds[complex.details.constructionKind]}
             height={{
-              min: this.state.data.details.ceilHeight.from.toFixed(2),
-              max: this.state.data.details.ceilHeight.to.toFixed(2),
+              min: complex.details.ceilHeight.from.toFixed(2),
+              max: complex.details.ceilHeight.to.toFixed(2),
             }}
             price={{
-              min: (this.state.data.statistics.price.from.rub / 1000000).toFixed(2),
-              max: (this.state.data.statistics.price.to.rub / 1000000).toFixed(2),
+              min: (complex.statistics.price.from.rub / 1000000).toFixed(2),
+              max: (complex.statistics.price.to.rub / 1000000).toFixed(2),
             }}
             area={{
-              min: this.state.data.statistics.totalArea.from.toFixed(2),
-              max: this.state.data.statistics.totalArea.to.toFixed(2),
+              min: complex.statistics.totalArea.from.toFixed(0),
+              max: complex.statistics.totalArea.to.toFixed(0),
             }}
-            maintenance={this.state.data.details.maintenanceCosts}
-            startQuarter={quarters[this.state.data.details.startQuarter]}
-            startYear={this.state.data.details.startYear}
-            commissioningQuarter={quarters[this.state.data.details.commissioningQuarter]}
-            commissioningYear={this.state.data.details.commissioningYear}
-            parking={this.state.data.details.parkings}
-            underground={this.state.data.details.undergroundGarages}
+            maintenance={complex.details.maintenanceCosts}
+            startQuarter={quarters[complex.details.startQuarter]}
+            startYear={complex.details.startYear}
+            commissioningQuarter={quarters[complex.details.commissioningQuarter]}
+            commissioningYear={complex.details.commissioningYear}
+            parking={complex.details.parkings}
+            underground={complex.details.undergroundGarages}
           />
-          <Description text={this.state.data.fullDescription} />
+          <Description text={complex.fullDescription} />
           <Facilities />
-          <Offers name={this.state.data.name} />
+          <Offers name={complex.name} />
           <Guide
             district="Якиманка"
             tagline="Исторический центр Москвы в&nbsp;двух километрах&nbsp;от&nbsp;Кремля"
