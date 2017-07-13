@@ -41,7 +41,7 @@ class Complexes extends Component {
         {this.state.data.map(complex =>
           (<Card
             key={complex.id}
-            slug={complex.slug}
+            id={complex.id}
             name={complex.name}
             location={`${complex.location.subLocalityName}, ${complex.location.street}, ${complex
               .location.house}`}

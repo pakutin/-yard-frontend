@@ -58,7 +58,7 @@ const Description = styled.p`
 `;
 
 export default props =>
-  (<Card to={`/${props.slug}`}>
+  (<Card to={`/${props.id}`}>
     <Complex>
       <Cover
         src={`https://yard-images.s3.amazonaws.com/${props.image}-512`}

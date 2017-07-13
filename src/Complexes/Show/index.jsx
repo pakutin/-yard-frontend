@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import Header from './Header';
 import Gallery from './Gallery';
@@ -10,7 +10,7 @@ import Offers from './Offers';
 import Guide from './Guide';
 import Sights from './Sights';
 
-const Complex = styled.article`
+const Characteristics = styled.article`
   margin-top: 0;
   font-size: 1rem;
   line-height: 1.5;
@@ -18,24 +18,73 @@ const Complex = styled.article`
   color: #3e4247;
 `;
 
-export default () => (
-  <main>
-    <Header address="Район Якиманка, улица Большая Полянка, дом 44 • 119180">
-        Жилой комплекс «Полянка/44»
-      </Header>
-    <Gallery />
-    <Complex>
-      <TopFeatures />
-      <Features />
-      <Description />
-      <Facilities />
-      <Offers />
-      <Guide
-        district="Якиманка"
-        tagline="Исторический центр Москвы в&nbsp;двух километрах&nbsp;от&nbsp;Кремля"
-        link="Гид по Якиманке"
-      />
-      <Sights />
-    </Complex>
-  </main>
-  );
+class Complex extends Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
+  componentDidMount() {
+    const complexLink = this.props.match.params.id;
+    fetch(`https://yard.moscow/api/v1/complexes/${complexLink}`)
+      .then(response => response.json())
+      .then((json) => {
+        this.setState({
+          data: json,
+        });
+      });
+  }
+  render() {
+    if (this.state.data === undefined) {
+      return <Header />;
+    }
+    return (
+      <main>
+        <Header
+          name={this.state.data.name}
+          address={`${this.state.data.location.subLocalityName}, ${this.state.data.location
+            .street}, ${this.state.data.location.house}`}
+        />
+        <Gallery />
+        <Characteristics>
+          <TopFeatures
+            architect={this.state.data.details.architect}
+            offers={this.state.data.statistics.resalePropertiesCount}
+          />
+          <Features
+            flats={this.state.data.statistics.propertiesCount}
+            security={this.state.data.details.security}
+            height={{
+              min: this.state.data.details.ceilHeight.from.toFixed(1),
+              max: this.state.data.details.ceilHeight.to.toFixed(1),
+            }}
+            price={{
+              min: this.state.data.statistics.price.from.rub / 1000000,
+              max: this.state.data.statistics.price.to.rub / 1000000,
+            }}
+            area={{
+              min: this.state.data.statistics.totalArea.from,
+              max: this.state.data.statistics.totalArea.to,
+            }}
+            maintenance={this.state.data.details.maintenanceCosts}
+            startQuarter={this.state.data.details.startQuarter}
+            startYear={this.state.data.details.startYear}
+            commissioningQuarter={this.state.data.details.commissioningQuarter}
+            commissioningYear={this.state.data.details.commissioningYear}
+            parking={this.state.data.details.undergroundGarages}
+          />
+          <Description />
+          <Facilities />
+          <Offers />
+          <Guide
+            district="Якиманка"
+            tagline="Исторический центр Москвы в&nbsp;двух километрах&nbsp;от&nbsp;Кремля"
+            link="Гид по Якиманке"
+          />
+          <Sights />
+        </Characteristics>
+      </main>
+    );
+  }
+}
+
+export default Complex;

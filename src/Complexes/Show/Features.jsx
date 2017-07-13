@@ -31,20 +31,26 @@ const Value = styled.dd`
   line-height: 1.5625;
 `;
 
-export default () => (
-  <Grid>
+export default props =>
+  (<Grid>
     <SectionTitle>Характеристики</SectionTitle>
     <Row>
       <Col lg={4}>
         <List>
           <Label>Количество квартир</Label>
-          <Value>1 503</Value>
+          <Value>
+            {props.flats}
+          </Value>
           <Label>Статус</Label>
           <Value>Квартиры</Value>
           <Label>Цены</Label>
-          <Value>от 5.3 до 143.5 млн</Value>
+          <Value>
+            от {props.price.min} до {props.price.max} млн
+          </Value>
           <Label>Безопасность</Label>
-          <Value>Охраняемая территория</Value>
+          <Value>
+            {props.security}
+          </Value>
         </List>
       </Col>
       <Col lg={4}>
@@ -52,25 +58,36 @@ export default () => (
           <Label>Конструкция корпусов</Label>
           <Value>монолит</Value>
           <Label>Площадь</Label>
-          <Value>от 50 до 154 м²</Value>
+          <Value>
+            от {props.area.min} до {props.area.max} м²
+          </Value>
           <Label>Высота потолков</Label>
-          <Value>3.45 − 5 м</Value>
+          <Value>
+            {props.height.min}–{props.height.max} м
+          </Value>
           <Label>Обслуживание</Label>
-          <Value>1 200 руб / м² / месяц</Value>
+          <Value>
+            {props.maintenance} руб / м² / месяц
+          </Value>
         </List>
       </Col>
       <Col lg={4}>
         <List>
           <Label>Начало строительства</Label>
-          <Value>I квартал 2012 года</Value>
+          <Value>
+            {props.startQuarter} квартал {props.startYear} года
+          </Value>
           <Label>Конец строительства</Label>
-          <Value>IV квартал 2018 года</Value>
+          <Value>
+            {props.commissioningQuarter} квартал {props.commissioningYear} года
+          </Value>
           <Label>Наземная парковка</Label>
-          <Value>1 500 м/м</Value>
+          <Value>
+            {props.parking} м/м
+          </Value>
           <Label>Подземная парковка</Label>
           <Value>Нет</Value>
         </List>
       </Col>
     </Row>
-  </Grid>
-  );
+  </Grid>);

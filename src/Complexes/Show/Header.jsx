@@ -49,7 +49,7 @@ export default props =>
     <Header>
       <Complex>
         <Name>
-          {props.children}
+          {props.name}
         </Name>
         <Address>
           {props.address}
