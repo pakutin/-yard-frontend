@@ -45,7 +45,7 @@ class Complex extends Component {
           address={`${this.state.data.location.subLocalityName}, ${this.state.data.location
             .street}, ${this.state.data.location.house}`}
         />
-        <Gallery />
+        <Gallery images={this.state.data.images} name={this.state.data.name} />
         <Characteristics>
           <TopFeatures
             architect={this.state.data.details.architect}
