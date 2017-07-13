@@ -17,6 +17,11 @@ const Complex = styled.article`
   }
 `;
 
+const Cover = styled.img`
+  max-width: 491px;
+  max-height: 350px;
+`;
+
 const Data = styled.div`
   font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
   border-bottom: 2px solid #646971;
@@ -53,12 +58,14 @@ const Description = styled.p`
 `;
 
 export default props =>
-  (<Card to={`/complex${props.id}`}>
+  (<Card to={`/${props.slug}`}>
     <Complex>
-      <img
-        src={`${process.env.PUBLIC_URL}./img1.jpg`}
-        srcSet={`${`${process.env.PUBLIC_URL}./img1@2x.jpg`} 2x, 
-            ${`${process.env.PUBLIC_URL}./img1@3x.jpg`} 3x`}
+      <Cover
+        src={`https://yard-images.s3.amazonaws.com/${props.image}-512`}
+        srcSet={
+          `https://yard-images.s3.amazonaws.com/${props.image}-1024 2x,` +
+          `https://yard-images.s3.amazonaws.com/${props.image}-2048 3x,`
+        }
         alt={props.name}
       />
       <Data>
