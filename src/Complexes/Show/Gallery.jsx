@@ -42,6 +42,8 @@ export default props =>
       )}
     </Gallery>
     <Overlay>
-      <Button>41 фотография</Button>
+      <Button>
+        {props.images.length} фото
+      </Button>
     </Overlay>
   </div>);
