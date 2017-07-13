@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { securityKinds, constructionKinds, quarters } from './Dictionary';
 import Header from './Header';
 import Gallery from './Gallery';
 import TopFeatures from './TopFeatures';
@@ -24,7 +25,7 @@ class Complex extends Component {
     this.state = {};
   }
   componentDidMount() {
-    const complexLink = this.props.match.params.id;
+    const complexLink = this.props.match.params.slug;
     fetch(`https://yard.moscow/api/v1/complexes/${complexLink}`)
       .then(response => response.json())
       .then((json) => {
@@ -52,25 +53,27 @@ class Complex extends Component {
           />
           <Features
             flats={this.state.data.statistics.propertiesCount}
-            security={this.state.data.details.security}
+            security={securityKinds[this.state.data.details.security]}
+            construction={constructionKinds[this.state.data.details.constructionKind]}
             height={{
-              min: this.state.data.details.ceilHeight.from.toFixed(1),
-              max: this.state.data.details.ceilHeight.to.toFixed(1),
+              min: this.state.data.details.ceilHeight.from.toFixed(2),
+              max: this.state.data.details.ceilHeight.to.toFixed(2),
             }}
             price={{
-              min: this.state.data.statistics.price.from.rub / 1000000,
-              max: this.state.data.statistics.price.to.rub / 1000000,
+              min: (this.state.data.statistics.price.from.rub / 1000000).toFixed(2),
+              max: (this.state.data.statistics.price.to.rub / 1000000).toFixed(2),
             }}
             area={{
-              min: this.state.data.statistics.totalArea.from,
-              max: this.state.data.statistics.totalArea.to,
+              min: this.state.data.statistics.totalArea.from.toFixed(2),
+              max: this.state.data.statistics.totalArea.to.toFixed(2),
             }}
             maintenance={this.state.data.details.maintenanceCosts}
-            startQuarter={this.state.data.details.startQuarter}
+            startQuarter={quarters[this.state.data.details.startQuarter]}
             startYear={this.state.data.details.startYear}
-            commissioningQuarter={this.state.data.details.commissioningQuarter}
+            commissioningQuarter={quarters[this.state.data.details.commissioningQuarter]}
             commissioningYear={this.state.data.details.commissioningYear}
-            parking={this.state.data.details.undergroundGarages}
+            parking={this.state.data.details.parkings}
+            underground={this.state.data.details.undergroundGarages}
           />
           <Description />
           <Facilities />

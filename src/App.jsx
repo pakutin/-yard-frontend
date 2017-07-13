@@ -12,7 +12,7 @@ function App() {
       <div className="App">
         <Header />
         <Route exact path="/" component={Complexes} />
-        <Route exact path="/:id" component={Complex} />
+        <Route exact path="/:slug" component={Complex} />
         <Footer />
       </div>
     </Router>

@@ -45,7 +45,7 @@ export default props =>
           <Value>Квартиры</Value>
           <Label>Цены</Label>
           <Value>
-            от {props.price.min} до {props.price.max} млн
+            от {props.price.min} до {props.price.max} млн ₽
           </Value>
           <Label>Безопасность</Label>
           <Value>
@@ -56,7 +56,9 @@ export default props =>
       <Col lg={4}>
         <List>
           <Label>Конструкция корпусов</Label>
-          <Value>монолит</Value>
+          <Value>
+            {props.construction}
+          </Value>
           <Label>Площадь</Label>
           <Value>
             от {props.area.min} до {props.area.max} м²
@@ -67,7 +69,7 @@ export default props =>
           </Value>
           <Label>Обслуживание</Label>
           <Value>
-            {props.maintenance} руб / м² / месяц
+            {props.maintenance} ₽ / м² / месяц
           </Value>
         </List>
       </Col>
@@ -86,7 +88,9 @@ export default props =>
             {props.parking} м/м
           </Value>
           <Label>Подземная парковка</Label>
-          <Value>Нет</Value>
+          <Value>
+            {props.underground} м/м
+          </Value>
         </List>
       </Col>
     </Row>
