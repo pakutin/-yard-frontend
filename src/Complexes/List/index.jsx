@@ -43,14 +43,11 @@ class Complexes extends Component {
             key={complex.id}
             slug={complex.slug}
             name={complex.name}
+            text={complex.shortDescription}
             location={`${complex.location.subLocalityName}, ${complex.location.street}, ${complex
               .location.house}`}
             image={complex.image.id}
-          >
-            The Lewis Steel Building is a masterful industrial conversion located in the heart of
-            Williamsburg. Located at 76 North 4th Street, the former 1930&apos;s steel factory has
-            been transformed into 83 individually unique and luxury loft apartments.
-          </Card>),
+          />),
         )}
       </Cards>
     );

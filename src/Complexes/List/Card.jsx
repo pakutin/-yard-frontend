@@ -23,6 +23,7 @@ const Cover = styled.img`
 `;
 
 const Data = styled.div`
+  width: 100%;
   font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
   border-bottom: 2px solid #646971;
 `;
@@ -76,7 +77,7 @@ export default props =>
           {props.name}
         </Name>
         <Description>
-          {props.children}
+          {props.text}
         </Description>
       </Data>
     </Complex>

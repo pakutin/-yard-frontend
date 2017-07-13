@@ -75,7 +75,7 @@ class Complex extends Component {
             parking={this.state.data.details.parkings}
             underground={this.state.data.details.undergroundGarages}
           />
-          <Description />
+          <Description text={this.state.data.fullDescription} />
           <Facilities />
           <Offers name={this.state.data.name} />
           <Guide
