@@ -77,7 +77,7 @@ class Complex extends Component {
           />
           <Description />
           <Facilities />
-          <Offers />
+          <Offers name={this.state.data.name} />
           <Guide
             district="Якиманка"
             tagline="Исторический центр Москвы в&nbsp;двух километрах&nbsp;от&nbsp;Кремля"
