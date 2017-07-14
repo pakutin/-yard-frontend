@@ -86,11 +86,11 @@ export default props =>
           </Value>
           <Label>Наземная парковка</Label>
           <Value>
-            {props.parking} м/м
+            {props.parking}
           </Value>
           <Label>Подземная парковка</Label>
           <Value>
-            {props.underground} м/м
+            {props.underground}
           </Value>
         </List>
       </Col>

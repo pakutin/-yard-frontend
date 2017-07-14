@@ -3,7 +3,9 @@ import styled from 'styled-components';
 
 const Gallery = styled.section`
   padding-top: 1px;
+  overflow: scroll;
   display: flex;
+  position: relative;
 `;
 
 const Picture = styled.img`margin-right: 0rem;`;
@@ -11,6 +13,7 @@ const Picture = styled.img`margin-right: 0rem;`;
 const Overlay = styled.div`
   margin-left: 7.5rem;
   margin-top: -2.675rem;
+  position: absolute;
 `;
 
 const Button = styled.button`
