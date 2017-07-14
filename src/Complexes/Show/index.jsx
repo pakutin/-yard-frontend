@@ -50,10 +50,10 @@ class Complex extends Component {
         <Characteristics>
           <TopFeatures
             architect={complex.details.architect}
-            offers={complex.statistics.resalePropertiesCount}
+            offers={complex.statistics.PropertiesCount}
           />
           <Features
-            flats={complex.statistics.propertiesCount}
+            flats={complex.units}
             security={securityKinds[complex.details.security]}
             construction={constructionKinds[complex.details.constructionKind]}
             height={{
@@ -77,7 +77,7 @@ class Complex extends Component {
             underground={complex.details.undergroundGarages}
           />
           <Description text={complex.fullDescription} />
-          <Facilities />
+          <Facilities amenities={complex.amenities} />
           <Offers name={complex.name} />
           <Guide
             district="Якиманка"

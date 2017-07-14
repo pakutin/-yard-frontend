@@ -4,35 +4,18 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import SectionTitle from './SectionTitle';
 import Facility from './Facility';
 
-const Facilities = styled.div`margin-top: 0.4rem;`;
+const Facilities = styled.div`margin-top: 0.875rem;`;
 
-export default () => (
-  <Grid>
+export default props =>
+  (<Grid>
     <SectionTitle>Инфраструктура</SectionTitle>
     <Facilities>
       <Row>
-        <Col lg={2}>
-          <Facility>Бассейн</Facility>
-          <Facility>Частная школа</Facility>
-        </Col>
-        <Col lg={2}>
-          <Facility>Детский сад</Facility>
-          <Facility>Частная школа</Facility>
-        </Col>
-        <Col lg={2}>
-          <Facility>Частная школа</Facility>
-          <Facility>Частная школа</Facility>
-        </Col>
-        <Col lg={2}>
-          <Facility>Бассейн</Facility>
-        </Col>
-        <Col lg={2}>
-          <Facility>Детский сад</Facility>
-        </Col>
-        <Col lg={2}>
-          <Facility>Частная школа</Facility>
-        </Col>
+        {props.amenities.map(amenity =>
+          (<Col lg={2}>
+            <Facility name={amenity.id} />
+          </Col>),
+        )}
       </Row>
     </Facilities>
-  </Grid>
-  );
+  </Grid>);
