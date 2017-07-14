@@ -19,6 +19,8 @@ const Characteristics = styled.article`
   color: #3e4247;
 `;
 
+const parkingStatus = { 0: 'Нет' };
+
 class Complex extends Component {
   constructor() {
     super();
@@ -73,7 +75,7 @@ class Complex extends Component {
             startYear={complex.details.startYear}
             commissioningQuarter={quarters[complex.details.commissioningQuarter]}
             commissioningYear={complex.details.commissioningYear}
-            parking={complex.details.parkings}
+            parking={parkingStatus[complex.details.parkings]}
             underground={complex.details.undergroundGarages}
           />
           {complex.fullDescription && <Description text={complex.fullDescription} />}
