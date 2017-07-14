@@ -76,7 +76,7 @@ class Complex extends Component {
             parking={complex.details.parkings}
             underground={complex.details.undergroundGarages}
           />
-          <Description text={complex.fullDescription} />
+          {complex.fullDescription && <Description text={complex.fullDescription} />}
           <Facilities amenities={complex.amenities} />
           <Offers name={complex.name} />
           <Guide

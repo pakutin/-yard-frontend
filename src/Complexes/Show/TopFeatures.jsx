@@ -15,8 +15,8 @@ const TopFeatures = styled.section`
 export default props =>
   (<Grid>
     <TopFeatures>
-      <TopFeature value={props.offers} label="предложений" />
-      <TopFeature value={props.architect} label="архитектор" />
+      {props.offers && <TopFeature value={props.offers} label="предложений" />}
+      {props.architect && <TopFeature value={props.architect} label="архитектор" />}
       <TopFeature value="Группа «ПСН»" label="застройщик" />
     </TopFeatures>
   </Grid>);

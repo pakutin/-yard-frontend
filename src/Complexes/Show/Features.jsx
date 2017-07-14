@@ -37,10 +37,11 @@ export default props =>
     <Row>
       <Col lg={4}>
         <List>
-          <Label>Количество квартир</Label>
-          <Value>
-            {props.flats}
-          </Value>
+          {props.flats && <Label>Количество квартир</Label>}
+          {props.flats &&
+            <Value>
+              {props.flats}
+            </Value>}
           <Label>Статус</Label>
           <Value>Квартиры</Value>
           <Label>Цены</Label>
