@@ -20,17 +20,17 @@ const MapView = styled.img`
   box-shadow: 0 0 1.25rem 0.25rem rgba(0, 0, 0, 0.3);
 `;
 
-export default () => (
-  <Sights>
+export default () =>
+  (<Sights>
     <Grid>
       <Row>
         <Col lg={6}>
           <MapView
             alt=""
             className="sights-map"
-            src={`${process.env.PUBLIC_URL}./map.png`}
-            srcSet={`${`${process.env.PUBLIC_URL}./map@2x.png`} 2x, ${`${process.env.PUBLIC_URL
-                }./map@3x.png`} 3x`}
+            src={`${process.env.PUBLIC_URL}/map.png`}
+            srcSet={`${`${process.env.PUBLIC_URL}/map@2x.png`} 2x, ${`${process.env
+              .PUBLIC_URL}/map@3x.png`} 3x`}
           />
         </Col>
         <Col lg={6}>
@@ -42,5 +42,4 @@ export default () => (
         </Col>
       </Row>
     </Grid>
-  </Sights>
-  );
+  </Sights>);
