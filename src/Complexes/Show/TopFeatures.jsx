@@ -17,6 +17,6 @@ export default props =>
     <TopFeatures>
       {props.offers && <TopFeature value={props.offers} label="предложений" />}
       {props.architect && <TopFeature value={props.architect} label="архитектор" />}
-      <TopFeature value="Группа «ПСН»" label="застройщик" />
+      {props.developer && <TopFeature value={props.developer} label="застройщик" />}
     </TopFeatures>
   </Grid>);

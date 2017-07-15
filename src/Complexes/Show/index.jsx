@@ -51,8 +51,9 @@ class Complex extends Component {
         <Gallery images={complex.images} name={complex.name} />
         <Characteristics>
           <TopFeatures
+            offers={complex.statistics.propertiesCount}
             architect={complex.details.architect}
-            offers={complex.statistics.PropertiesCount}
+            developer={complex.details.develop}
           />
           <Features
             flats={complex.units}
