@@ -8,7 +8,11 @@ const Gallery = styled.section`
   position: relative;
 `;
 
-const Picture = styled.img`margin-right: 0rem;`;
+const Picture = styled.img`
+  margin-right: 0rem;
+  height: 400px;
+  width: auto;
+`;
 
 const Overlay = styled.div`
   margin-left: 7.5rem;

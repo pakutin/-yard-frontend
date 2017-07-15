@@ -5,7 +5,7 @@ import TopFeature from './TopFeature';
 
 const TopFeatures = styled.section`
   display: flex;
-  margin-top: 2.75rem;
+  margin-top: 1.75rem;
   padding-bottom: 1.625rem;
   margin-bottom: 2rem;
   font-family: "Philosopher", "Iowan", serif;

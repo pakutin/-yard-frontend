@@ -43,8 +43,10 @@ class Complex extends Component {
       <main>
         <Header
           name={complex.name}
-          address={`${complex.location.subLocalityName}, ${complex.location.street}, ${complex
-            .location.house}`}
+          district={complex.location.subLocalityName}
+          street={complex.location.street}
+          house={complex.location.house}
+          postalCode={complex.location.postalCode}
         />
         <Gallery images={complex.images} name={complex.name} />
         <Characteristics>
