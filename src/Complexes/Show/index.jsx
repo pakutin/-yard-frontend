@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import get from '../../Api';
 import Header from './Header';
 import Gallery from './Gallery';
 import TopFeatures from './TopFeatures';
@@ -25,13 +26,7 @@ class Complex extends Component {
   }
   componentDidMount() {
     const complexSlug = this.props.match.params.slug;
-    fetch(`https://yard.moscow/api/v1/complexes/${complexSlug}`)
-      .then(response => response.json())
-      .then((json) => {
-        this.setState({
-          complex: json,
-        });
-      });
+    get(`/complexes/${complexSlug}`).then(json => this.setState({ complex: json }));
   }
   render() {
     const complex = this.state.complex;

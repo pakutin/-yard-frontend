@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import 'whatwg-fetch';
 import styled from 'styled-components';
+import get from '../../Api';
 import Banner from './Banner';
 import Card from './Card';
 import background from './background.png';
@@ -19,13 +20,7 @@ class Complexes extends Component {
     this.state = {};
   }
   componentDidMount() {
-    fetch('https://yard.moscow/api/v1/complexes?filter%5Bstate%5D=public')
-      .then(response => response.json())
-      .then((json) => {
-        this.setState({
-          complexes: json.items,
-        });
-      });
+    get('/complexes?filter[state]=public').then(json => this.setState({ complexes: json.items }));
   }
   render() {
     if (this.state.complexes === undefined) {
