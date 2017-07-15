@@ -37,7 +37,7 @@ class Complex extends Component {
   render() {
     const complex = this.state.data;
     if (complex === undefined) {
-      return <Header />;
+      return null;
     }
     return (
       <main>
