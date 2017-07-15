@@ -17,19 +17,14 @@ const Cards = styled.main`
 class Complexes extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      complexes: [],
+    };
   }
   componentDidMount() {
     get('/complexes?filter[state]=public').then(json => this.setState({ complexes: json.items }));
   }
   render() {
-    if (this.state.complexes === undefined) {
-      return (
-        <Cards>
-          <Banner />
-        </Cards>
-      );
-    }
     return (
       <Cards>
         <Banner />
