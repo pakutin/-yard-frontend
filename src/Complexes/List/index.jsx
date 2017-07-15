@@ -23,12 +23,12 @@ class Complexes extends Component {
       .then(response => response.json())
       .then((json) => {
         this.setState({
-          data: json.items,
+          complexes: json.items,
         });
       });
   }
   render() {
-    if (this.state.data === undefined) {
+    if (this.state.complexes === undefined) {
       return (
         <Cards>
           <Banner />
@@ -38,7 +38,7 @@ class Complexes extends Component {
     return (
       <Cards>
         <Banner />
-        {this.state.data.map(complex => <Card key={complex.id} complex={complex} />)}
+        {this.state.complexes.map(complex => <Card key={complex.id} complex={complex} />)}
       </Cards>
     );
   }

@@ -17,16 +17,17 @@ const Text = styled.p`
 
 export default props =>
   (<Grid>
-    <Desciption>
-      <Row>
-        <Col lg={2}>
-          <SectionTitle>Описание</SectionTitle>
-        </Col>
-        <Col lg={10}>
-          <Text>
-            {props.text}
-          </Text>
-        </Col>
-      </Row>
-    </Desciption>
+    {props.text &&
+      <Desciption>
+        <Row>
+          <Col lg={2}>
+            <SectionTitle>Описание</SectionTitle>
+          </Col>
+          <Col lg={10}>
+            <Text>
+              {props.text}
+            </Text>
+          </Col>
+        </Row>
+      </Desciption>}
   </Grid>);

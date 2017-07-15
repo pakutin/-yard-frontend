@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import ruplu from 'ruplu';
+
+const photos = ruplu(['фотография', 'фотографии', 'фотографий']);
 
 const Gallery = styled.section`
   padding-top: 1px;
@@ -50,7 +53,7 @@ export default props =>
     </Gallery>
     <Overlay>
       <Button>
-        {props.images.length} фото
+        {photos(props.images.length, true)}
       </Button>
     </Overlay>
   </div>);

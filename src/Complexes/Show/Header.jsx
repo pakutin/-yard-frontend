@@ -52,7 +52,8 @@ export default props =>
           {props.name}
         </Name>
         <Address>
-          Район {props.district}, {props.street}, дом {props.house} • {props.postalCode}
+          Район {props.address.subLocalityName}, {props.address.street}, дом {props.address.house} •{' '}
+          {props.address.postalCode}
         </Address>
       </Complex>
       <Button>В&nbsp;избранное</Button>

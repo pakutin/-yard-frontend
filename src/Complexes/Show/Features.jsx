@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Grid, Row, Col } from 'react-flexbox-grid';
+import { securityKinds, constructionKinds, quarters } from './Dictionary';
 import SectionTitle from './SectionTitle';
 
 const List = styled.dl`
@@ -46,11 +47,12 @@ export default props =>
           <Value>Квартиры</Value>
           <Label>Цены</Label>
           <Value>
-            от {props.price.min} до {props.price.max} млн ₽
+            от {(props.statistics.price.from.rub / 1000000).toFixed(2)} до{' '}
+            {(props.statistics.price.to.rub / 1000000).toFixed(2)} млн ₽
           </Value>
           <Label>Безопасность</Label>
           <Value>
-            {props.security}
+            {securityKinds[props.details.security]}
           </Value>
         </List>
       </Col>
@@ -58,19 +60,20 @@ export default props =>
         <List>
           <Label>Конструкция корпусов</Label>
           <Value>
-            {props.construction}
+            {constructionKinds[props.details.constructionKind]}
           </Value>
           <Label>Площадь</Label>
           <Value>
-            от {props.area.min} до {props.area.max} м²
+            от {props.statistics.totalArea.from.toFixed(0)} до{' '}
+            {props.statistics.totalArea.to.toFixed(0)} м²
           </Value>
           <Label>Высота потолков</Label>
           <Value>
-            {props.height.min}–{props.height.max} м
+            {props.details.ceilHeight.from.toFixed(2)}–{props.details.ceilHeight.to.toFixed(2)} м
           </Value>
           <Label>Обслуживание</Label>
           <Value>
-            {props.maintenance} ₽ / м² / месяц
+            {props.details.maintenanceCosts} ₽ / м² / месяц
           </Value>
         </List>
       </Col>
@@ -78,19 +81,20 @@ export default props =>
         <List>
           <Label>Начало строительства</Label>
           <Value>
-            {props.startQuarter} квартал {props.startYear} года
+            {quarters[props.details.startQuarter]} квартал {props.details.startYear} года
           </Value>
           <Label>Конец строительства</Label>
           <Value>
-            {props.commissioningQuarter} квартал {props.commissioningYear} года
+            {quarters[props.details.commissioningQuarter]} квартал {props.details.commissioningYear}{' '}
+            года
           </Value>
           <Label>Наземная парковка</Label>
           <Value>
-            {props.parking}
+            {props.details.parkings ? `${props.details.parkings} м/м` : 'Нет'}
           </Value>
           <Label>Подземная парковка</Label>
           <Value>
-            {props.underground}
+            {props.details.undergroundGarages ? `${props.details.undergroundGarages} м/м` : 'Нет'}
           </Value>
         </List>
       </Col>

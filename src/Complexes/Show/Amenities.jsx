@@ -2,21 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import SectionTitle from './SectionTitle';
-import Facility from './Facility';
+import Amenity from './Amenity';
 
-const Facilities = styled.div`margin-top: 0.875rem;`;
+const Amenities = styled.div`margin-top: 0.875rem;`;
 
 export default props =>
   (<Grid>
-    {props.name && <SectionTitle>Инфраструктура</SectionTitle>}
-    {props.name &&
-      <Facilities>
+    {props.amenity && <SectionTitle>Инфраструктура</SectionTitle>}
+    {props.amenity &&
+      <Amenities>
         <Row>
           {props.amenities.map(amenity =>
             (<Col lg={2}>
-              <Facility name={amenity} />
+              <Amenity amenity={amenity} />
             </Col>),
           )}
         </Row>
-      </Facilities>}
+      </Amenities>}
   </Grid>);
