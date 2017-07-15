@@ -38,17 +38,7 @@ class Complexes extends Component {
     return (
       <Cards>
         <Banner />
-        {this.state.data.map(complex =>
-          (<Card
-            key={complex.id}
-            slug={complex.slug}
-            name={complex.name}
-            text={complex.shortDescription}
-            location={`${complex.location.subLocalityName}, ${complex.location.street}, ${complex
-              .location.house}`}
-            image={complex.image.id}
-          />),
-        )}
+        {this.state.data.map(complex => <Card key={complex.id} complex={complex} />)}
       </Cards>
     );
   }

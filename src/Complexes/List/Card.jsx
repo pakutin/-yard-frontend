@@ -59,25 +59,26 @@ const Description = styled.p`
 `;
 
 export default props =>
-  (<Card to={`/${props.slug}`}>
+  (<Card to={`/${props.complex.slug}`}>
     <Complex>
       <Cover
-        src={`https://yard-images.s3.amazonaws.com/${props.image}-512`}
+        src={`https://yard-images.s3.amazonaws.com/${props.complex.image.id}-512`}
         srcSet={
-          `https://yard-images.s3.amazonaws.com/${props.image}-1024 2x,` +
-          `https://yard-images.s3.amazonaws.com/${props.image}-2048 3x,`
+          `https://yard-images.s3.amazonaws.com/${props.complex.image.id}-1024 2x,` +
+          `https://yard-images.s3.amazonaws.com/${props.complex.image.id}-2048 3x,`
         }
-        alt={props.name}
+        alt={props.complex.name}
       />
       <Data>
         <Location>
-          {props.location}
+          {`${props.complex.location.subLocalityName}, ${props.complex.location.street}, ${props
+            .complex.location.house}`}
         </Location>
         <Name>
-          {props.name}
+          {props.complex.name}
         </Name>
         <Description>
-          {props.text}
+          {props.complex.shortDescription}
         </Description>
       </Data>
     </Complex>
