@@ -32,6 +32,14 @@ const Value = styled.dd`
   line-height: 1.5625;
 `;
 
+function formatPrice(price) {
+  return (price / 1000000).toFixed(2);
+}
+
+function formatFloat(float) {
+  return parseFloat(float).toFixed(2);
+}
+
 export default function (props) {
   const price = props.statistics.price || {};
   const priceFrom = price.from || {};
@@ -54,8 +62,7 @@ export default function (props) {
             <Value>Квартиры</Value>
             <Label>Цены</Label>
             <Value>
-              от {Math.floor(priceFrom.rub / 1000000).toFixed(2)} до
-              {Math.floor(priceTo.rub / 1000000).toFixed(2)} млн ₽
+              от {formatPrice(priceFrom.rub)} до {formatPrice(priceTo.rub)} млн ₽
             </Value>
             <Label>Безопасность</Label>
             <Value>
@@ -71,11 +78,11 @@ export default function (props) {
             </Value>
             <Label>Площадь</Label>
             <Value>
-              от {Math.floor(area.from).toFixed()} до {Math.floor(area.to).toFixed()} м²
+              от {formatFloat(area.from)} до {formatFloat(area.to)} м²
             </Value>
             <Label>Высота потолков</Label>
             <Value>
-              {Math.floor(ceilings.from).toFixed()}–{Math.floor(ceilings.to).toFixed()} м
+              {formatFloat(ceilings.from)}–{formatFloat(ceilings.to)} м
             </Value>
             <Label>Обслуживание</Label>
             <Value>
