@@ -44,14 +44,15 @@ class Complex extends Component {
         fullDescription,
         amenities = [],
       },
-    } = this.state;
+    } =
+      this.state || {};
 
     return (
       <main>
         <Header name={name} location={location} />
         <Gallery images={images} name={name} />
         <Characteristics>
-          <TopFeatures statistics={statistics} details={details} />
+          <TopFeatures details={details} statistics={statistics} />
           <Features flats={units} details={details} statistics={statistics} />
           {fullDescription && <Description text={fullDescription} />}
           {amenities && amenities.length > 0 && <Amenities amenities={amenities} />}

@@ -45,7 +45,7 @@ export default function (props) {
     price: { from: { rub: priceFrom } = {}, to: { rub: priceTo } = {} } = {},
     totalArea: area = {},
   } =
-    props.complex || {};
+    props.statistics || {};
   const ceilings = props.details.ceilHeight || {};
 
   return (
