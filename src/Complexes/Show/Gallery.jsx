@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ruplu from 'ruplu';
 
-const photos = ruplu(['фотография', 'фотографии', 'фотографий']);
+const plural = ruplu(['фотография', 'фотографии', 'фотографий']);
 
 const Gallery = styled.section`
   padding-top: 1px;
@@ -37,23 +37,28 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-export default props =>
-  (<div>
-    <Gallery>
-      {props.images.map(image =>
-        (<Picture
-          src={`https://yard-images.s3.amazonaws.com/${image.id}-512`}
-          srcSet={
-            `https://yard-images.s3.amazonaws.com/${image.id}-1024 2x,` +
-            `https://yard-images.s3.amazonaws.com/${image.id}-2048 3x,`
-          }
-          alt={props.name}
-        />),
-      )}
-    </Gallery>
-    <Overlay>
-      <Button>
-        {photos(props.images.length, true)}
-      </Button>
-    </Overlay>
-  </div>);
+export default function (props) {
+  const images = props.images || [];
+
+  return (
+    <div>
+      <Gallery>
+        {images.map(image =>
+          (<Picture
+            src={`https://yard-images.s3.amazonaws.com/${image.id}-512`}
+            srcSet={
+              `https://yard-images.s3.amazonaws.com/${image.id}-1024 2x,` +
+              `https://yard-images.s3.amazonaws.com/${image.id}-2048 3x,`
+            }
+            alt={props.name}
+          />),
+        )}
+      </Gallery>
+      <Overlay>
+        <Button>
+          {plural(images.length, true)}
+        </Button>
+      </Overlay>
+    </div>
+  );
+}

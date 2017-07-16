@@ -32,71 +32,79 @@ const Value = styled.dd`
   line-height: 1.5625;
 `;
 
-export default props =>
-  (<Grid>
-    <SectionTitle>Характеристики</SectionTitle>
-    <Row>
-      <Col lg={4}>
-        <List>
-          {props.flats && <Label>Количество квартир</Label>}
-          {props.flats &&
+export default function (props) {
+  const price = props.statistics.price || {};
+  const priceFrom = price.from || {};
+  const priceTo = price.to || {};
+  const area = props.statistics.totalArea || {};
+  const ceilings = props.details.ceilHeight || {};
+
+  return (
+    <Grid>
+      <SectionTitle>Характеристики</SectionTitle>
+      <Row>
+        <Col lg={4}>
+          <List>
+            {props.flats && <Label>Количество квартир</Label>}
+            {props.flats &&
+              <Value>
+                {props.flats}
+              </Value>}
+            <Label>Статус</Label>
+            <Value>Квартиры</Value>
+            <Label>Цены</Label>
             <Value>
-              {props.flats}
-            </Value>}
-          <Label>Статус</Label>
-          <Value>Квартиры</Value>
-          <Label>Цены</Label>
-          <Value>
-            от {(props.statistics.price.from.rub / 1000000).toFixed(2)} до{' '}
-            {(props.statistics.price.to.rub / 1000000).toFixed(2)} млн ₽
-          </Value>
-          <Label>Безопасность</Label>
-          <Value>
-            {securityKinds[props.details.security]}
-          </Value>
-        </List>
-      </Col>
-      <Col lg={4}>
-        <List>
-          <Label>Конструкция корпусов</Label>
-          <Value>
-            {constructionKinds[props.details.constructionKind]}
-          </Value>
-          <Label>Площадь</Label>
-          <Value>
-            от {props.statistics.totalArea.from.toFixed(0)} до{' '}
-            {props.statistics.totalArea.to.toFixed(0)} м²
-          </Value>
-          <Label>Высота потолков</Label>
-          <Value>
-            {props.details.ceilHeight.from.toFixed(2)}–{props.details.ceilHeight.to.toFixed(2)} м
-          </Value>
-          <Label>Обслуживание</Label>
-          <Value>
-            {props.details.maintenanceCosts} ₽ / м² / месяц
-          </Value>
-        </List>
-      </Col>
-      <Col lg={4}>
-        <List>
-          <Label>Начало строительства</Label>
-          <Value>
-            {quarters[props.details.startQuarter]} квартал {props.details.startYear} года
-          </Value>
-          <Label>Конец строительства</Label>
-          <Value>
-            {quarters[props.details.commissioningQuarter]} квартал {props.details.commissioningYear}{' '}
-            года
-          </Value>
-          <Label>Наземная парковка</Label>
-          <Value>
-            {props.details.parkings ? `${props.details.parkings} м/м` : 'Нет'}
-          </Value>
-          <Label>Подземная парковка</Label>
-          <Value>
-            {props.details.undergroundGarages ? `${props.details.undergroundGarages} м/м` : 'Нет'}
-          </Value>
-        </List>
-      </Col>
-    </Row>
-  </Grid>);
+              от {Math.floor(priceFrom.rub / 1000000).toFixed(2)} до
+              {Math.floor(priceTo.rub / 1000000).toFixed(2)} млн ₽
+            </Value>
+            <Label>Безопасность</Label>
+            <Value>
+              {securityKinds[props.details.security]}
+            </Value>
+          </List>
+        </Col>
+        <Col lg={4}>
+          <List>
+            <Label>Конструкция корпусов</Label>
+            <Value>
+              {constructionKinds[props.details.constructionKind]}
+            </Value>
+            <Label>Площадь</Label>
+            <Value>
+              от {Math.floor(area.from).toFixed()} до {Math.floor(area.to).toFixed()} м²
+            </Value>
+            <Label>Высота потолков</Label>
+            <Value>
+              {Math.floor(ceilings.from).toFixed()}–{Math.floor(ceilings.to).toFixed()} м
+            </Value>
+            <Label>Обслуживание</Label>
+            <Value>
+              {props.details.maintenanceCosts} ₽ / м² / месяц
+            </Value>
+          </List>
+        </Col>
+        <Col lg={4}>
+          <List>
+            <Label>Начало строительства</Label>
+            <Value>
+              {quarters[props.details.startQuarter]} квартал {props.details.startYear} года
+            </Value>
+            <Label>Конец строительства</Label>
+            <Value>
+              {quarters[props.details.commissioningQuarter]} квартал{' '}
+              {props.details.commissioningYear} года
+            </Value>
+            <Label>Наземная парковка</Label>
+            <Value>
+              {props.details.parkings ? `${props.details.parkings} м/м` : 'Нет'}
+            </Value>
+            <Label>Подземная парковка</Label>
+            <Value>
+              {props.details.undergroundGarages ? `${props.details.undergroundGarages} м/м` : 'Нет'}
+            </Value>
+          </List>
+        </Col>
+      </Row>
+    </Grid>
+  );
+}

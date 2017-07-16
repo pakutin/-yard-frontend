@@ -41,7 +41,7 @@ const NavItem = styled(Link)`
 
 export default () =>
   (<Header>
-    <Logo to="/">
+    <Logo to="/complexes">
       <img src={navLogo} alt="Compass" width="179px" height="24px" />
     </Logo>
     <Nav>

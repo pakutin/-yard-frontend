@@ -4,7 +4,7 @@ import { Grid } from 'react-flexbox-grid';
 import ruplu from 'ruplu';
 import TopFeature from './TopFeature';
 
-const offers = ruplu(['предложение', 'предложения', 'предложений']);
+const plural = ruplu(['предложение', 'предложения', 'предложений']);
 
 const TopFeatures = styled.section`
   display: flex;
@@ -15,12 +15,20 @@ const TopFeatures = styled.section`
   border-bottom: 1px solid #e0e0e1;
 `;
 
-export default props =>
-  (<Grid>
-    <TopFeatures>
-      {props.offers &&
-        <TopFeature value={props.offers} label={offers(props.offers.length, true)} />}
-      {props.details.architect && <TopFeature value={props.details.architect} label="архитектор" />}
-      {props.details.developer && <TopFeature value={props.details.developer} label="застройщик" />}
-    </TopFeatures>
-  </Grid>);
+export default function (props) {
+  return (
+    <Grid>
+      <TopFeatures>
+        {props.statistics.propertiesCount &&
+          <TopFeature
+            value={props.statistics.propertiesCount}
+            label={plural(props.statistics.propertiesCount.length, true)}
+          />}
+        {props.details.architect &&
+          <TopFeature value={props.details.architect} label="архитектор" />}
+        {props.details.developer &&
+          <TopFeature value={props.details.developer} label="застройщик" />}
+      </TopFeatures>
+    </Grid>
+  );
+}

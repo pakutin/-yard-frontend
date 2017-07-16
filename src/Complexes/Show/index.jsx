@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import get from '../../Api';
+import get from '../../get';
 import Header from './Header';
 import Gallery from './Gallery';
 import TopFeatures from './TopFeatures';
@@ -22,38 +22,39 @@ const Characteristics = styled.article`
 class Complex extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      complex: {},
+    };
   }
   componentDidMount() {
     const complexSlug = this.props.match.params.slug;
     get(`/complexes/${complexSlug}`).then(json => this.setState({ complex: json }));
   }
   render() {
-    const complex = this.state.complex;
-    if (complex === undefined) {
-      return null;
-    }
+    const location = this.state.complex.location || {};
+    const images = this.state.complex.images || [];
+    const statistics = this.state.complex.statistics || {};
+    const details = this.state.complex.details || {};
+    const amenities = this.state.complex.amenities || [];
+
     return (
       <main>
-        <Header name={complex.name} address={complex.location} />
-        <Gallery images={complex.images} name={complex.name} />
+        <Header name={this.state.complex.name} location={location} />
+        <Gallery images={images} name={this.state.complex.name} />
         <Characteristics>
-          <TopFeatures offers={complex.statistics.propertiesCount} details={complex.details} />
-          <Features
-            flats={complex.units}
-            details={complex.details}
-            statistics={complex.statistics}
-          />
-          <Description text={complex.fullDescription} />
-          <Amenities amenities={complex.amenities} />
-          <Offers name={complex.name} />
-          <Guide
-            district="Якиманка"
-            tagline="Исторический центр Москвы в&nbsp;двух километрах&nbsp;от&nbsp;Кремля"
-            link="Гид по Якиманке"
-          />
-          <Sights />
+          <TopFeatures statistics={statistics} details={details} />
+          <Features flats={this.state.complex.units} details={details} statistics={statistics} />
+          {this.state.complex.fullDescription &&
+            <Description text={this.state.complex.fullDescription} />}
+          <Amenities amenities={amenities} />
+          <Offers name={this.state.complex.name} />
         </Characteristics>
+        <Guide
+          district="Якиманка"
+          tagline="Исторический центр Москвы в&nbsp;двух километрах&nbsp;от&nbsp;Кремля"
+          link="Гид по Якиманке"
+        />
+        <Sights />
       </main>
     );
   }
