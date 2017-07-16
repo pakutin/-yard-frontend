@@ -33,23 +33,29 @@ class Complex extends Component {
   }
 
   render() {
-    const location = this.state.complex.location || {};
-    const images = this.state.complex.images || [];
-    const statistics = this.state.complex.statistics || {};
-    const details = this.state.complex.details || {};
-    const amenities = this.state.complex.amenities || [];
+    const {
+      complex: {
+        name,
+        location = {},
+        images = [],
+        statistics = {},
+        details = {},
+        units,
+        fullDescription,
+        amenities = [],
+      },
+    } = this.state;
 
     return (
       <main>
-        <Header name={this.state.complex.name} location={location} />
-        <Gallery images={images} name={this.state.complex.name} />
+        <Header name={name} location={location} />
+        <Gallery images={images} name={name} />
         <Characteristics>
           <TopFeatures statistics={statistics} details={details} />
-          <Features flats={this.state.complex.units} details={details} statistics={statistics} />
-          {this.state.complex.fullDescription &&
-            <Description text={this.state.complex.fullDescription} />}
+          <Features flats={units} details={details} statistics={statistics} />
+          {fullDescription && <Description text={fullDescription} />}
           {amenities && amenities.length > 0 && <Amenities amenities={amenities} />}
-          <Offers name={this.state.complex.name} />
+          <Offers name={name} />
         </Characteristics>
         <Guide
           district="Якиманка"
