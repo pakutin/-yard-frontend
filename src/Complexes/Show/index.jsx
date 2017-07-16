@@ -34,26 +34,17 @@ class Complex extends Component {
 
   render() {
     const {
-      complex: {
-        name,
-        location = {},
-        images = [],
-        statistics = {},
-        details = {},
-        units,
-        fullDescription,
-        amenities = [],
-      },
-    } =
-      this.state || {};
+      complex = {},
+      complex: { name, location = {}, images = [], fullDescription, amenities = [] } = {},
+    } = this.state;
 
     return (
       <main>
         <Header name={name} location={location} />
         <Gallery images={images} name={name} />
         <Characteristics>
-          <TopFeatures details={details} statistics={statistics} />
-          <Features flats={units} details={details} statistics={statistics} />
+          <TopFeatures complex={complex} />
+          <Features complex={complex} />
           {fullDescription && <Description text={fullDescription} />}
           {amenities && amenities.length > 0 && <Amenities amenities={amenities} />}
           <Offers name={name} />

@@ -42,11 +42,15 @@ function formatFloat(float) {
 
 export default function (props) {
   const {
-    price: { from: { rub: priceFrom } = {}, to: { rub: priceTo } = {} } = {},
-    totalArea: area = {},
+    units,
+    statistics: {
+      price: { from: { rub: priceFrom } = {}, to: { rub: priceTo } = {} } = {},
+      totalArea: area = {},
+    } = {},
+    details = {},
+    details: { ceilHeight: ceilings = {} } = {},
   } =
-    props.statistics || {};
-  const ceilings = props.details.ceilHeight || {};
+    props.complex || {};
 
   return (
     <Grid>
@@ -54,10 +58,10 @@ export default function (props) {
       <Row>
         <Col lg={4}>
           <List>
-            {props.flats && <Label>Количество квартир</Label>}
-            {props.flats &&
+            {units && <Label>Количество квартир</Label>}
+            {units &&
               <Value>
-                {props.flats}
+                {units}
               </Value>}
             <Label>Статус</Label>
             <Value>Квартиры</Value>
@@ -67,7 +71,7 @@ export default function (props) {
             </Value>
             <Label>Безопасность</Label>
             <Value>
-              {securityKinds[props.details.security]}
+              {securityKinds[details.security]}
             </Value>
           </List>
         </Col>
@@ -75,7 +79,7 @@ export default function (props) {
           <List>
             <Label>Конструкция корпусов</Label>
             <Value>
-              {constructionKinds[props.details.constructionKind]}
+              {constructionKinds[details.constructionKind]}
             </Value>
             <Label>Площадь</Label>
             <Value>
@@ -87,7 +91,7 @@ export default function (props) {
             </Value>
             <Label>Обслуживание</Label>
             <Value>
-              {props.details.maintenanceCosts} ₽ / м² / месяц
+              {details.maintenanceCosts} ₽ / м² / месяц
             </Value>
           </List>
         </Col>
@@ -95,20 +99,19 @@ export default function (props) {
           <List>
             <Label>Начало строительства</Label>
             <Value>
-              {quarters[props.details.startQuarter]} квартал {props.details.startYear} года
+              {quarters[details.startQuarter]} квартал {details.startYear} года
             </Value>
             <Label>Конец строительства</Label>
             <Value>
-              {quarters[props.details.commissioningQuarter]} квартал{' '}
-              {props.details.commissioningYear} года
+              {quarters[details.commissioningQuarter]} квартал {details.commissioningYear} года
             </Value>
             <Label>Наземная парковка</Label>
             <Value>
-              {props.details.parkings ? `${props.details.parkings} м/м` : 'Нет'}
+              {details.parkings ? `${details.parkings} м/м` : 'Нет'}
             </Value>
             <Label>Подземная парковка</Label>
             <Value>
-              {props.details.undergroundGarages ? `${props.details.undergroundGarages} м/м` : 'Нет'}
+              {details.undergroundGarages ? `${details.undergroundGarages} м/м` : 'Нет'}
             </Value>
           </List>
         </Col>

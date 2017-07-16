@@ -16,18 +16,17 @@ const TopFeatures = styled.section`
 `;
 
 export default function (props) {
+  const { statistics = {}, details = {} } = props.complex || {};
   return (
     <Grid>
       <TopFeatures>
-        {props.statistics.propertiesCount &&
+        {statistics.propertiesCount &&
           <TopFeature
-            value={props.statistics.propertiesCount}
-            label={plural(props.statistics.propertiesCount.length, true)}
+            value={statistics.propertiesCount}
+            label={plural(statistics.propertiesCount.length, true)}
           />}
-        {props.details.architect &&
-          <TopFeature value={props.details.architect} label="архитектор" />}
-        {props.details.developer &&
-          <TopFeature value={props.details.developer} label="застройщик" />}
+        {details.architect && <TopFeature value={details.architect} label="архитектор" />}
+        {details.developer && <TopFeature value={details.developer} label="застройщик" />}
       </TopFeatures>
     </Grid>
   );
