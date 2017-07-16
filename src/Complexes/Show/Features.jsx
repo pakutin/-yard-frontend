@@ -41,10 +41,11 @@ function formatFloat(float) {
 }
 
 export default function (props) {
-  const price = props.statistics.price || {};
-  const priceFrom = price.from || {};
-  const priceTo = price.to || {};
-  const area = props.statistics.totalArea || {};
+  const {
+    price: { from: { rub: priceFrom } = {}, to: { rub: priceTo } = {} } = {},
+    totalArea: area = {},
+  } =
+    props.complex || {};
   const ceilings = props.details.ceilHeight || {};
 
   return (
@@ -62,7 +63,7 @@ export default function (props) {
             <Value>Квартиры</Value>
             <Label>Цены</Label>
             <Value>
-              от {formatPrice(priceFrom.rub)} до {formatPrice(priceTo.rub)} млн ₽
+              от {formatPrice(priceFrom)} до {formatPrice(priceTo)} млн ₽
             </Value>
             <Label>Безопасность</Label>
             <Value>
