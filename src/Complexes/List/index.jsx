@@ -21,9 +21,11 @@ class Complexes extends Component {
       complexes: [],
     };
   }
+
   componentDidMount() {
     get('/complexes?filter[state]=public').then(json => this.setState({ complexes: json.items }));
   }
+
   render() {
     return (
       <Cards>

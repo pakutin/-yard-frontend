@@ -26,10 +26,12 @@ class Complex extends Component {
       complex: {},
     };
   }
+
   componentDidMount() {
     const complexSlug = this.props.match.params.slug;
     get(`/complexes/${complexSlug}`).then(json => this.setState({ complex: json }));
   }
+
   render() {
     const location = this.state.complex.location || {};
     const images = this.state.complex.images || [];
@@ -46,7 +48,7 @@ class Complex extends Component {
           <Features flats={this.state.complex.units} details={details} statistics={statistics} />
           {this.state.complex.fullDescription &&
             <Description text={this.state.complex.fullDescription} />}
-          <Amenities amenities={amenities} />
+          {amenities && amenities.length > 0 && <Amenities amenities={amenities} />}
           <Offers name={this.state.complex.name} />
         </Characteristics>
         <Guide
