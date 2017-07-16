@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import get from '../../get';
+import request from '../../api';
 import Header from './Header';
 import Gallery from './Gallery';
 import TopFeatures from './TopFeatures';
@@ -29,7 +29,7 @@ class Complex extends Component {
 
   componentDidMount() {
     const complexSlug = this.props.match.params.slug;
-    get(`/complexes/${complexSlug}`).then(json => this.setState({ complex: json }));
+    request(`/complexes/${complexSlug}`).then(json => this.setState({ complex: json }));
   }
 
   render() {
