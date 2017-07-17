@@ -12,7 +12,9 @@
     "react-flexboxgrid": "^1.0.1",
     "react-router-dom": "^4.1.1",
     "react-scripts": "1.0.10",
-    "styled-components": "^2.1.1"
+    "ruplu": "^2.0.1",
+    "styled-components": "^2.1.1",
+    "whatwg-fetch": "^2.0.3"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import Complexes from './Complexes/List';
@@ -11,8 +11,9 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <Route exact path="/" component={Complexes} />
-        <Route exact path="/complex" component={Complex} />
+        <Redirect from="/" to="/complexes" />
+        <Route exact path="/complexes" component={Complexes} />
+        <Route exact path="/complexes/:slug" component={Complex} />
         <Footer />
       </div>
     </Router>

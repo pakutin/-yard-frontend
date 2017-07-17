@@ -16,10 +16,12 @@ const Offers = styled.section`
   background-color: #f4f5f9;
 `;
 
-export default () => (
-  <Offers>
+export default ({ name }) =>
+  (<Offers>
     <Grid>
-      <SectionTitle>Предложения в ЖК «Полянка/44»</SectionTitle>
+      <SectionTitle>
+        Предложения в ЖК «{name}»
+      </SectionTitle>
       <Row>
         <Col lg={4}>
           <Offer room={1} space={{ min: 59, max: 120 }} price={{ min: 20.3, max: 84.2 }} />
@@ -32,5 +34,4 @@ export default () => (
         </Col>
       </Row>
     </Grid>
-  </Offers>
-  );
+  </Offers>);

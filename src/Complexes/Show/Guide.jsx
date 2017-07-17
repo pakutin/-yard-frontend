@@ -62,9 +62,9 @@ export default props =>
         <Col lg={6}>
           <Cover
             alt=""
-            src={`${process.env.PUBLIC_URL}./polyankaPhoto.jpg`}
-            srcSet={`${`${process.env.PUBLIC_URL}./polyankaPhoto@2x.jpg`} 2x, ${`${process.env
-              .PUBLIC_URL}./polyankaPhoto@3x.jpg`} 3x`}
+            src={`${process.env.PUBLIC_URL}/polyankaPhoto.jpg`}
+            srcSet={`${`${process.env.PUBLIC_URL}/polyankaPhoto@2x.jpg`} 2x, ${`${process.env
+              .PUBLIC_URL}/polyankaPhoto@3x.jpg`} 3x`}
           />
         </Col>
       </Row>

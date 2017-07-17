@@ -17,7 +17,13 @@ const Complex = styled.article`
   }
 `;
 
+const Cover = styled.img`
+  max-width: 491px;
+  max-height: 350px;
+`;
+
 const Data = styled.div`
+  width: 100%;
   font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
   border-bottom: 2px solid #646971;
 `;
@@ -53,23 +59,26 @@ const Description = styled.p`
 `;
 
 export default props =>
-  (<Card to={`/complex${props.id}`}>
+  (<Card to={`/complexes/${props.complex.slug}`}>
     <Complex>
-      <img
-        src={`${process.env.PUBLIC_URL}./img1.jpg`}
-        srcSet={`${`${process.env.PUBLIC_URL}./img1@2x.jpg`} 2x, 
-            ${`${process.env.PUBLIC_URL}./img1@3x.jpg`} 3x`}
-        alt={props.name}
+      <Cover
+        src={`https://yard-images.s3.amazonaws.com/${props.complex.image.id}-512`}
+        srcSet={
+          `https://yard-images.s3.amazonaws.com/${props.complex.image.id}-1024 2x,` +
+          `https://yard-images.s3.amazonaws.com/${props.complex.image.id}-2048 3x,`
+        }
+        alt={props.complex.name}
       />
       <Data>
         <Location>
-          {props.location}
+          {`${props.complex.location.subLocalityName}, ${props.complex.location.street}, ${props
+            .complex.location.house}`}
         </Location>
         <Name>
-          {props.name}
+          {props.complex.name}
         </Name>
         <Description>
-          {props.children}
+          {props.complex.shortDescription}
         </Description>
       </Data>
     </Complex>

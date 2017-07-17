@@ -1,16 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
+import ruplu from 'ruplu';
+
+const plural = ruplu(['фотография', 'фотографии', 'фотографий']);
 
 const Gallery = styled.section`
   padding-top: 1px;
+  overflow: scroll;
   display: flex;
+  position: relative;
 `;
 
-const Picture = styled.img`margin-right: 0rem;`;
+const Picture = styled.img`
+  margin-right: 0rem;
+  height: 400px;
+  width: auto;
+`;
 
 const Overlay = styled.div`
   margin-left: 7.5rem;
   margin-top: -2.675rem;
+  position: absolute;
 `;
 
 const Button = styled.button`
@@ -27,42 +37,28 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-export default () => (
-  <div>
-    <Gallery>
-      <Picture
-        alt=""
-        src={`${process.env.PUBLIC_URL}./complex1.jpg`}
-        srcSet={`${`${process.env.PUBLIC_URL}./complex1@2x.jpg`} 2x, ${`${process.env.PUBLIC_URL
-            }./complex1@3x.jpg`} 3x`}
-      />
-      <Picture
-        alt=""
-        src={`${process.env.PUBLIC_URL}./complex2.jpg`}
-        srcSet={`${`${process.env.PUBLIC_URL}./complex2@2x.jpg`} 2x, ${`${process.env.PUBLIC_URL
-            }./complex2@3x.jpg`} 3x`}
-      />
-      <Picture
-        alt=""
-        src={`${process.env.PUBLIC_URL}./complex3.jpg`}
-        srcSet={`${`${process.env.PUBLIC_URL}./complex3@2x.jpg`} 2x, ${`${process.env.PUBLIC_URL
-            }./complex3@3x.jpg`} 3x`}
-      />
-      <Picture
-        alt=""
-        src={`${process.env.PUBLIC_URL}./complex4.jpg`}
-        srcSet={`${`${process.env.PUBLIC_URL}./complex4@2x.jpg`} 2x, ${`${process.env.PUBLIC_URL
-            }./complex4@3x.jpg`} 3x`}
-      />
-      <Picture
-        alt=""
-        src={`${process.env.PUBLIC_URL}./complex5.jpg`}
-        srcSet={`${`${process.env.PUBLIC_URL}./complex5@2x.jpg`} 2x, ${`${process.env.PUBLIC_URL
-            }./complex5@3x.jpg`} 3x`}
-      />
-    </Gallery>
-    <Overlay>
-      <Button>41 фотография</Button>
-    </Overlay>
-  </div>
+export default function (props) {
+  const images = props.images || [];
+
+  return (
+    <div>
+      <Gallery>
+        {images.map(image =>
+          (<Picture
+            src={`https://yard-images.s3.amazonaws.com/${image.id}-512`}
+            srcSet={
+              `https://yard-images.s3.amazonaws.com/${image.id}-1024 2x,` +
+              `https://yard-images.s3.amazonaws.com/${image.id}-2048 3x,`
+            }
+            alt={props.name}
+          />),
+        )}
+      </Gallery>
+      <Overlay>
+        <Button>
+          {plural(images.length, true)}
+        </Button>
+      </Overlay>
+    </div>
   );
+}

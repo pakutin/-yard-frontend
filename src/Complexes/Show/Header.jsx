@@ -49,10 +49,11 @@ export default props =>
     <Header>
       <Complex>
         <Name>
-          {props.children}
+          {props.name}
         </Name>
         <Address>
-          {props.address}
+          Район {props.location.subLocalityName}, {props.location.street}, дом{' '}
+          {props.location.house} • {props.location.postalCode}
         </Address>
       </Complex>
       <Button>В&nbsp;избранное</Button>

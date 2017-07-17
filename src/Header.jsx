@@ -12,7 +12,7 @@ const Header = styled.header`
   border-bottom: 1px solid #eaebf0;
 `;
 
-const Logo = styled.div`
+const Logo = styled(Link)`
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
   display: flex;
@@ -39,9 +39,9 @@ const NavItem = styled(Link)`
   text-decoration: none;
 `;
 
-export default () => (
-  <Header>
-    <Logo>
+export default () =>
+  (<Header>
+    <Logo to="/complexes">
       <img src={navLogo} alt="Compass" width="179px" height="24px" />
     </Logo>
     <Nav>
@@ -49,5 +49,4 @@ export default () => (
       <NavItem to="/">Снять</NavItem>
       <NavItem to="/">Наши агенты</NavItem>
     </Nav>
-  </Header>
-  );
+  </Header>);
