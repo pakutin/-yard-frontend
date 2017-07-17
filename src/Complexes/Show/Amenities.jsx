@@ -12,13 +12,12 @@ const Amenity = styled.p`
 `;
 
 export default function (props) {
-  const amenities = props.amenities || [];
   return (
     <Grid>
       <SectionTitle>Инфраструктура</SectionTitle>
       <List>
         <Row>
-          {amenities.map(amenity =>
+          {props.amenities.map(amenity =>
             (<Col lg={2}>
               <Amenity>
                 {amenity}

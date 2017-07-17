@@ -24,7 +24,7 @@ export default props =>
         </Col>
         <Col lg={10}>
           <Text>
-            {props.text}
+            {props.fullDescription}
           </Text>
         </Col>
       </Row>
