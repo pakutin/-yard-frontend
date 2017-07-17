@@ -11,23 +11,18 @@ const Amenity = styled.p`
   line-height: 1.375;
 `;
 
-export default function (props) {
-  const { amenities = {} } = props.amenities || {};
-
-  return (
-    <Grid>
-      <SectionTitle>Инфраструктура</SectionTitle>
-      <List>
-        <Row>
-          {amenities.map(amenity =>
-            (<Col lg={2}>
-              <Amenity>
-                {amenity}
-              </Amenity>
-            </Col>),
-          )}
-        </Row>
-      </List>
-    </Grid>
-  );
-}
+export default ({ amenities = [] }) =>
+  (<Grid>
+    <SectionTitle>Инфраструктура</SectionTitle>
+    <List>
+      <Row>
+        {amenities.map(amenity =>
+          (<Col lg={2}>
+            <Amenity>
+              {amenity}
+            </Amenity>
+          </Col>),
+        )}
+      </Row>
+    </List>
+  </Grid>);

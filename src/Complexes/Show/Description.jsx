@@ -15,7 +15,7 @@ const Text = styled.p`
   line-height: 1.5625;
 `;
 
-export default props =>
+export default ({ fullDescription }) =>
   (<Grid>
     <Desciption>
       <Row>
@@ -24,7 +24,7 @@ export default props =>
         </Col>
         <Col lg={10}>
           <Text>
-            {props.fullDescription}
+            {fullDescription}
           </Text>
         </Col>
       </Row>

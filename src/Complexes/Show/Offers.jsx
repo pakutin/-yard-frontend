@@ -16,11 +16,11 @@ const Offers = styled.section`
   background-color: #f4f5f9;
 `;
 
-export default props =>
+export default ({ name }) =>
   (<Offers>
     <Grid>
       <SectionTitle>
-        Предложения в ЖК «{props.name}»
+        Предложения в ЖК «{name}»
       </SectionTitle>
       <Row>
         <Col lg={4}>

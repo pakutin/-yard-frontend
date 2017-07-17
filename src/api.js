@@ -1,5 +1,8 @@
-const apiLink = 'https://yard.moscow/api/v1';
+const baseLink = 'https://yard.moscow/api/v1';
 
-export default function request(address, params) {
-  return fetch(encodeURI(apiLink + address), params).then(response => response.json());
+export default function request(url, action, data) {
+  return fetch(encodeURI(baseLink + url), {
+    method: action,
+    body: data,
+  }).then(response => response.json());
 }
