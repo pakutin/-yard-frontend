@@ -41,12 +41,12 @@ class Complex extends Component {
     return (
       <main>
         <Header name={name} location={location} />
-        <Gallery images={images} name={name} />
+        <Gallery name={name} images={images} />
         <Characteristics>
           <TopFeatures complex={complex} />
           <Features complex={complex} />
-          {fullDescription && <Description fullDescription={fullDescription} />}
-          {amenities.length > 0 && <Amenities amenities={amenities} />}
+          {fullDescription && <Description text={fullDescription} />}
+          {amenities.length > 0 && <Amenities complex={complex} />}
           <Offers name={name} />
         </Characteristics>
         <Guide
