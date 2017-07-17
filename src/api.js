@@ -1,8 +1,5 @@
 const baseLink = 'https://yard.moscow/api/v1';
 
-export default function request(url, action, data) {
-  return fetch(encodeURI(baseLink + url), {
-    method: action,
-    body: data,
-  }).then(response => response.json());
+export default function get(url) {
+  return fetch(encodeURI(baseLink + url)).then(response => response.json());
 }

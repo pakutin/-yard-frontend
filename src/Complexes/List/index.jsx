@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'whatwg-fetch';
 import styled from 'styled-components';
-import request from '../../api';
+import get from '../../api';
 import Banner from './Banner';
 import Card from './Card';
 import background from './background.png';
@@ -23,9 +23,7 @@ class Complexes extends Component {
   }
 
   componentDidMount() {
-    request('/complexes?filter[state]=public').then(json =>
-      this.setState({ complexes: json.items }),
-    );
+    get('/complexes?filter[state]=public').then(json => this.setState({ complexes: json.items }));
   }
 
   render() {
