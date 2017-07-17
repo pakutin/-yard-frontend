@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'whatwg-fetch';
 import styled from 'styled-components';
-import get from '../../api';
+import { get } from '../../api';
 import Banner from './Banner';
 import Card from './Card';
 import background from './background.png';

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import get from '../../api';
+import { get } from '../../api';
 import Header from './Header';
 import Gallery from './Gallery';
 import TopFeatures from './TopFeatures';
