@@ -12,7 +12,7 @@ const Amenity = styled.p`
 `;
 
 export default function (props) {
-  const { amenities = {} } = props.complex || {};
+  const { amenities = {} } = props.amenities || {};
 
   return (
     <Grid>

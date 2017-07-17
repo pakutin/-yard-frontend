@@ -46,7 +46,7 @@ class Complex extends Component {
           <TopFeatures complex={complex} />
           <Features complex={complex} />
           {fullDescription && <Description text={fullDescription} />}
-          {amenities.length > 0 && <Amenities complex={complex} />}
+          {amenities.length > 0 && <Amenities amenities={amenities} />}
           <Offers name={name} />
         </Characteristics>
         <Guide
