@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "node"
+- stage: test
+  script: yarn lint
+  script: yarn flow
+- stage: build
+  script: yarn build
+  on:
+    branch: master
+  script:
+  - now build
+  - now build --name yard-frontend --public --token $NOWSH_TOKEN
+  - now alias --token $NOWSH_TOKEN
