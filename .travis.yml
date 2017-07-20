@@ -3,8 +3,7 @@ node_js:
   - "node"
 
 script:
-  - yarn lint
-  - yarn flow
+  - yarn lint && yarn flow
 
 deploy:
   skip_cleanup: true
@@ -12,6 +11,4 @@ deploy:
     branch: master
   provider: script
   script:
-    - yarn build
-    - now build --public --name pakutin-yard-frontend --token $NOW_TOKEN
-    - now alias --token $NOW_TOKEN
+    - yarn build && now build --public --name pakutin-yard-frontend --token $NOW_TOKEN && now alias --token $NOW_TOKEN

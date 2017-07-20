@@ -7,7 +7,8 @@ This is an educational project made during [Evgeny Rodionov's course](http://kur
 - [React Router](https://reacttraining.com/react-router/) for linking pages,
 - [styled-components](https://www.styled-components.com) for styling the layout, 
 - [yarn](https://yarnpkg.com/lang/en/) for dependency management,
-- [Eslint](http://eslint.org) (with Airbnb configuration) and [flow](https://flow.org) for finding code errors.
+- [Eslint](http://eslint.org) (with Airbnb configuration)  for finding code errors,
+- [flow](https://flow.org) and [flow-typed](https://github.com/flowtype/flow-typed) for checking data types.
 
 ## Cool, how does it work?
 
@@ -25,6 +26,12 @@ $ yarn start
 ### Check with Eslint
 ```
 $ yarn lint
+```
+
+### Check with Flow
+```
+$ yarn add flow-typed
+$ yarn flow
 ```
 
 ### Build application
