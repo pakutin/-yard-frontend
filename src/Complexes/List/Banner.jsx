@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
 import Intro from './Intro';
@@ -11,11 +13,10 @@ const Logo = styled.section`
   background-color: #161616;
 `;
 
-export default () => (
-  <div>
+export default () =>
+  (<div>
     <Logo>
       <img src={heroLogo} alt="Compass Development" width="418.9px" height="131px" />
     </Logo>
     <Intro />
-  </div>
-  );
+  </div>);

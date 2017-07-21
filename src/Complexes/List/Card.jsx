@@ -1,6 +1,9 @@
+// @flow
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import type { ComplexType } from '../../types';
 
 const Card = styled(Link)`
   text-decoration: none;
@@ -58,7 +61,7 @@ const Description = styled.p`
   color: #3e4247;
 `;
 
-export default props =>
+export default (props: { complex: ComplexType }) =>
   (<Card to={`/complexes/${props.complex.slug}`}>
     <Complex>
       <Cover

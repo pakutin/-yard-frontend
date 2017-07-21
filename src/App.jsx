@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
 import Header from './Header';

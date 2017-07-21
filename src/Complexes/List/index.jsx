@@ -1,7 +1,10 @@
+// @flow
+
 import React, { Component } from 'react';
 import 'whatwg-fetch';
 import styled from 'styled-components';
 import { get } from '../../api';
+import type { ComplexType } from '../../types';
 import Banner from './Banner';
 import Card from './Card';
 import background from './background.png';
@@ -15,12 +18,7 @@ const Cards = styled.main`
 `;
 
 class Complexes extends Component {
-  constructor() {
-    super();
-    this.state = {
-      complexes: [],
-    };
-  }
+  state: { complexes: Array<ComplexType> } = { complexes: [] };
 
   componentDidMount() {
     get('/complexes?filter[state]=public').then(json => this.setState({ complexes: json.items }));

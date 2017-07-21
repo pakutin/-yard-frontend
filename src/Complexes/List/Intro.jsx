@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
 
@@ -35,14 +37,12 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-export default () => (
-  <Intro>
+export default () =>
+  (<Intro>
     <Title>Discover Our New Developments</Title>
     <Text>
-        Compass brings a modern approach to new development marketing and sales. From boutique
-        rental conversions to luxurious ground-up condominiums, browse our portfolio of current
-        offerings.
-      </Text>
+      Compass brings a modern approach to new development marketing and sales. From boutique rental
+      conversions to luxurious ground-up condominiums, browse our portfolio of current offerings.
+    </Text>
     <Button>Contact The Team</Button>
-  </Intro>
-  );
+  </Intro>);
