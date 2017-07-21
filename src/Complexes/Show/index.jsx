@@ -1,6 +1,9 @@
+// @flow
+
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { get } from '../../api';
+import type { ComplexType } from '../../types';
 import Header from './Header';
 import Gallery from './Gallery';
 import TopFeatures from './TopFeatures';
@@ -20,12 +23,8 @@ const Characteristics = styled.article`
 `;
 
 class Complex extends Component {
-  constructor() {
-    super();
-    this.state = {
-      complex: {},
-    };
-  }
+  state = { complex: {} };
+  state: { complex: ComplexType };
 
   componentDidMount() {
     const complexSlug = this.props.match.params.slug;
@@ -45,7 +44,7 @@ class Complex extends Component {
         <Characteristics>
           <TopFeatures complex={complex} />
           <Features complex={complex} />
-          {fullDescription && <Description text={fullDescription} />}
+          {fullDescription && <Description fullDescription={fullDescription} />}
           {amenities.length > 0 && <Amenities amenities={amenities} />}
           <Offers name={name} />
         </Characteristics>

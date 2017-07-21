@@ -61,7 +61,9 @@ const Description = styled.p`
   color: #3e4247;
 `;
 
-export default (props: { complex: ComplexType }) =>
+type Props = { complex: ComplexType };
+
+export default (props: Props) =>
   (<Card to={`/complexes/${props.complex.slug}`}>
     <Complex>
       <Cover

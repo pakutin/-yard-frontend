@@ -22,6 +22,8 @@ const MapView = styled.img`
   box-shadow: 0 0 1.25rem 0.25rem rgba(0, 0, 0, 0.3);
 `;
 
+const url: string = process.env.PUBLIC_URL || '';
+
 export default () =>
   (<Sights>
     <Grid>
@@ -30,9 +32,8 @@ export default () =>
           <MapView
             alt=""
             className="sights-map"
-            src={`${process.env.PUBLIC_URL}/map.png`}
-            srcSet={`${`${process.env.PUBLIC_URL}/map@2x.png`} 2x, ${`${process.env
-              .PUBLIC_URL}/map@3x.png`} 3x`}
+            src={`${url}/map.png`}
+            srcSet={`${`${url}/map@2x.png`} 2x, ${`${url}/map@3x.png`} 3x`}
           />
         </Col>
         <Col lg={6}>

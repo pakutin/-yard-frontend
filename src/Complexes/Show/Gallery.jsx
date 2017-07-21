@@ -3,6 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ruplu from 'ruplu';
+import type { ImageType } from '../../types';
 
 const plural = ruplu(['фотография', 'фотографии', 'фотографий']);
 
@@ -39,7 +40,9 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-export default function (props) {
+type Props = { name: string, images: Array<ImageType> };
+
+export default function (props: Props) {
   const images = props.images || [];
 
   return (
