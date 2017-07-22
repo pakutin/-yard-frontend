@@ -31,7 +31,7 @@ $ yarn lint
 ### Check with Flow
 ```
 $ yarn add flow-typed
-$ flow-typed install
+$ yarn flow-typed install
 $ yarn flow
 ```
 
