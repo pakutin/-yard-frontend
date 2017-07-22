@@ -1,10 +1,10 @@
 // @flow
 
-type ImageType = {
+export type ImageType = {
   id: string,
 };
 
-type ListType = {
+export type CardType = {
   id: number,
   name: string,
   slug: string,
@@ -18,7 +18,7 @@ type ListType = {
   shortDescription: string,
 };
 
-type DetailsType = {
+export type DetailsType = {
   architect: string,
   ceilHeight: {
     from: number,
@@ -36,14 +36,14 @@ type DetailsType = {
   undergroundGarages?: number,
 };
 
-type LocationType = {
+export type LocationType = {
   subLocalityName?: string,
   street?: string,
   house?: string,
   postalCode?: string,
 };
 
-type StatisticsType = {
+export type StatisticsType = {
   propertiesCount: string,
   totalArea: {
     from: number,
@@ -59,17 +59,17 @@ type StatisticsType = {
   },
 };
 
-type AmenityType = {
+export type AmenityType = {
   name: string,
 };
 
-type FeatureType = {
+export type FeatureType = {
   details?: DetailsType,
   statistics?: StatisticsType,
   units?: number,
 };
 
-type ComplexType = {
+export type ComplexType = {
   id?: number,
   name: string,
   slug?: string,
@@ -83,5 +83,3 @@ type ComplexType = {
   amenity?: string,
   fullDescription?: string,
 };
-
-export type { ImageType, ListType, LocationType, AmenityType, FeatureType, ComplexType };

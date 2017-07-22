@@ -3,7 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Grid, Row, Col } from 'react-flexbox-grid';
-import type { AmenityType } from '../../types';
+import type { AmenityType } from '../types';
 import SectionTitle from './SectionTitle';
 
 const List = styled.div`margin-top: 0.875rem;`;

@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { get } from '../../api';
-import type { ComplexType } from '../../types';
+import type { ComplexType } from '../types';
 import Header from './Header';
 import Gallery from './Gallery';
 import TopFeatures from './TopFeatures';

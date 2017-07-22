@@ -3,7 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ruplu from 'ruplu';
-import type { ImageType } from '../../types';
+import type { ImageType } from '../types';
 
 const plural = ruplu(['фотография', 'фотографии', 'фотографий']);
 

@@ -3,7 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Grid } from 'react-flexbox-grid';
-import type { LocationType } from '../../types';
+import type { LocationType } from '../types';
 
 const Header = styled.div`
   padding-top: 1.5rem;

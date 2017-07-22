@@ -4,7 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { securityKinds, constructionKinds, quarters } from './Dictionary';
-import type { FeatureType } from '../../types';
+import type { FeatureType } from '../types';
 import SectionTitle from './SectionTitle';
 
 const List = styled.dl`

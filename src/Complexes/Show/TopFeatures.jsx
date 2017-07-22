@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { Grid } from 'react-flexbox-grid';
 import ruplu from 'ruplu';
 import TopFeature from './TopFeature';
-import type { FeatureType } from '../../types';
+import type { FeatureType } from '../types';
 
 const plural = ruplu(['предложение', 'предложения', 'предложений']);
 

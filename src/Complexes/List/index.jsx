@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import 'whatwg-fetch';
 import styled from 'styled-components';
 import { get } from '../../api';
-import type { ListType } from '../../types';
+import type { CardType } from '../types';
 import Banner from './Banner';
 import Card from './Card';
 import background from './background.png';
@@ -18,7 +18,7 @@ const Cards = styled.main`
 `;
 
 class Complexes extends Component {
-  state: { complexes: Array<ListType> } = { complexes: [] };
+  state: { complexes: Array<CardType> } = { complexes: [] };
 
   componentDidMount() {
     get('/complexes?filter[state]=public').then(json => this.setState({ complexes: json.items }));
