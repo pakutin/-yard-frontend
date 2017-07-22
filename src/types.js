@@ -4,6 +4,20 @@ type ImageType = {
   id: string,
 };
 
+type ListType = {
+  id: number,
+  name: string,
+  slug: string,
+  image: ImageType,
+  location: {
+    subLocalityName: string,
+    street: string,
+    house: string,
+    postalCode: string,
+  },
+  shortDescription: string,
+};
+
 type DetailsType = {
   architect: string,
   ceilHeight: {
@@ -23,14 +37,14 @@ type DetailsType = {
 };
 
 type LocationType = {
-  subLocalityName: string,
-  street: string,
-  house: string,
-  postalCode: string,
+  subLocalityName?: string,
+  street?: string,
+  house?: string,
+  postalCode?: string,
 };
 
 type StatisticsType = {
-  propertiesCount: number,
+  propertiesCount: string,
   totalArea: {
     from: number,
     to: number,
@@ -49,20 +63,25 @@ type AmenityType = {
   name: string,
 };
 
-type ComplexType = {
-  id: number,
-  name: string,
-  slug: string,
-  images: Array<ImageType>,
-  image: ImageType,
-  details: DetailsType,
-  location: LocationType,
-  statistics: StatisticsType,
-  units: number,
-  amenities: Array<AmenityType>,
-  amenity: string,
-  shortDescription: string,
-  fullDescription: string,
+type FeatureType = {
+  details?: DetailsType,
+  statistics?: StatisticsType,
+  units?: number,
 };
 
-export type { ImageType, LocationType, AmenityType, ComplexType };
+type ComplexType = {
+  id?: number,
+  name: string,
+  slug?: string,
+  images?: Array<ImageType>,
+  image?: ImageType,
+  details?: DetailsType,
+  location?: LocationType,
+  statistics?: StatisticsType,
+  units?: number,
+  amenities?: Array<AmenityType>,
+  amenity?: string,
+  fullDescription?: string,
+};
+
+export type { ImageType, ListType, LocationType, AmenityType, FeatureType, ComplexType };
