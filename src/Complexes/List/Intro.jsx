@@ -2,23 +2,24 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import Media from '../media';
 
 const Intro = styled.section`
   text-align: center;
   font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
   padding: 2rem 1rem;
-  @media (min-width: 62rem) {
+  ${Media.md`
     padding: 4rem 19.875rem;
     font-size: 1rem;
-  }
+  `};
 `;
 
 const Title = styled.h2`
   margin-top: 0;
   margin-bottom: 1rem;
-  @media (min-width: 62rem) {
+  ${Media.md`
     margin-bottom: 0.625rem;
-  }
+  `};
   font-weight: 700;
   font-size: 24px;
   line-height: 1.4;

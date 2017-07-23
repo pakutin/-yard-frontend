@@ -3,6 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import Media from './Complexes/media';
 import navLogo from './nav-logo.svg';
 
 const Header = styled.header`
@@ -10,27 +11,27 @@ const Header = styled.header`
   padding-bottom: 1rem;
   padding-left: 1rem;
   margin-bottom: 0;
-  @media (min-width: 62rem) {
+  ${Media.md`
     padding: 0 7.5rem;
     display: flex;
     justify-content: space-between;
     background-color: #fff;
     border-bottom: 1px solid #eaebf0;
-  }
+  `};
 `;
 
 const Logo = styled(Link)`
-@media (min-width: 62rem) {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-  display: flex;
-  justify-content: flex-start;  
-  }
+  ${Media.md`
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    justify-content: flex-start;  
+  `};
 `;
 
 const Nav = styled.nav`
   display: none;
-  @media (min-width: 62rem) {
+  ${Media.md`
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     display: flex;
@@ -39,18 +40,19 @@ const Nav = styled.nav`
     font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
     line-height: 1.0;
     color: #3e4247;
-  }
+  `};
 `;
 
 const NavItem = styled(Link)`
-@media (min-width: 62rem) {
-  margin-right: 2rem;
-  :last-child {margin-right: 0;} 
-  line-height: 1.0;
-  font-size: 1rem;
-  font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
-  color: #3e4247;
-  text-decoration: none; }
+  ${Media.md`
+    margin-right: 2rem;
+    :last-child {margin-right: 0;} 
+    line-height: 1.0;
+    font-size: 1rem;
+    font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
+    color: #3e4247;
+    text-decoration: none; 
+  `};
 `;
 
 export default () =>

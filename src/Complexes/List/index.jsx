@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import 'whatwg-fetch';
 import styled from 'styled-components';
+import Media from '../media';
 import { get } from '../../api';
 import type { CardType } from '../types';
 import Banner from './Banner';
@@ -11,9 +12,9 @@ import background from './background.png';
 
 const Cards = styled.main`
   padding-bottom: 2rem;
-  @media (min-width: 62rem) {
+  ${Media.md`
     padding-bottom: 3rem;
-  }
+  `};
   background-image: url(${background});
   background-color: #eaebf0;
   background-size: 20px 10px;

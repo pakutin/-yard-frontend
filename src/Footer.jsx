@@ -4,15 +4,16 @@ import React from 'react';
 import styled from 'styled-components';
 import { Grid, Col, Row } from 'react-flexbox-grid';
 import { Link } from 'react-router-dom';
+import Media from './Complexes/media';
 import arrow from './arrow.svg';
 
 const Footer = styled.footer`
   padding-left: 1rem;
   padding-right: 1rem;
-  @media (min-width: 75rem) {
+  ${Media.lg`
     padding-left: 0;
     padding-right: 0;
-  }
+  `};
   padding-top: 2rem;
   padding-bottom: 2rem;
   font-weight: 300;
@@ -39,9 +40,9 @@ const Detail = styled.p`
 const DetailLast = styled(Detail)`
   margin-top: 1.375rem;
   margin-bottom: 3rem;
-  @media (min-width: 75rem) {
-      margin-bottom: 0rem;
-  }
+  ${Media.lg`
+    margin-bottom: 0rem;
+  `};
 `;
 
 const Nav = styled.nav`
@@ -64,16 +65,16 @@ const NavItem = styled(Link)`
 const NavItemLast = styled(NavItem)`
   margin-top: 1.25rem;
   margin-bottom: 2rem;
-  @media (min-width: 75rem) {
-      margin-bottom: 0rem;
-      }
+  ${Media.lg`
+    margin-bottom: 0rem;
+  `};
 `;
 
 const Caption = styled.p`
   margin-top: 3rem;
-  @media (min-width: 75rem) {
+  ${Media.lg`
     margin-top: 6.25rem;
-  }
+  `};
   margin-bottom: 0;
   font-size: 0.6875rem;
   font-weight: 300;

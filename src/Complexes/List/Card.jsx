@@ -3,6 +3,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Media from '../media';
 import type { CardType } from '../types';
 
 const Card = styled(Link)`
@@ -13,16 +14,16 @@ const Complex = styled.article`
   margin-left: 1rem;
   margin-right: 1rem;
   margin-bottom: 2rem;
-  @media (min-width: 62rem) {
+  ${Media.md`
     margin-left: 4rem;
     margin-right: 4rem;
     margin-bottom: 3rem;
     display: flex;
-  }
-  @media (min-width: 75rem) {
+  `};
+  ${Media.lg`
     margin-left: 7.5rem;
     margin-right: 7.5rem;
-  }
+  `};
   background-color: #fff;
   &:hover {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
@@ -34,10 +35,10 @@ const Cover = styled.img`
   height: auto;
   margin-bottom: 0;
   padding-bottom: 0;
-  @media (min-width: 62rem) {
+  ${Media.md`
     max-width: 491px;
     max-height: 350px;
-  }
+  `};
 `;
 
 const Data = styled.div`
@@ -48,10 +49,10 @@ const Data = styled.div`
 
 const Location = styled.p`
   margin: 1rem 1rem 1.5rem 1rem;
-  @media (min-width: 62rem) {
+  ${Media.md`
     margin-top: 1.5rem;
     margin-left: 2rem;
-  }
+  `};
   text-transform: uppercase;
   font-size: 1rem;
   font-family: "Monaco", "Lucida Console", monospace;
@@ -62,11 +63,11 @@ const Location = styled.p`
 const Name = styled.h3`
   margin: 1rem 1rem 1.5rem 1rem;
   font-size: 2rem;
-  @media (min-width: 62rem) {
+  ${Media.md`
     margin-bottom: .5rem;
     margin-left: 2rem;
     font-size: 2.5rem;
-  }
+  `};
   font-weight: 700;
   line-height: 1.4;
   color: #000000;
@@ -74,12 +75,12 @@ const Name = styled.h3`
 
 const Description = styled.p`
   margin: 1rem 1rem 1.5rem 1rem;
-  @media (min-width: 62rem) {
+  ${Media.md`
     margin: 0.5rem 4rem 0 2rem;
-  }
-  @media (min-width: 75rem) {
+  `};
+  ${Media.lg`
     margin: 0.5rem 5.375rem 0 2rem;
-  }
+  `};
   font-size: 1rem;
   line-height: 1.5;
   color: #3e4247;
