@@ -18,7 +18,7 @@ const Cards = styled.main`
   background-color: #eaebf0;
   background-size: 20px 10px;
   background-repeat: repeat;
-  @media (min-width: 992px) {
+  @media (min-width: 62rem) {
     padding-bottom: 3rem;
   }
 `;

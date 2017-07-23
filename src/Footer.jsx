@@ -9,7 +9,7 @@ import arrow from './arrow.svg';
 const Footer = styled.footer`
   padding-left: 1rem;
   padding-right: 1rem;
-  @media (min-width: 1200px) {
+  @media (min-width: 75rem) {
     padding-left: 0;
     padding-right: 0;
   }
@@ -39,7 +39,7 @@ const Detail = styled.p`
 const DetailLast = styled(Detail)`
   margin-top: 1.375rem;
   margin-bottom: 3rem;
-  @media (min-width: 1200px) {
+  @media (min-width: 75rem) {
       margin-bottom: 0rem;
   }
 `;
@@ -64,14 +64,14 @@ const NavItem = styled(Link)`
 const NavItemLast = styled(NavItem)`
   margin-top: 1.25rem;
   margin-bottom: 2rem;
-  @media (min-width: 1200px) {
+  @media (min-width: 75rem) {
       margin-bottom: 0rem;
       }
 `;
 
 const Caption = styled.p`
   margin-top: 3rem;
-  @media (min-width: 1200px) {
+  @media (min-width: 75rem) {
     margin-top: 6.25rem;
   }
   margin-bottom: 0;

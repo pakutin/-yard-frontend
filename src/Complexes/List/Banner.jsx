@@ -7,7 +7,7 @@ import heroLogo from './hero-logo.svg';
 
 const Logo = styled.section`
   display: none;
-  @media (min-width: 992px) {
+  @media (min-width: 62rem) {
     padding: 5rem 31.875rem;
     display: flex;
     justify-content: center;

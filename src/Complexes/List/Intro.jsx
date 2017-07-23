@@ -7,7 +7,7 @@ const Intro = styled.section`
   text-align: center;
   font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
   padding: 2rem 1rem;
-  @media (min-width: 992px) {
+  @media (min-width: 62rem) {
     padding: 4rem 19.875rem;
     font-size: 1rem;
   }
@@ -16,7 +16,7 @@ const Intro = styled.section`
 const Title = styled.h2`
   margin-top: 0;
   margin-bottom: 1rem;
-  @media (min-width: 992px) {
+  @media (min-width: 62rem) {
     margin-bottom: 0.625rem;
   }
   font-weight: 700;

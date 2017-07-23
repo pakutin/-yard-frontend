@@ -10,7 +10,7 @@ const Header = styled.header`
   padding-bottom: 1rem;
   padding-left: 1rem;
   margin-bottom: 0;
-  @media (min-width: 992px) {
+  @media (min-width: 62rem) {
     padding: 0 7.5rem;
     display: flex;
     justify-content: space-between;
@@ -20,7 +20,7 @@ const Header = styled.header`
 `;
 
 const Logo = styled(Link)`
-@media (min-width: 992px) {
+@media (min-width: 62rem) {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
   display: flex;
@@ -30,7 +30,7 @@ const Logo = styled(Link)`
 
 const Nav = styled.nav`
   display: none;
-  @media (min-width: 992px) {
+  @media (min-width: 62rem) {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     display: flex;
@@ -43,7 +43,7 @@ const Nav = styled.nav`
 `;
 
 const NavItem = styled(Link)`
-@media (min-width: 992px) {
+@media (min-width: 62rem) {
   margin-right: 2rem;
   :last-child {margin-right: 0;} 
   line-height: 1.0;
