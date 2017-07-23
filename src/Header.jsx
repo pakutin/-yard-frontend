@@ -6,39 +6,51 @@ import { Link } from 'react-router-dom';
 import navLogo from './nav-logo.svg';
 
 const Header = styled.header`
-  padding-left: 7.5em;
-  padding-right: 5.5em;
-  display: flex;
-  justify-content: space-between;
-  background-color: #fff;
-  border-bottom: 1px solid #eaebf0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  margin-bottom: 0;
+  @media (min-width: 992px) {
+    padding: 0 7.5rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border-bottom: 1px solid #eaebf0;
+  }
 `;
 
 const Logo = styled(Link)`
+@media (min-width: 992px) {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-start;  
+  }
 `;
 
 const Nav = styled.nav`
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  display: flex;
-  justify-content: flex-end;
-  font-size: 1rem;
-  font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
-  line-height: 1.0;
-  color: #3e4247;
+  display: none;
+  @media (min-width: 992px) {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1rem;
+    font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
+    line-height: 1.0;
+    color: #3e4247;
+  }
 `;
 
 const NavItem = styled(Link)`
+@media (min-width: 992px) {
   margin-right: 2rem;
+  :last-child {margin-right: 0;} 
   line-height: 1.0;
   font-size: 1rem;
   font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
   color: #3e4247;
-  text-decoration: none;
+  text-decoration: none; }
 `;
 
 export default () =>

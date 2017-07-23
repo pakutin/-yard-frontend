@@ -7,6 +7,12 @@ import { Link } from 'react-router-dom';
 import arrow from './arrow.svg';
 
 const Footer = styled.footer`
+  padding-left: 1rem;
+  padding-right: 1rem;
+  @media (min-width: 1200px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
   padding-top: 2rem;
   padding-bottom: 2rem;
   font-weight: 300;
@@ -32,7 +38,10 @@ const Detail = styled.p`
 
 const DetailLast = styled(Detail)`
   margin-top: 1.375rem;
-  margin-bottom: 0rem;
+  margin-bottom: 3rem;
+  @media (min-width: 1200px) {
+      margin-bottom: 0rem;
+  }
 `;
 
 const Nav = styled.nav`
@@ -54,11 +63,17 @@ const NavItem = styled(Link)`
 
 const NavItemLast = styled(NavItem)`
   margin-top: 1.25rem;
-  margin-bottom: 0;
+  margin-bottom: 2rem;
+  @media (min-width: 1200px) {
+      margin-bottom: 0rem;
+      }
 `;
 
 const Caption = styled.p`
-  margin-top: 6.25rem;
+  margin-top: 3rem;
+  @media (min-width: 1200px) {
+    margin-top: 6.25rem;
+  }
   margin-bottom: 0;
   font-size: 0.6875rem;
   font-weight: 300;
@@ -70,13 +85,13 @@ export default () =>
   (<Footer>
     <Grid>
       <Row>
-        <Col xs={4}>
+        <Col xs={12} lg={4}>
           <Heading>ООО «Ярд»</Heading>
           <Detail>ОГРН 1175074002531</Detail>
           <Detail>ИНН 5036165365</Detail>
           <DetailLast>+7 (999) 821-14-88</DetailLast>
         </Col>
-        <Col xs={2}>
+        <Col xs={12} lg={2}>
           <Nav>
             <NavHeading>Жилые комплексы</NavHeading>
             <NavItem to="/">ВТБ Арена Парк</NavItem>
@@ -87,7 +102,7 @@ export default () =>
             </NavItemLast>
           </Nav>
         </Col>
-        <Col xs={2}>
+        <Col xs={12} lg={2}>
           <Nav>
             <NavHeading>Компания</NavHeading>
             <NavItem to="/">Команда</NavItem>
@@ -96,7 +111,7 @@ export default () =>
         </Col>
       </Row>
       <Row>
-        <Col xsOffset={4} xs={8}>
+        <Col xs={12} lgOffset={4} lg={8}>
           <Caption>
             Любая информация, представленная на&nbsp;данном сайте, носит исключительно
             информационный характер и&nbsp;ни&nbsp;при&nbsp;каких условиях не&nbsp;является

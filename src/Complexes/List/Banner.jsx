@@ -6,11 +6,13 @@ import Intro from './Intro';
 import heroLogo from './hero-logo.svg';
 
 const Logo = styled.section`
-  padding: 5rem 31.875rem;
-  margin-bottom: 4rem;
-  display: flex;
-  justify-content: center;
-  background-color: #161616;
+  display: none;
+  @media (min-width: 992px) {
+    padding: 5rem 31.875rem;
+    display: flex;
+    justify-content: center;
+    background-color: #161616;
+  }
 `;
 
 export default () =>

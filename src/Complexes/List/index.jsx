@@ -10,11 +10,17 @@ import Card from './Card';
 import background from './background.png';
 
 const Cards = styled.main`
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
+  @media (min-width: 62rem) {
+    padding-bottom: 3rem;
+  }
   background-image: url(${background});
   background-color: #eaebf0;
   background-size: 20px 10px;
   background-repeat: repeat;
+  @media (min-width: 992px) {
+    padding-bottom: 3rem;
+  }
 `;
 
 class Complexes extends Component {

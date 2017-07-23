@@ -10,10 +10,19 @@ const Card = styled(Link)`
 `;
 
 const Complex = styled.article`
-  margin-bottom: 3rem;
-  margin-left: 7.5rem;
-  margin-right: 7.5rem;
-  display: flex;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  @media (min-width: 62rem) {
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-bottom: 3rem;
+    display: flex;
+  }
+  @media (min-width: 75rem) {
+    margin-left: 7.5rem;
+    margin-right: 7.5rem;
+  }
   background-color: #fff;
   &:hover {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
@@ -21,8 +30,14 @@ const Complex = styled.article`
 `;
 
 const Cover = styled.img`
-  max-width: 491px;
-  max-height: 350px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  @media (min-width: 62rem) {
+    max-width: 491px;
+    max-height: 350px;
+  }
 `;
 
 const Data = styled.div`
@@ -32,9 +47,11 @@ const Data = styled.div`
 `;
 
 const Location = styled.p`
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  margin-left: 2rem;
+  margin: 1rem 1rem 1.5rem 1rem;
+  @media (min-width: 62rem) {
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+  }
   text-transform: uppercase;
   font-size: 1rem;
   font-family: "Monaco", "Lucida Console", monospace;
@@ -43,19 +60,26 @@ const Location = styled.p`
 `;
 
 const Name = styled.h3`
-  margin-top: 1.5rem;
-  margin-bottom: .5rem;
-  margin-left: 2rem;
+  margin: 1rem 1rem 1.5rem 1rem;
+  font-size: 2rem;
+  @media (min-width: 62rem) {
+    margin-bottom: .5rem;
+    margin-left: 2rem;
+    font-size: 2.5rem;
+  }
   font-weight: 700;
-  font-size: 2.5rem;
   line-height: 1.4;
   color: #000000;
 `;
 
 const Description = styled.p`
-  margin-top: 0.5rem;
-  margin-left: 2rem;
-  margin-right: 5.375rem;
+  margin: 1rem 1rem 1.5rem 1rem;
+  @media (min-width: 62rem) {
+    margin: 0.5rem 4rem 0 2rem;
+  }
+  @media (min-width: 75rem) {
+    margin: 0.5rem 5.375rem 0 2rem;
+  }
   font-size: 1rem;
   line-height: 1.5;
   color: #3e4247;

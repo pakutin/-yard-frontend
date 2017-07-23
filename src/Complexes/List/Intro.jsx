@@ -4,15 +4,21 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Intro = styled.section`
-  margin: 4rem 19.875rem;
   text-align: center;
-  font-size: 1rem;
   font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
+  padding: 2rem 1rem;
+  @media (min-width: 992px) {
+    padding: 4rem 19.875rem;
+    font-size: 1rem;
+  }
 `;
 
 const Title = styled.h2`
   margin-top: 0;
-  margin-bottom: 0.625rem;
+  margin-bottom: 1rem;
+  @media (min-width: 992px) {
+    margin-bottom: 0.625rem;
+  }
   font-weight: 700;
   font-size: 24px;
   line-height: 1.4;
@@ -20,7 +26,7 @@ const Title = styled.h2`
 `;
 
 const Text = styled.p`
-  margin-top: 0.625rem;
+  margin-top: 0;
   margin-bottom: 1rem;
   line-height: 1.5;
   color: #3e4247;
