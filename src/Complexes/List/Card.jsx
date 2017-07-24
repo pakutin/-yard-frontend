@@ -3,8 +3,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import Media from '../media';
 import type { ComplexesType } from '../types';
+import Media from '../media';
 
 const Card = styled(Link)`
   text-decoration: none;
