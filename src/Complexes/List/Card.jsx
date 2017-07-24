@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Media from '../media';
-import type { CardType } from '../types';
+import type { ComplexesType } from '../types';
 
 const Card = styled(Link)`
   text-decoration: none;
@@ -86,7 +86,7 @@ const Description = styled.p`
   color: #3e4247;
 `;
 
-type Props = { complex: CardType };
+type Props = { complex: ComplexesType };
 
 export default (props: Props) =>
   (<Card to={`/complexes/${props.complex.slug}`}>
