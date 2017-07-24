@@ -4,7 +4,7 @@ export type ImageType = {
   id: string,
 };
 
-export type CardType = {
+export type ComplexesType = {
   id: number,
   name: string,
   slug: string,
