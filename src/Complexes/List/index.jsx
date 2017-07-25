@@ -20,8 +20,6 @@ const Main = styled.main`
 `;
 
 const Cards = styled.div`
-  padding-left: 1rem;
-  padding-right: 1rem;
   padding-bottom: 2rem;
   ${Media.md`
     padding-bottom: 3rem;
