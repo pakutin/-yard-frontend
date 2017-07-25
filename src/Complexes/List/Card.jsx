@@ -3,7 +3,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import type { ComplexesType } from '../types';
+import type { ComplexType } from '../types';
 
 const Card = styled(Link)`
   text-decoration: none;
@@ -61,7 +61,7 @@ const Description = styled.p`
   color: #3e4247;
 `;
 
-type Props = { complex: ComplexesType };
+type Props = { complex: ComplexType };
 
 export default (props: Props) =>
   (<Card to={`/complexes/${props.complex.slug}`}>
@@ -75,10 +75,13 @@ export default (props: Props) =>
         alt={props.complex.name}
       />
       <Data>
-        <Location>
-          {`${props.complex.location.subLocalityName}, ${props.complex.location.street}, ${props
-            .complex.location.house}`}
-        </Location>
+        {props.complex.location.subLocalityName &&
+          props.complex.location.street &&
+          props.complex.location.house &&
+          <Location>
+            {`${props.complex.location.subLocalityName}, ${props.complex.location.street}, ${props
+              .complex.location.house}`}
+          </Location>}
         <Name>
           {props.complex.name}
         </Name>
