@@ -4,20 +4,6 @@ export type ImageType = {
   id: string,
 };
 
-export type ComplexesType = {
-  id: number,
-  name: string,
-  slug: string,
-  image: ImageType,
-  location: {
-    subLocalityName: string,
-    street: string,
-    house: string,
-    postalCode: string,
-  },
-  shortDescription: string,
-};
-
 export type DetailsType = {
   architect: string,
   ceilHeight: {
@@ -71,15 +57,16 @@ export type FeatureType = {
 
 export type ComplexType = {
   id?: number,
-  name: string,
-  slug?: string,
+  name?: string,
+  slug: string,
   images?: Array<ImageType>,
-  image?: ImageType,
+  image: ImageType,
   details?: DetailsType,
-  location?: LocationType,
+  location: LocationType,
   statistics?: StatisticsType,
   units?: number,
   amenities?: Array<AmenityType>,
   amenity?: string,
+  shortDescription?: string,
   fullDescription?: string,
 };

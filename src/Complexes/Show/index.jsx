@@ -39,14 +39,14 @@ class Complex extends Component {
 
     return (
       <main>
-        <Header name={name} location={location} />
-        <Gallery name={name} images={images} />
+        {name && <Header name={name} location={location} />}
+        {name && <Gallery name={name} images={images} />}
         <Characteristics>
           <TopFeatures complex={complex} />
           <Features complex={complex} />
           {fullDescription && <Description fullDescription={fullDescription} />}
           {amenities.length > 0 && <Amenities amenities={amenities} />}
-          <Offers name={name} />
+          {name && <Offers name={name} />}
         </Characteristics>
         <Guide
           district="Якиманка"

@@ -5,7 +5,7 @@ import 'whatwg-fetch';
 import styled from 'styled-components';
 import Media from '../media';
 import { get } from '../../api';
-import type { ComplexesType } from '../types';
+import type { ComplexType } from '../types';
 import Banner from './Banner';
 import Card from './Card';
 import background from './background.png';
@@ -25,7 +25,7 @@ const Cards = styled.main`
 `;
 
 class Complexes extends Component {
-  state: { complexes: Array<ComplexesType> } = { complexes: [] };
+  state: { complexes: Array<ComplexType> } = { complexes: [] };
 
   componentDidMount() {
     get('/complexes?filter[state]=public').then(json => this.setState({ complexes: json.items }));
@@ -33,10 +33,12 @@ class Complexes extends Component {
 
   render() {
     return (
-      <Cards>
-        <Banner />
-        {this.state.complexes.map(complex => <Card key={complex.id} complex={complex} />)}
-      </Cards>
+      <main>
+        <Cards>
+          <Banner />
+          {this.state.complexes.map(complex => <Card key={complex.id} complex={complex} />)}
+        </Cards>
+      </main>
     );
   }
 }
