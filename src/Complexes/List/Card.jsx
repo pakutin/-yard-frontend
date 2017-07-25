@@ -11,12 +11,8 @@ const Card = styled(Link)`
 `;
 
 const Complex = styled.article`
-  margin-left: 1rem;
-  margin-right: 1rem;
   margin-bottom: 2rem;
   ${Media.md`
-    margin-left: 4rem;
-    margin-right: 4rem;
     margin-bottom: 3rem;
     display: flex;
   `};
@@ -89,30 +85,35 @@ const Description = styled.p`
 type Props = { complex: ComplexType };
 
 export default (props: Props) =>
-  (<Card to={`/complexes/${props.complex.slug}`}>
-    <Complex>
-      <Cover
-        src={`https://yard-images.s3.amazonaws.com/${props.complex.image.id}-512`}
-        srcSet={
-          `https://yard-images.s3.amazonaws.com/${props.complex.image.id}-1024 2x,` +
-          `https://yard-images.s3.amazonaws.com/${props.complex.image.id}-2048 3x,`
-        }
-        alt={props.complex.name}
-      />
-      <Data>
-        {props.complex.location.subLocalityName &&
-          props.complex.location.street &&
-          props.complex.location.house &&
-          <Location>
-            {`${props.complex.location.subLocalityName}, ${props.complex.location.street}, ${props
-              .complex.location.house}`}
-          </Location>}
-        <Name>
-          {props.complex.name}
-        </Name>
-        <Description>
-          {props.complex.shortDescription}
-        </Description>
-      </Data>
-    </Complex>
-  </Card>);
+  (<div>
+    {props.complex.slug &&
+      <Card to={`/complexes/${props.complex.slug}`}>
+        <Complex>
+          {props.complex.image &&
+            <Cover
+              src={`https://yard-images.s3.amazonaws.com/${props.complex.image.id}-512`}
+              srcSet={
+                `https://yard-images.s3.amazonaws.com/${props.complex.image.id}-1024 2x,` +
+                `https://yard-images.s3.amazonaws.com/${props.complex.image.id}-2048 3x,`
+              }
+              alt={props.complex.name}
+            />}
+          <Data>
+            {props.complex.location &&
+              props.complex.location.subLocalityName &&
+              props.complex.location.street &&
+              props.complex.location.house &&
+              <Location>
+                {`${props.complex.location.subLocalityName}, ${props.complex.location
+                  .street}, ${props.complex.location.house}`}
+              </Location>}
+            <Name>
+              {props.complex.name}
+            </Name>
+            <Description>
+              {props.complex.shortDescription}
+            </Description>
+          </Data>
+        </Complex>
+      </Card>}
+  </div>);

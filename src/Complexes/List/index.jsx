@@ -3,25 +3,29 @@
 import React, { Component } from 'react';
 import 'whatwg-fetch';
 import styled from 'styled-components';
-import Media from '../media';
+import { Grid } from 'react-flexbox-grid';
 import { get } from '../../api';
+import Media from '../media';
 import type { ComplexType } from '../types';
-import Banner from './Banner';
+import Logo from './Logo';
+import Intro from './Intro';
 import Card from './Card';
 import background from './background.png';
 
-const Cards = styled.main`
-  padding-bottom: 2rem;
-  ${Media.md`
-    padding-bottom: 3rem;
-  `};
+const Main = styled.main`
   background-image: url(${background});
   background-color: #eaebf0;
   background-size: 20px 10px;
   background-repeat: repeat;
-  @media (min-width: 62rem) {
+`;
+
+const Cards = styled.div`
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
+  ${Media.md`
     padding-bottom: 3rem;
-  }
+  `};
 `;
 
 class Complexes extends Component {
@@ -33,12 +37,15 @@ class Complexes extends Component {
 
   render() {
     return (
-      <main>
+      <Main>
+        <Logo />
+        <Intro />
         <Cards>
-          <Banner />
-          {this.state.complexes.map(complex => <Card key={complex.id} complex={complex} />)}
+          <Grid>
+            {this.state.complexes.map(complex => <Card key={complex.id} complex={complex} />)}
+          </Grid>
         </Cards>
-      </main>
+      </Main>
     );
   }
 }
