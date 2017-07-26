@@ -7,16 +7,18 @@ import Media from './Complexes/media';
 import navLogo from './nav-logo.svg';
 
 const Header = styled.header`
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  margin-bottom: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #eaebf0;
+`;
+
+const Nav = styled.div`
+  padding: 1rem 1rem;
+  margin: 0 auto;
+  max-width: 76rem;
   ${Media.md`
-    padding: 0 7.5rem;
+    padding: 0 1rem;
     display: flex;
     justify-content: space-between;
-    background-color: #fff;
-    border-bottom: 1px solid #eaebf0;
   `};
 `;
 
@@ -29,7 +31,7 @@ const Logo = styled(Link)`
   `};
 `;
 
-const Nav = styled.nav`
+const NavItems = styled.nav`
   display: none;
   ${Media.md`
     margin-top: 1.5rem;
@@ -57,12 +59,14 @@ const NavItem = styled(Link)`
 
 export default () =>
   (<Header>
-    <Logo to="/complexes">
-      <img src={navLogo} alt="Compass" width="179px" height="24px" />
-    </Logo>
     <Nav>
-      <NavItem to="/">Купить</NavItem>
-      <NavItem to="/">Снять</NavItem>
-      <NavItem to="/">Наши агенты</NavItem>
+      <Logo to="/complexes">
+        <img src={navLogo} alt="Compass" width="179px" height="24px" />
+      </Logo>
+      <NavItems>
+        <NavItem to="/">Купить</NavItem>
+        <NavItem to="/">Снять</NavItem>
+        <NavItem to="/">Наши агенты</NavItem>
+      </NavItems>
     </Nav>
   </Header>);

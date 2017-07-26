@@ -3,8 +3,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import SectionTitle from './SectionTitle';
+import Media from '../media';
 
-const TopFeature = styled.div`padding-right: 3rem;`;
+const TopFeature = styled.div`
+  padding-bottom: 1rem;
+  ${Media.md`
+    padding-right: 3rem;
+    padding-bottom: 0;
+  `};
+`;
 
 const Caption = styled.small`
   padding-top: 1rem;

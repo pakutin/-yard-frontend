@@ -4,6 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ruplu from 'ruplu';
 import type { ImageType } from '../types';
+import Media from '../media';
 
 const plural = ruplu(['фотография', 'фотографии', 'фотографий']);
 
@@ -21,9 +22,12 @@ const Picture = styled.img`
 `;
 
 const Overlay = styled.div`
-  margin-left: 7.5rem;
+  margin-left: 1rem;
   margin-top: -2.675rem;
   position: absolute;
+  ${Media.md`
+  margin-left: 7.5rem;
+  `};
 `;
 
 const Button = styled.button`
