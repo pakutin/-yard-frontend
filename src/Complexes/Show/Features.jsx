@@ -4,7 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { securityKinds, constructionKinds, quarters } from './Dictionary';
-import type { FeatureType } from '../types';
+import type { ComplexType } from '../types';
 import SectionTitle from './SectionTitle';
 
 const List = styled.dl`
@@ -44,7 +44,7 @@ function formatFloat(float) {
 }
 
 type Props = {
-  complex: FeatureType,
+  complex: ComplexType,
 };
 
 export default function (props: Props) {

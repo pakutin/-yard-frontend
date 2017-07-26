@@ -49,20 +49,14 @@ export type AmenityType = {
   name: string,
 };
 
-export type FeatureType = {
-  details?: DetailsType,
-  statistics?: StatisticsType,
-  units?: number,
-};
-
 export type ComplexType = {
   id?: number,
   name?: string,
-  slug: string,
+  slug?: string,
   images?: Array<ImageType>,
-  image: ImageType,
+  image?: ImageType,
   details?: DetailsType,
-  location: LocationType,
+  location?: LocationType,
   statistics?: StatisticsType,
   units?: number,
   amenities?: Array<AmenityType>,
