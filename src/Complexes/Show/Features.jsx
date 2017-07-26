@@ -7,6 +7,13 @@ import { securityKinds, constructionKinds, quarters } from './Dictionary';
 import type { ComplexType } from '../types';
 import SectionTitle from './SectionTitle';
 
+const FeaturesGrid = styled(Grid)`
+  margin: 0 auto;
+  max-width: 76rem;
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+`;
+
 const List = styled.dl`
   margin-bottom: 0;
   display: flex;
@@ -60,7 +67,7 @@ export default function (props: Props) {
     props.complex || {};
 
   return (
-    <Grid>
+    <FeaturesGrid fluid>
       <SectionTitle>Характеристики</SectionTitle>
       <Row>
         <Col lg={4}>
@@ -123,6 +130,6 @@ export default function (props: Props) {
           </List>
         </Col>
       </Row>
-    </Grid>
+    </FeaturesGrid>
   );
 }

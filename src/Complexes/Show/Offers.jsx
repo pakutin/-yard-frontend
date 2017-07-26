@@ -3,14 +3,24 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Grid, Row, Col } from 'react-flexbox-grid';
+import Media from '../media';
 import SectionTitle from './SectionTitle';
 import Offer from './Offer';
+
+const OffersGrid = styled(Grid)`
+  margin: 0 auto;
+  max-width: 76rem;
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+`;
 
 const Offers = styled.section`
   margin-top: 3.5rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
+  ${Media.md`
   text-align: center;
+  `};
   font-size: 1rem;
   line-height: 1.5625;
   font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
@@ -22,9 +32,9 @@ type Props = { name: string };
 
 export default (props: Props) =>
   (<Offers>
-    <Grid>
+    <OffersGrid>
       <SectionTitle>
-        Предложения в ЖК «{props.name}»
+        Предложения в&nbsp;ЖК&nbsp;«{props.name}»
       </SectionTitle>
       <Row>
         <Col lg={4}>
@@ -37,5 +47,5 @@ export default (props: Props) =>
           <Offer room={3} space={{ min: 59, max: 120 }} price={{ min: 20.3, max: 84.2 }} />
         </Col>
       </Row>
-    </Grid>
+    </OffersGrid>
   </Offers>);

@@ -36,7 +36,6 @@ class Complex extends Component {
       complex = {},
       complex: { name, location = {}, images = [], fullDescription, amenities = [] } = {},
     } = this.state;
-
     return (
       <main>
         {name && <Header name={name} location={location} />}
@@ -53,7 +52,7 @@ class Complex extends Component {
           tagline="Исторический центр Москвы в&nbsp;двух километрах&nbsp;от&nbsp;Кремля"
           link="Гид по Якиманке"
         />
-        <Sights />
+        <Sights location={location} />
       </main>
     );
   }
