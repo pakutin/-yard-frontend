@@ -11,16 +11,11 @@ const Card = styled(Link)`
 `;
 
 const Complex = styled.article`
-  margin-bottom: 2rem;
-  max-width: 76rem;
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
+  max-width: 75rem;
   ${Media.md`
     margin-bottom: 3rem;
     display: flex;
-  `};
-  ${Media.lg`
-    margin-left: 7.5rem;
-    margin-right: 7.5rem;
   `};
   background-color: #fff;
   &:hover {

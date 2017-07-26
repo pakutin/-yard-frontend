@@ -8,7 +8,7 @@ import Media from './Complexes/media';
 import arrow from './arrow.svg';
 
 const Footer = styled.footer`
-  padding: 2rem 1rem 3rem 1rem;
+  padding: 2rem 0 3rem 0;
   ${Media.md`
     padding-bottom: 2rem;
     display: flex;
@@ -18,6 +18,13 @@ const Footer = styled.footer`
   line-height: 1.2;
   font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
   background-color: #111;
+`;
+
+const FooterGrid = styled(Grid)`
+  margin: 0 auto;
+  max-width: 76rem;
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
 `;
 
 const Heading = styled.h4`
@@ -80,7 +87,7 @@ const Caption = styled.p`
 
 export default () =>
   (<Footer>
-    <Grid>
+    <FooterGrid fluid>
       <Row>
         <Col xs={12} md={4}>
           <Heading>ООО «Ярд»</Heading>
@@ -117,5 +124,5 @@ export default () =>
           </Caption>
         </Col>
       </Row>
-    </Grid>
+    </FooterGrid>
   </Footer>);

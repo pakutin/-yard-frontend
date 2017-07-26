@@ -27,10 +27,8 @@ const Cards = styled.div`
 `;
 
 const CardGrid = styled(Grid)`
-  ${Media.xs`
     padding-right: 1rem !important;
     padding-left: 1rem !important;
-  `};
 `;
 
 class Complexes extends Component {
