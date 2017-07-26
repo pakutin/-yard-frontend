@@ -6,8 +6,10 @@ const Intro = styled.section`
   text-align: center;
   font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
   padding: 2rem 1rem;
+  margin: 0 auto;
+  max-width: 50rem;
   ${Media.md`
-    padding: 4rem 19.875rem;
+    padding: 4rem 0;
     font-size: 1rem;
   `};
 `;

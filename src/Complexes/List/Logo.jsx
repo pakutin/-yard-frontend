@@ -8,7 +8,8 @@ import heroLogo from './hero-logo.svg';
 const Logo = styled.section`
   display: none;
   ${Media.md`
-    padding: 5rem 31.875rem;
+    padding: 5rem 0;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     background-color: #161616;

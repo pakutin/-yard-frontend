@@ -12,6 +12,8 @@ const Card = styled(Link)`
 
 const Complex = styled.article`
   margin-bottom: 2rem;
+  max-width: 76rem;
+  margin: 0 auto;
   ${Media.md`
     margin-bottom: 3rem;
     display: flex;

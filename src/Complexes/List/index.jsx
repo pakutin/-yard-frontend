@@ -20,11 +20,16 @@ const Main = styled.main`
 `;
 
 const Cards = styled.div`
-  margin-left: 1rem;
-  margin-right: 1rem;
   padding-bottom: 2rem;
   ${Media.md`
     padding-bottom: 3rem;
+  `};
+`;
+
+const CardGrid = styled(Grid)`
+  ${Media.xs`
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
   `};
 `;
 
@@ -41,9 +46,9 @@ class Complexes extends Component {
         <Logo />
         <Intro />
         <Cards>
-          <Grid>
+          <CardGrid fluid>
             {this.state.complexes.map(complex => <Card key={complex.id} complex={complex} />)}
-          </Grid>
+          </CardGrid>
         </Cards>
       </Main>
     );
