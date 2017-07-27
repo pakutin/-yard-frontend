@@ -3,7 +3,7 @@ node_js:
   - "node"
 
 script:
-  - yarn lint && yarn flow
+  - yarn lint && yarn flow-typed install && yarn flow
 
 deploy:
   skip_cleanup: true

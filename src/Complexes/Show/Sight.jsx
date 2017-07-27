@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
 
@@ -28,7 +30,9 @@ const Distance = styled.p`
   color: #a9afb6;
 `;
 
-export default props =>
+type Props = { name: string, distance: string };
+
+export default (props: Props) =>
   (<Sight>
     <Name>
       {props.name}

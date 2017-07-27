@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
 
@@ -11,7 +13,9 @@ const SectionTitle = styled.h2`
   color: #3e4247;
 `;
 
-export default props =>
+type Props = { children: string };
+
+export default (props: Props) =>
   (<SectionTitle>
     {props.children}
   </SectionTitle>);

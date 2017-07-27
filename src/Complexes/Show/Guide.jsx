@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
@@ -42,7 +44,15 @@ const Cover = styled.img`
   padding-top: 1px;
 `;
 
-export default props =>
+type Props = {
+  district: string,
+  tagline: string,
+  link: string,
+};
+
+const url: string = process.env.PUBLIC_URL || '';
+
+export default (props: Props) =>
   (<Guide>
     <Grid>
       <Row>
@@ -62,9 +72,8 @@ export default props =>
         <Col lg={6}>
           <Cover
             alt=""
-            src={`${process.env.PUBLIC_URL}/polyankaPhoto.jpg`}
-            srcSet={`${`${process.env.PUBLIC_URL}/polyankaPhoto@2x.jpg`} 2x, ${`${process.env
-              .PUBLIC_URL}/polyankaPhoto@3x.jpg`} 3x`}
+            src={`${url}/polyankaPhoto.jpg`}
+            srcSet={`${`${url}/polyankaPhoto@2x.jpg`} 2x, ${`${url}/polyankaPhoto@3x.jpg`} 3x`}
           />
         </Col>
       </Row>

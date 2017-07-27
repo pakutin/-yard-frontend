@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
 
@@ -48,7 +50,13 @@ const Button = styled.button`
 }
 `;
 
-export default props =>
+type Props = {
+  room: number,
+  space: { min: number, max: number },
+  price: { min: number, max: number },
+};
+
+export default (props: Props) =>
   (<Card>
     <Rooms>
       {props.room}-комнатные квартиры

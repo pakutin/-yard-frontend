@@ -1,8 +1,11 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
 import { Grid } from 'react-flexbox-grid';
 import ruplu from 'ruplu';
 import TopFeature from './TopFeature';
+import type { ComplexType } from '../types';
 
 const plural = ruplu(['предложение', 'предложения', 'предложений']);
 
@@ -15,7 +18,11 @@ const TopFeatures = styled.section`
   border-bottom: 1px solid #e0e0e1;
 `;
 
-export default function (props) {
+type Props = {
+  complex: ComplexType,
+};
+
+export default function (props: Props) {
   const { statistics = {}, details = {} } = props.complex || {};
   return (
     <Grid>

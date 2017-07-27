@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
 import { Grid, Row, Col } from 'react-flexbox-grid';
@@ -15,7 +17,9 @@ const Text = styled.p`
   line-height: 1.5625;
 `;
 
-export default ({ fullDescription }) =>
+type Props = { fullDescription: string };
+
+export default (props: Props) =>
   (<Grid>
     <Desciption>
       <Row>
@@ -24,7 +28,7 @@ export default ({ fullDescription }) =>
         </Col>
         <Col lg={10}>
           <Text>
-            {fullDescription}
+            {props.fullDescription}
           </Text>
         </Col>
       </Row>

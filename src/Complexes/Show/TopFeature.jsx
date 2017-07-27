@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
 import SectionTitle from './SectionTitle';
@@ -14,7 +16,9 @@ const Caption = styled.small`
   color: #a9afb6;
 `;
 
-export default props =>
+type Props = { value: string, label: string };
+
+export default (props: Props) =>
   (<TopFeature>
     <SectionTitle>
       {props.value}

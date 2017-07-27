@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
 import { Grid, Row, Col } from 'react-flexbox-grid';
@@ -16,11 +18,13 @@ const Offers = styled.section`
   background-color: #f4f5f9;
 `;
 
-export default ({ name }) =>
+type Props = { name: string };
+
+export default (props: Props) =>
   (<Offers>
     <Grid>
       <SectionTitle>
-        Предложения в ЖК «{name}»
+        Предложения в ЖК «{props.name}»
       </SectionTitle>
       <Row>
         <Col lg={4}>

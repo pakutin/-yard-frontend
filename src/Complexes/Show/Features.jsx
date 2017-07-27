@@ -1,7 +1,10 @@
+// @flow
+
 import React from 'react';
 import styled from 'styled-components';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { securityKinds, constructionKinds, quarters } from './Dictionary';
+import type { ComplexType } from '../types';
 import SectionTitle from './SectionTitle';
 
 const List = styled.dl`
@@ -40,7 +43,11 @@ function formatFloat(float) {
   return parseFloat(float).toFixed(2);
 }
 
-export default function (props) {
+type Props = {
+  complex: ComplexType,
+};
+
+export default function (props: Props) {
   const {
     units,
     statistics: {
