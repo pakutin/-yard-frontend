@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import type { ComplexType } from '../types';
-import Media from '../media';
+import { media } from '../media';
 
 const Card = styled(Link)`
   text-decoration: none;
@@ -13,7 +13,7 @@ const Card = styled(Link)`
 const Complex = styled.article`
   margin: 0 auto 2rem auto;
   max-width: 75rem;
-  ${Media.md`
+  ${media.md`
     margin-bottom: 3rem;
     display: flex;
   `};
@@ -28,7 +28,7 @@ const Cover = styled.img`
   height: auto;
   margin-bottom: 0;
   padding-bottom: 0;
-  ${Media.md`
+  ${media.md`
     max-width: 491px;
     max-height: 350px;
   `};
@@ -42,7 +42,7 @@ const Data = styled.div`
 
 const Location = styled.p`
   margin: 1rem 1rem 1.5rem 1rem;
-  ${Media.md`
+  ${media.md`
     margin-top: 1.5rem;
     margin-left: 2rem;
   `};
@@ -56,7 +56,7 @@ const Location = styled.p`
 const Name = styled.h3`
   margin: 1rem 1rem 1.5rem 1rem;
   font-size: 2rem;
-  ${Media.md`
+  ${media.md`
     margin-bottom: .5rem;
     margin-left: 2rem;
     font-size: 2.5rem;
@@ -68,10 +68,10 @@ const Name = styled.h3`
 
 const Description = styled.p`
   margin: 1rem 1rem 1.5rem 1rem;
-  ${Media.md`
+  ${media.md`
     margin: 0.5rem 4rem 0 2rem;
   `};
-  ${Media.lg`
+  ${media.lg`
     margin: 0.5rem 5.375rem 0 2rem;
   `};
   font-size: 1rem;
@@ -83,15 +83,15 @@ type Props = { complex: ComplexType };
 
 export default (props: Props) =>
   (<div>
-    {props.complex.slug &&
-      <Card to={`/complexes/${props.complex.slug}`}>
+    {props.complex.id &&
+      <Card to={`/complexes/${props.complex.id}`}>
         <Complex>
-          {props.complex.image &&
+          {props.complex.images &&
             <Cover
-              src={`https://yard-images.s3.amazonaws.com/${props.complex.image.id}-512`}
+              src={`https://images.jqestate.ru/${props.complex.images[0].id}-jqestate-512`}
               srcSet={
-                `https://yard-images.s3.amazonaws.com/${props.complex.image.id}-1024 2x,` +
-                `https://yard-images.s3.amazonaws.com/${props.complex.image.id}-2048 3x,`
+                `https://images.jqestate.ru/${props.complex.images[0].id}-jqestate-1024 2x,` +
+                `https://images.jqestate.ru/${props.complex.images[0].id}-jqestate-2048 3x,`
               }
               alt={props.complex.name}
             />}

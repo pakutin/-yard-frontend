@@ -15,7 +15,7 @@ function App() {
         <Header />
         <Redirect from="/" to="/complexes" />
         <Route exact path="/complexes" component={Complexes} />
-        <Route exact path="/complexes/:slug" component={Complex} />
+        <Route exact path="/complexes/:id" component={Complex} />
         <Footer />
       </div>
     </Router>

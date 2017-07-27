@@ -3,7 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import Media from './Complexes/media';
+import { media } from './Complexes/media';
 import navLogo from './nav-logo.svg';
 
 const Header = styled.header`
@@ -11,7 +11,7 @@ const Header = styled.header`
   padding-bottom: 1rem;
   padding-left: 1rem;
   margin-bottom: 0;
-  ${Media.md`
+  ${media.md`
     padding: 0 7.5rem;
     display: flex;
     justify-content: space-between;
@@ -21,7 +21,7 @@ const Header = styled.header`
 `;
 
 const Logo = styled(Link)`
-  ${Media.md`
+  ${media.md`
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
     display: flex;
@@ -31,7 +31,7 @@ const Logo = styled(Link)`
 
 const Nav = styled.nav`
   display: none;
-  ${Media.md`
+  ${media.md`
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     display: flex;
@@ -44,9 +44,9 @@ const Nav = styled.nav`
 `;
 
 const NavItem = styled(Link)`
-  ${Media.md`
+  ${media.md`
     margin-right: 2rem;
-    :last-child {margin-right: 0;} 
+    &:last-child {margin-right: 0;} 
     line-height: 1.0;
     font-size: 1rem;
     font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;

@@ -2,12 +2,12 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import Media from '../media';
+import { media } from '../media';
 import heroLogo from './hero-logo.svg';
 
 const Logo = styled.section`
   display: none;
-  ${Media.md`
+  ${media.md`
     padding: 5rem 0;
     margin: 0 auto;
     display: flex;

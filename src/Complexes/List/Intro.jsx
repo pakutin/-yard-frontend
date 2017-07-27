@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Media from '../media';
+import { media } from '../media';
 
 const Intro = styled.section`
   text-align: center;
@@ -8,7 +8,7 @@ const Intro = styled.section`
   padding: 2rem 1rem;
   margin: 0 auto;
   max-width: 50rem;
-  ${Media.md`
+  ${media.md`
     padding: 4rem 0;
     font-size: 1rem;
   `};
@@ -17,11 +17,12 @@ const Intro = styled.section`
 const Title = styled.h2`
   margin-top: 0;
   margin-bottom: 1rem;
-  ${Media.md`
+  font-size: 1.25rem;
+  ${media.md`
     margin-bottom: 0.625rem;
+    font-size: 1.5rem;
   `};
   font-weight: 700;
-  font-size: 24px;
   line-height: 1.4;
   color: #3e4247;
 `;
