@@ -34,7 +34,7 @@ class Complex extends Component {
   render() {
     const {
       complex = {},
-      complex: { name, location = {}, images = [], fullDescription, amenities = [] } = {},
+      complex: { name, location = {}, images = [], amenities = [] } = {},
     } = this.state;
     return (
       <main>
@@ -43,7 +43,7 @@ class Complex extends Component {
         <Characteristics>
           <TopFeatures complex={complex} />
           <Features complex={complex} />
-          {fullDescription && <Description fullDescription={fullDescription} />}
+          <Description />
           {amenities.length > 0 && <Amenities amenities={amenities} />}
           {name && <Offers name={name} />}
         </Characteristics>

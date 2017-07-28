@@ -6,16 +6,11 @@ import { Grid } from 'react-flexbox-grid';
 import type { LocationType } from '../types';
 import media from '../../media';
 
-const HeaderGrid = styled(Grid)`
+const Title = styled.div`
   margin: 0 auto;
   max-width: 76rem;
-  padding-right: 1rem !important;
-  padding-left: 1rem !important;
-`;
-
-const Title = styled.div`
   padding-top: 1.5rem;
-  ${media.lg`
+  ${media.md`
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -47,6 +42,7 @@ const Address = styled.h1`
 const Button = styled.button`
   display: none;
   ${media.md`
+    display: block;
     padding: 0.4rem 0.8rem;
     font-weight: 300;
     font-size: 0.625rem;
@@ -66,7 +62,7 @@ type Props = {
 };
 
 export default (props: Props) =>
-  (<HeaderGrid fluid>
+  (<Grid fluid>
     <Title>
       <Complex>
         <Name>
@@ -79,4 +75,4 @@ export default (props: Props) =>
       </Complex>
       <Button>В&nbsp;избранное</Button>
     </Title>
-  </HeaderGrid>);
+  </Grid>);

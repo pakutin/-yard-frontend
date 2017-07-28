@@ -13,8 +13,6 @@ const plural = ruplu(['предложение', 'предложения', 'пр�
 const TopFeaturesGrid = styled(Grid)`
   margin: 0 auto;
   max-width: 76rem;
-  padding-right: 1rem !important;
-  padding-left: 1rem !important;
 `;
 
 const TopFeatures = styled.section`
