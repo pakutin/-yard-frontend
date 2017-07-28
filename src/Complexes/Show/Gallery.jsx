@@ -50,10 +50,10 @@ export default function (props: Props) {
       <Gallery>
         {images.map(image =>
           (<Picture
-            src={`https://images.jqestate.ru/${image.id}-jqestate-512`}
+            src={`https://s3-eu-central-1.amazonaws.com/yard-images/${image.id}-512`}
             srcSet={
-              `https://images.jqestate.ru/${image.id}-jqestate-1024 2x,` +
-              `https://images.jqestate.ru/${image.id}-jqestate}-2048 3x,`
+              `https://s3-eu-central-1.amazonaws.com/yard-images/${image.id}-1024 2x,` +
+              `https://s3-eu-central-1.amazonaws.com/yard-images/${image.id}}-2048 3x,`
             }
             alt={props.name}
           />),

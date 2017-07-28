@@ -1,4 +1,4 @@
-const baseLink = 'https://api.jqestate.ru/v1/complexes';
+const baseLink = 'https://yard-api.now.sh/';
 
 /*eslint-disable */
 export function get(url) {

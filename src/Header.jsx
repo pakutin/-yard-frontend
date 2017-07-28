@@ -3,16 +3,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { media } from './Complexes/media';
+import media from './media';
 import navLogo from './nav-logo.svg';
 
 const Header = styled.header`
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
+  padding: 1rem 1rem;
   margin-bottom: 0;
   ${media.md`
-    padding: 0 7.5rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: 75rem;
     display: flex;
     justify-content: space-between;
     background-color: #fff;

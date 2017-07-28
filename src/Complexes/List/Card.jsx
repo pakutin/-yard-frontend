@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import type { ComplexType } from '../types';
-import { media } from '../media';
+import media from '../../media';
 
 const Card = styled(Link)`
   text-decoration: none;
@@ -83,15 +83,18 @@ type Props = { complex: ComplexType };
 
 export default (props: Props) =>
   (<div>
-    {props.complex.id &&
-      <Card to={`/complexes/${props.complex.id}`}>
+    {props.complex.slug &&
+      <Card to={`/complexes/${props.complex.slug}`}>
         <Complex>
           {props.complex.images &&
             <Cover
-              src={`https://images.jqestate.ru/${props.complex.images[0].id}-jqestate-512`}
+              src={`https://s3-eu-central-1.amazonaws.com/yard-images/${props.complex.images[0]
+                .id}-512`}
               srcSet={
-                `https://images.jqestate.ru/${props.complex.images[0].id}-jqestate-1024 2x,` +
-                `https://images.jqestate.ru/${props.complex.images[0].id}-jqestate-2048 3x,`
+                `https://s3-eu-central-1.amazonaws.com/yard-images/${props.complex.images[0]
+                  .id}-1024 2x,` +
+                `https://s3-eu-central-1.amazonaws.com/yard-images/${props.complex.images[0]
+                  .id}-2048 3x,`
               }
               alt={props.complex.name}
             />}

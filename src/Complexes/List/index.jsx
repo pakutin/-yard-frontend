@@ -5,7 +5,7 @@ import 'whatwg-fetch';
 import styled from 'styled-components';
 import { Grid } from 'react-flexbox-grid';
 import { get } from '../../api';
-import { media } from '../media';
+import media from '../../media';
 import type { ComplexType } from '../types';
 import Logo from './Logo';
 import Intro from './Intro';
@@ -30,7 +30,7 @@ class Complexes extends Component {
   state: { complexes: Array<ComplexType> } = { complexes: [] };
 
   componentDidMount() {
-    get('?filter[state]=public').then(json => this.setState({ complexes: json.items }));
+    get('complexes/?filter[state]=public').then(json => this.setState({ complexes: json.items }));
   }
 
   render() {
