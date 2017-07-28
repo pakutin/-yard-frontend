@@ -11,9 +11,9 @@ const Mapbox = ReactMapboxGl({
 });
 
 const Map = styled.div`
+  height: 10.375rem;
   ${media.md`
-    height: 306px;
-    width: 583px;
+    height: 19.125rem;
     box-shadow: 0 0 1.25rem 0.25rem rgba(0, 0, 0, 0.3);
   `};
 `;
@@ -27,11 +27,11 @@ export default (props: Props) => {
   return (
     <Map>
       <Mapbox
+        style="mapbox://styles/mapbox/light-v9"
         containerStyle={{
-          height: '19rem',
+          height: '100%',
           width: '100%',
         }}
-        style="mapbox://styles/mapbox/light-v9"
         zoom={[14]}
         center={[longitude, latitude]}
       >

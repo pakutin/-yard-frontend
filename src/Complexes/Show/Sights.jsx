@@ -9,18 +9,32 @@ import Map from './Map';
 import Sight from './Sight';
 
 const Sights = styled.section`
-  ${media.lg`
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-top: -9.75rem;
-  margin-bottom: 4rem;
+  max-width: 75rem;
+  ${media.md`
+  margin: -9.75rem auto 4rem auto;
   display: flex;
 `};
 `;
 
+const SightsGrid = styled(Grid)`
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  width: 100%;
+`;
+
+const MapWrapper = styled.div`
+  width: 100%;
+  ${media.md`
+  max-width: 36.875rem;
+  box-shadow: 0 0 1.25rem 0.25rem rgba(0, 0, 0, 0.3);
+  `};
+`;
+
 const SightList = styled.div`
+  width: 100%;
   background-color: #fff;
-  ${media.lg`
+  ${media.md`
+  max-width: 36.875rem;
   box-shadow: 0 0 1.25rem 0.25rem rgba(0, 0, 0, 0.3);
   `};
 `;
@@ -29,14 +43,16 @@ type Props = { location: LocationType };
 
 export default (props: Props) =>
   (<Sights>
-    <Grid>
+    <SightsGrid fluid>
       <Row>
-        <Col xs={12} lg={6}>
-          {props.location.latitude &&
-            props.location.longitude &&
-            <Map latitude={props.location.latitude} longitude={props.location.longitude} />}
+        <Col xs={12} md={6}>
+          <MapWrapper>
+            {props.location.latitude &&
+              props.location.longitude &&
+              <Map latitude={props.location.latitude} longitude={props.location.longitude} />}
+          </MapWrapper>
         </Col>
-        <Col xs={12} lg={6}>
+        <Col xs={12} md={6}>
           <SightList>
             <Sight name="Красный Октябрь" distance="24 минуты, 6 км" />
             <Sight name="World Class" distance="2 минуты, 300 м" />
@@ -44,5 +60,5 @@ export default (props: Props) =>
           </SightList>
         </Col>
       </Row>
-    </Grid>
+    </SightsGrid>
   </Sights>);
