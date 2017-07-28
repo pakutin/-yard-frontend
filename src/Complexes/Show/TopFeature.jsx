@@ -3,11 +3,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import SectionTitle from './SectionTitle';
-import Media from '../media';
+import media from '../../media';
 
 const TopFeature = styled.div`
   padding-bottom: 1rem;
-  ${Media.md`
+  ${media.md`
     padding-right: 3rem;
     padding-bottom: 0;
   `};

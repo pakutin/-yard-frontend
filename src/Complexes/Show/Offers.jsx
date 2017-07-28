@@ -3,7 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Grid, Row, Col } from 'react-flexbox-grid';
-import Media from '../media';
+import media from '../../media';
 import SectionTitle from './SectionTitle';
 import Offer from './Offer';
 
@@ -18,7 +18,7 @@ const Offers = styled.section`
   margin-top: 3.5rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
-  ${Media.md`
+  ${media.md`
   text-align: center;
   `};
   font-size: 1rem;

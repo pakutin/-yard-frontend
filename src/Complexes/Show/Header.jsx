@@ -4,7 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Grid } from 'react-flexbox-grid';
 import type { LocationType } from '../types';
-import Media from '../media';
+import media from '../../media';
 
 const HeaderGrid = styled(Grid)`
   margin: 0 auto;
@@ -15,7 +15,7 @@ const HeaderGrid = styled(Grid)`
 
 const Title = styled.div`
   padding-top: 1.5rem;
-  ${Media.lg`
+  ${media.lg`
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -46,7 +46,7 @@ const Address = styled.h1`
 
 const Button = styled.button`
   display: none;
-  ${Media.md`
+  ${media.md`
     padding: 0.4rem 0.8rem;
     font-weight: 300;
     font-size: 0.625rem;

@@ -5,7 +5,7 @@ import 'whatwg-fetch';
 import styled from 'styled-components';
 import { Grid } from 'react-flexbox-grid';
 import { get } from '../../api';
-import Media from '../media';
+import media from '../../media';
 import type { ComplexType } from '../types';
 import Logo from './Logo';
 import Intro from './Intro';
@@ -21,21 +21,16 @@ const Main = styled.main`
 
 const Cards = styled.div`
   padding-bottom: 2rem;
-  ${Media.md`
+  ${media.md`
     padding-bottom: 3rem;
   `};
-`;
-
-const CardGrid = styled(Grid)`
-    padding-right: 1rem !important;
-    padding-left: 1rem !important;
 `;
 
 class Complexes extends Component {
   state: { complexes: Array<ComplexType> } = { complexes: [] };
 
   componentDidMount() {
-    get('/complexes?filter[state]=public').then(json => this.setState({ complexes: json.items }));
+    get('complexes/?filter[state]=public').then(json => this.setState({ complexes: json.items }));
   }
 
   render() {
@@ -44,9 +39,9 @@ class Complexes extends Component {
         <Logo />
         <Intro />
         <Cards>
-          <CardGrid fluid>
+          <Grid fluid>
             {this.state.complexes.map(complex => <Card key={complex.id} complex={complex} />)}
-          </CardGrid>
+          </Grid>
         </Cards>
       </Main>
     );

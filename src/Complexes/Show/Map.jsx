@@ -1,15 +1,17 @@
+// @flow
+
 import React from 'react';
 import ReactMapboxGl, { Layer, Feature } from 'react-mapbox-gl';
 import styled from 'styled-components';
-import Media from '../media';
+import media from '../../media';
 
 const Mapbox = ReactMapboxGl({
-  accessToken:
-    'pk.eyJ1IjoianVzdHVzZWJyYWluIiwiYSI6ImNpbHV1dWlmYTAwNmp2Zm02NjZkZmIybGkifQ.feSAgXjbU00mlAjBQyv1lQ',
+  accessToken: process.env.REACT_APP_MAPBOX_KEY,
+  scrollZoom: false,
 });
 
 const Map = styled.div`
-  ${Media.md`
+  ${media.md`
     height: 306px;
     width: 583px;
     box-shadow: 0 0 1.25rem 0.25rem rgba(0, 0, 0, 0.3);
@@ -18,18 +20,31 @@ const Map = styled.div`
 
 type Props = { longitude: string, latitude: string };
 
-export default (props: Props) =>
-  (<Map>
-    <Mapbox
-      style="mapbox://styles/mapbox/light-v9"
-      zoom={[10]}
-      containerStyle={{
-        height: '100%',
-        width: '100%',
-      }}
-    >
-      <Layer type="symbol" id="marker" layout={{ 'icon-image': 'marker-15' }}>
-        <Feature coordinates={[parseFloat(props.latitude), parseFloat(props.longitude)]} />
-      </Layer>
-    </Mapbox>
-  </Map>);
+export default (props: Props) => {
+  const longitude = props.longitude;
+  const latitude = props.latitude;
+
+  return (
+    <Map>
+      <Mapbox
+        containerStyle={{
+          height: '19rem',
+          width: '100%',
+        }}
+        style="mapbox://styles/mapbox/light-v9"
+        zoom={[14]}
+        center={[longitude, latitude]}
+      >
+        <Layer
+          type="symbol"
+          id="marker"
+          layout={{
+            'icon-image': 'marker-15',
+          }}
+        >
+          <Feature coordinates={[longitude, latitude]} />
+        </Layer>
+      </Mapbox>
+    </Map>
+  );
+};

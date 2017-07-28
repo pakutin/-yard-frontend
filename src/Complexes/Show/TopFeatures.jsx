@@ -6,7 +6,7 @@ import { Grid } from 'react-flexbox-grid';
 import ruplu from 'ruplu';
 import TopFeature from './TopFeature';
 import type { ComplexType } from '../types';
-import Media from '../media';
+import media from '../../media';
 
 const plural = ruplu(['предложение', 'предложения', 'предложений']);
 
@@ -20,7 +20,7 @@ const TopFeaturesGrid = styled(Grid)`
 const TopFeatures = styled.section`
   padding-top: 1rem;
   margin-bottom: 2rem;
-  ${Media.md`
+  ${media.md`
     display: flex;
     padding-top: 1.75rem;
     padding-bottom: 1.625rem;

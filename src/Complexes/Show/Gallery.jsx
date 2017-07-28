@@ -4,7 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ruplu from 'ruplu';
 import type { ImageType } from '../types';
-import Media from '../media';
+import media from '../../media';
 
 const plural = ruplu(['фотография', 'фотографии', 'фотографий']);
 
@@ -25,7 +25,7 @@ const Overlay = styled.div`
   margin-left: 1rem;
   margin-top: -2.675rem;
   position: absolute;
-  ${Media.md`
+  ${media.md`
   margin-left: 7.5rem;
   `};
 `;

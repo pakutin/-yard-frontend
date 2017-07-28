@@ -4,12 +4,12 @@ import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import styled from 'styled-components';
 import type { LocationType } from '../types';
-import Media from '../media';
+import media from '../../media';
 import Map from './Map';
 import Sight from './Sight';
 
 const Sights = styled.section`
-  ${Media.lg`
+  ${media.lg`
   padding-left: 1rem;
   padding-right: 1rem;
   margin-top: -9.75rem;
@@ -20,7 +20,7 @@ const Sights = styled.section`
 
 const SightList = styled.div`
   background-color: #fff;
-  ${Media.lg`
+  ${media.lg`
   box-shadow: 0 0 1.25rem 0.25rem rgba(0, 0, 0, 0.3);
   `};
 `;
@@ -32,7 +32,9 @@ export default (props: Props) =>
     <Grid>
       <Row>
         <Col xs={12} lg={6}>
-          <Map latitude={props.location.latitude} longitude={props.location.longitude} />
+          {props.location.latitude &&
+            props.location.longitude &&
+            <Map latitude={props.location.latitude} longitude={props.location.longitude} />}
         </Col>
         <Col xs={12} lg={6}>
           <SightList>
