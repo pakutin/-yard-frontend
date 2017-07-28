@@ -1,4 +1,5 @@
 // @flow
+/* eslint-disable react/style-prop-object  */
 
 import React from 'react';
 import ReactMapboxGl, { Layer, Feature } from 'react-mapbox-gl';
