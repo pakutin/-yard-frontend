@@ -24,7 +24,7 @@ const Offers = styled.section`
   background-color: #f4f5f9;
 `;
 
-const Wrapper = styled.div`
+const Scroll = styled.div`
   margin: 0 auto;
   width: 100%;
   overflow: scroll;
@@ -48,11 +48,11 @@ export default (props: Props) =>
         Предложения в&nbsp;ЖК&nbsp;«{props.name}»
       </SectionTitle>
     </Grid>
-    <Wrapper>
+    <Scroll>
       <OffersList>
         <Offer room={1} space={{ min: 59, max: 120 }} price={{ min: 20.3, max: 84.2 }} />
         <Offer room={2} space={{ min: 59, max: 120 }} price={{ min: 20.3, max: 84.2 }} />
         <Offer room={3} space={{ min: 59, max: 120 }} price={{ min: 20.3, max: 84.2 }} />
       </OffersList>
-    </Wrapper>
+    </Scroll>
   </Offers>);

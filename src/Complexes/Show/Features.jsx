@@ -2,7 +2,7 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import { Grid, Col } from 'react-flexbox-grid';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 import media from '../../media';
 import { securityKinds, constructionKinds, quarters } from './Dictionary';
 import type { ComplexType } from '../types';
@@ -21,16 +21,11 @@ const Wrapper = styled.div`
 
 const FeatureLists = styled.div`
   width: 76rem;
-  margin-left: 1rem;
-  ${media.md`
+  margin-left: 1.5rem;
+  ${media.lg`
     margin: 0 auto;
   `};
   display: flex;
-`;
-
-const Column = styled(Col)`
-  padding-left: 0 !important;
-  padding-right: 0 !important;
 `;
 
 const List = styled.dl`
@@ -95,65 +90,67 @@ export default function (props: Props) {
       </Grid>
       <Wrapper>
         <FeatureLists>
-          <Column lg={4}>
-            <List>
-              {units && <Label>Количество квартир</Label>}
-              {units &&
+          <Row>
+            <Col lg={4}>
+              <List>
+                {units && <Label>Количество квартир</Label>}
+                {units &&
+                  <Value>
+                    {units}
+                  </Value>}
+                <Label>Статус</Label>
+                <Value>Квартиры</Value>
+                <Label>Цены</Label>
                 <Value>
-                  {units}
-                </Value>}
-              <Label>Статус</Label>
-              <Value>Квартиры</Value>
-              <Label>Цены</Label>
-              <Value>
-                от {formatPrice(priceFrom)} до {formatPrice(priceTo)} млн ₽
-              </Value>
-              <Label>Безопасность</Label>
-              <Value>
-                {securityKinds[details.security]}
-              </Value>
-            </List>
-          </Column>
-          <Column lg={4}>
-            <List>
-              <Label>Конструкция корпусов</Label>
-              <Value>
-                {constructionKinds[details.constructionKind]}
-              </Value>
-              <Label>Площадь</Label>
-              <Value>
-                от {formatFloat(area.from)} до {formatFloat(area.to)} м²
-              </Value>
-              <Label>Высота потолков</Label>
-              <Value>
-                {formatFloat(ceilings.from)}–{formatFloat(ceilings.to)} м
-              </Value>
-              <Label>Обслуживание</Label>
-              <Value>
-                {details.maintenanceCosts} ₽ / м² / месяц
-              </Value>
-            </List>
-          </Column>
-          <Column lg={4}>
-            <List>
-              <Label>Начало строительства</Label>
-              <Value>
-                {quarters[details.startQuarter]} квартал {details.startYear} года
-              </Value>
-              <Label>Конец строительства</Label>
-              <Value>
-                {quarters[details.commissioningQuarter]} квартал {details.commissioningYear} года
-              </Value>
-              <Label>Наземная парковка</Label>
-              <Value>
-                {details.parkings ? `${details.parkings} м/м` : 'Нет'}
-              </Value>
-              <Label>Подземная парковка</Label>
-              <Value>
-                {details.undergroundGarages ? `${details.undergroundGarages} м/м` : 'Нет'}
-              </Value>
-            </List>
-          </Column>
+                  от {formatPrice(priceFrom)} до {formatPrice(priceTo)} млн ₽
+                </Value>
+                <Label>Безопасность</Label>
+                <Value>
+                  {securityKinds[details.security]}
+                </Value>
+              </List>
+            </Col>
+            <Col lg={4}>
+              <List>
+                <Label>Конструкция корпусов</Label>
+                <Value>
+                  {constructionKinds[details.constructionKind]}
+                </Value>
+                <Label>Площадь</Label>
+                <Value>
+                  от {formatFloat(area.from)} до {formatFloat(area.to)} м²
+                </Value>
+                <Label>Высота потолков</Label>
+                <Value>
+                  {formatFloat(ceilings.from)}–{formatFloat(ceilings.to)} м
+                </Value>
+                <Label>Обслуживание</Label>
+                <Value>
+                  {details.maintenanceCosts} ₽ / м² / месяц
+                </Value>
+              </List>
+            </Col>
+            <Col lg={4}>
+              <List>
+                <Label>Начало строительства</Label>
+                <Value>
+                  {quarters[details.startQuarter]} квартал {details.startYear} года
+                </Value>
+                <Label>Конец строительства</Label>
+                <Value>
+                  {quarters[details.commissioningQuarter]} квартал {details.commissioningYear} года
+                </Value>
+                <Label>Наземная парковка</Label>
+                <Value>
+                  {details.parkings ? `${details.parkings} м/м` : 'Нет'}
+                </Value>
+                <Label>Подземная парковка</Label>
+                <Value>
+                  {details.undergroundGarages ? `${details.undergroundGarages} м/м` : 'Нет'}
+                </Value>
+              </List>
+            </Col>
+          </Row>
         </FeatureLists>
       </Wrapper>
     </div>
