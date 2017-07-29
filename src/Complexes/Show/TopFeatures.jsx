@@ -10,14 +10,10 @@ import media from '../../media';
 
 const plural = ruplu(['предложение', 'предложения', 'предложений']);
 
-const TopFeaturesGrid = styled(Grid)`
-  margin: 0 auto;
-  max-width: 76rem;
-`;
-
 const TopFeatures = styled.section`
   padding-top: 1rem;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem auto;
+  max-width: 76rem;
   ${media.md`
     display: flex;
     padding-top: 1.75rem;
@@ -34,7 +30,7 @@ type Props = {
 export default function (props: Props) {
   const { statistics = {}, details = {} } = props.complex || {};
   return (
-    <TopFeaturesGrid fluid>
+    <Grid fluid>
       <TopFeatures>
         {statistics.propertiesCount &&
           <TopFeature
@@ -44,6 +40,6 @@ export default function (props: Props) {
         {details.architect && <TopFeature value={details.architect} label="архитектор" />}
         {details.developer && <TopFeature value={details.developer} label="застройщик" />}
       </TopFeatures>
-    </TopFeaturesGrid>
+    </Grid>
   );
 }

@@ -7,7 +7,10 @@ import media from '../../media';
 import SectionTitle from './SectionTitle';
 
 const Desciption = styled.section`
-  margin: 2.625rem auto 2rem auto;
+  margin: 2rem auto 2rem auto;
+  ${media.md`
+  margin-top: 3rem;
+  `};
   padding-bottom: 0.5rem;
   max-width: 76rem;
   border-bottom: 1px solid #e0e0e1;
