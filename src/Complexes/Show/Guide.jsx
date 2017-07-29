@@ -2,25 +2,18 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Row, Col } from 'react-flexbox-grid';
 import styled from 'styled-components';
 import media from '../../media';
 
-const GuideWrapper = styled.div`background-color: #3e4247;`;
+const Background = styled.div`background-color: #3e4247;`;
 
 const Guide = styled.section`
   margin: 0 auto;
-  padding-bottom: 0;
   ${media.md`
   padding-bottom: 13.5rem;
   `};
   max-width: 75rem;
-`;
-
-const GuideGrid = styled(Grid)`
-  padding-right: 0 !important;
-  padding-left: 0 !important;
-  width: 100%;
 `;
 
 const Text = styled.div`
@@ -85,31 +78,29 @@ type Props = {
 const url: string = process.env.PUBLIC_URL || '';
 
 export default (props: Props) =>
-  (<GuideWrapper>
+  (<Background>
     <Guide>
-      <GuideGrid fluid>
-        <Row>
-          <Col xs={12} md={6} first="md">
-            <Text>
-              <District>
-                {props.district}
-              </District>
-              <Tagline>
-                {props.tagline}
-              </Tagline>
-              <GuideLink to="/">
-                {props.link} →
-              </GuideLink>
-            </Text>
-          </Col>
-          <Col xs={12} md={6} first="xs">
-            <Cover
-              alt=""
-              src={`${url}/polyankaPhoto.jpg`}
-              srcSet={`${`${url}/polyankaPhoto@2x.jpg`} 2x, ${`${url}/polyankaPhoto@3x.jpg`} 3x`}
-            />
-          </Col>
-        </Row>
-      </GuideGrid>
+      <Row>
+        <Col xs={12} md={6} first="md">
+          <Text>
+            <District>
+              {props.district}
+            </District>
+            <Tagline>
+              {props.tagline}
+            </Tagline>
+            <GuideLink to="/">
+              {props.link} →
+            </GuideLink>
+          </Text>
+        </Col>
+        <Col xs={12} md={6} first="xs">
+          <Cover
+            alt=""
+            src={`${url}/polyankaPhoto.jpg`}
+            srcSet={`${`${url}/polyankaPhoto@2x.jpg`} 2x, ${`${url}/polyankaPhoto@3x.jpg`} 3x`}
+          />
+        </Col>
+      </Row>
     </Guide>
-  </GuideWrapper>);
+  </Background>);

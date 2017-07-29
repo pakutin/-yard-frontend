@@ -33,7 +33,10 @@ const Wrapper = styled.div`
 const OffersList = styled.div`
   width: 76rem;
   margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
   display: flex;
+  justify-content: space-between;
 `;
 
 type Props = { name: string };
@@ -46,12 +49,10 @@ export default (props: Props) =>
       </SectionTitle>
     </Grid>
     <Wrapper>
-      <Grid fluid>
-        <OffersList>
-          <Offer room={1} space={{ min: 59, max: 120 }} price={{ min: 20.3, max: 84.2 }} />
-          <Offer room={2} space={{ min: 59, max: 120 }} price={{ min: 20.3, max: 84.2 }} />
-          <Offer room={3} space={{ min: 59, max: 120 }} price={{ min: 20.3, max: 84.2 }} />
-        </OffersList>
-      </Grid>
+      <OffersList>
+        <Offer room={1} space={{ min: 59, max: 120 }} price={{ min: 20.3, max: 84.2 }} />
+        <Offer room={2} space={{ min: 59, max: 120 }} price={{ min: 20.3, max: 84.2 }} />
+        <Offer room={3} space={{ min: 59, max: 120 }} price={{ min: 20.3, max: 84.2 }} />
+      </OffersList>
     </Wrapper>
   </Offers>);

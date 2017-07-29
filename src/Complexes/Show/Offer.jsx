@@ -5,8 +5,6 @@ import styled from 'styled-components';
 
 const Card = styled.div`
   margin-top: 1.5rem;
-  margin-right: 1rem;
-  &:last-child {margin-right: 0;} 
   padding-top: 1.625rem;
   padding-left: 2rem;
   background-color: #fff;
