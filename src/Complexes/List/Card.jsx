@@ -4,16 +4,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import type { ComplexType } from '../types';
+import media from '../../media';
 
 const Card = styled(Link)`
   text-decoration: none;
 `;
 
 const Complex = styled.article`
-  margin-bottom: 3rem;
-  margin-left: 7.5rem;
-  margin-right: 7.5rem;
-  display: flex;
+  margin: 0 auto 2rem auto;
+  max-width: 75rem;
+  ${media.md`
+    margin-bottom: 3rem;
+    display: flex;
+  `};
   background-color: #fff;
   &:hover {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
@@ -21,8 +24,14 @@ const Complex = styled.article`
 `;
 
 const Cover = styled.img`
-  max-width: 491px;
-  max-height: 350px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  ${media.md`
+    max-width: 491px;
+    max-height: 350px;
+  `};
 `;
 
 const Data = styled.div`
@@ -32,9 +41,11 @@ const Data = styled.div`
 `;
 
 const Location = styled.p`
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  margin-left: 2rem;
+  margin: 1rem 1rem 1.5rem 1rem;
+  ${media.md`
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+  `};
   text-transform: uppercase;
   font-size: 1rem;
   font-family: "Monaco", "Lucida Console", monospace;
@@ -43,19 +54,26 @@ const Location = styled.p`
 `;
 
 const Name = styled.h3`
-  margin-top: 1.5rem;
-  margin-bottom: .5rem;
-  margin-left: 2rem;
+  margin: 1rem 1rem 1.5rem 1rem;
+  font-size: 2rem;
+  ${media.md`
+    margin-bottom: .5rem;
+    margin-left: 2rem;
+    font-size: 2.5rem;
+  `};
   font-weight: 700;
-  font-size: 2.5rem;
   line-height: 1.4;
   color: #000000;
 `;
 
 const Description = styled.p`
-  margin-top: 0.5rem;
-  margin-left: 2rem;
-  margin-right: 5.375rem;
+  margin: 1rem 1rem 1.5rem 1rem;
+  ${media.md`
+    margin: 0.5rem 4rem 0 2rem;
+  `};
+  ${media.lg`
+    margin: 0.5rem 5.375rem 0 2rem;
+  `};
   font-size: 1rem;
   line-height: 1.5;
   color: #3e4247;
@@ -68,12 +86,15 @@ export default (props: Props) =>
     {props.complex.slug &&
       <Card to={`/complexes/${props.complex.slug}`}>
         <Complex>
-          {props.complex.image &&
+          {props.complex.images &&
             <Cover
-              src={`https://yard-images.s3.amazonaws.com/${props.complex.image.id}-512`}
+              src={`https://s3-eu-central-1.amazonaws.com/yard-images/${props.complex.images[0]
+                .id}-512`}
               srcSet={
-                `https://yard-images.s3.amazonaws.com/${props.complex.image.id}-1024 2x,` +
-                `https://yard-images.s3.amazonaws.com/${props.complex.image.id}-2048 3x,`
+                `https://s3-eu-central-1.amazonaws.com/yard-images/${props.complex.images[0]
+                  .id}-1024 2x,` +
+                `https://s3-eu-central-1.amazonaws.com/yard-images/${props.complex.images[0]
+                  .id}-2048 3x,`
               }
               alt={props.complex.name}
             />}
