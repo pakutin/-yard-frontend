@@ -2,3 +2,8 @@ body {
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased;
 }
+
+.container-fluid {
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+}

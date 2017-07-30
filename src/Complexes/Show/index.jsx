@@ -28,7 +28,7 @@ class Complex extends Component {
 
   componentDidMount() {
     const complexSlug = this.props.match.params.slug;
-    get(`/complexes/${complexSlug}`).then(json => this.setState({ complex: json }));
+    get(`complexes/${complexSlug}`).then(json => this.setState({ complex: json }));
   }
 
   render() {

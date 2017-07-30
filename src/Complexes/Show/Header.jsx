@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { Grid } from 'react-flexbox-grid';
 import type { LocationType } from '../types';
 
-const Header = styled.div`
+const Title = styled.div`
   padding-top: 1.5rem;
   display: flex;
   justify-content: space-between;
@@ -54,7 +54,7 @@ type Props = {
 
 export default (props: Props) =>
   (<Grid>
-    <Header>
+    <Title>
       <Complex>
         <Name>
           {props.name}
@@ -65,5 +65,5 @@ export default (props: Props) =>
         </Address>
       </Complex>
       <Button>В&nbsp;избранное</Button>
-    </Header>
+    </Title>
   </Grid>);
