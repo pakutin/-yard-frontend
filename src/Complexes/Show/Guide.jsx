@@ -2,27 +2,40 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Row, Col } from 'react-flexbox-grid';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 import styled from 'styled-components';
 import media from '../../media';
 
-const Background = styled.div`background-color: #3e4247;`;
+const Wrapper = styled.div`
+  padding-left: 1rem;
+  padding-right: 1rem;
+  ${media.md`
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+  `};
+`;
 
 const Guide = styled.section`
+  width: 100%;
+  background-color: #3e4247;
+`;
+
+const Content = styled.div`
+  max-width: 75rem;
   margin: 0 auto;
   ${media.md`
   padding-bottom: 13.5rem;
   `};
-  max-width: 75rem;
 `;
 
 const Text = styled.div`
-  margin-left: 1rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
   ${media.md`
     margin-top: 11rem;
     margin-bottom: 0;
+    margin-left: 0;
   `};
   font-family: "Philosopher", "Iowan", serif;
 `;
@@ -64,7 +77,7 @@ const Cover = styled.img`
   width: 100%;
   height: auto;
   ${media.md`
-  margin-top: 4rem;
+    margin-top: 4rem;
     padding-top: 1px;
   `};
 `;
@@ -78,29 +91,31 @@ type Props = {
 const url: string = process.env.PUBLIC_URL || '';
 
 export default (props: Props) =>
-  (<Background>
-    <Guide>
-      <Row>
-        <Col xs={12} md={6} first="md">
-          <Text>
-            <District>
-              {props.district}
-            </District>
-            <Tagline>
-              {props.tagline}
-            </Tagline>
-            <GuideLink to="/">
-              {props.link} →
-            </GuideLink>
-          </Text>
-        </Col>
-        <Col xs={12} md={6} first="xs">
-          <Cover
-            alt=""
-            src={`${url}/polyankaPhoto.jpg`}
-            srcSet={`${`${url}/polyankaPhoto@2x.jpg`} 2x, ${`${url}/polyankaPhoto@3x.jpg`} 3x`}
-          />
-        </Col>
-      </Row>
-    </Guide>
-  </Background>);
+  (<Guide>
+    <Content>
+      <Grid fluid>
+        <Row>
+          <Col xs={12} md={6} first="md">
+            <Text>
+              <District>
+                {props.district}
+              </District>
+              <Tagline>
+                {props.tagline}
+              </Tagline>
+              <GuideLink to="/">
+                {props.link} →
+              </GuideLink>
+            </Text>
+          </Col>
+          <Col xs={12} md={6} first="xs">
+            <Cover
+              alt=""
+              src={`${url}/polyankaPhoto.jpg`}
+              srcSet={`${`${url}/polyankaPhoto@2x.jpg`} 2x, ${`${url}/polyankaPhoto@3x.jpg`} 3x`}
+            />
+          </Col>
+        </Row>
+      </Grid>
+    </Content>
+  </Guide>);

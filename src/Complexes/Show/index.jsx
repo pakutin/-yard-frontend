@@ -7,8 +7,8 @@ import type { ComplexType } from '../types';
 import Header from './Header';
 import Gallery from './Gallery';
 import TopFeatures from './TopFeatures';
-import Features from './Features';
 import Description from './Description';
+import Features from './Features';
 import Amenities from './Amenities';
 import Offers from './Offers';
 import Guide from './Guide';
@@ -42,17 +42,17 @@ class Complex extends Component {
         {name && <Gallery name={name} images={images} />}
         <Characteristics>
           <TopFeatures complex={complex} />
-          <Features complex={complex} />
           <Description />
+          <Features complex={complex} />
           {amenities.length > 0 && <Amenities amenities={amenities} />}
           {name && <Offers name={name} />}
+          <Guide
+            district="Якиманка"
+            tagline="Исторический центр Москвы в&nbsp;двух километрах&nbsp;от&nbsp;Кремля"
+            link="Гид по Якиманке"
+          />
+          <Sights location={location} />
         </Characteristics>
-        <Guide
-          district="Якиманка"
-          tagline="Исторический центр Москвы в&nbsp;двух километрах&nbsp;от&nbsp;Кремля"
-          link="Гид по Якиманке"
-        />
-        <Sights location={location} />
       </main>
     );
   }
