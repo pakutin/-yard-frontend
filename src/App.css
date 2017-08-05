@@ -7,3 +7,28 @@ body {
   padding-right: 1rem;
   padding-left: 1rem;
 }
+
+.altfbg {
+  max-width: 76rem;
+  margin: 0 auto;
+}
+
+.altfbg-row {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.altfbg-col6-xs {
+  box-sizing: border-box;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 64rem) {
+  .altfbg-col6-md {
+    box-sizing: border-box;
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
