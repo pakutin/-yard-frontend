@@ -32,9 +32,3 @@ body {
     max-width: 50%;
   }
 }
-
-@media only screen and (min-width: 64rem) {
-  .with-col-padding {
-    padding-right: 1rem;
-  }
-}
