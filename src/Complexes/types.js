@@ -27,6 +27,8 @@ export type LocationType = {
   street?: string,
   house?: string,
   postalCode?: string,
+  latitude?: string,
+  longitude?: string,
 };
 
 export type StatisticsType = {

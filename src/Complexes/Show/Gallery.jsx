@@ -2,6 +2,7 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import { Grid } from 'react-flexbox-grid';
 import ruplu from 'ruplu';
 import type { ImageType } from '../types';
 
@@ -20,8 +21,12 @@ const Picture = styled.img`
   width: auto;
 `;
 
+const ButtonGrid = styled(Grid)`
+  margin: 0 auto;
+  max-width: 76rem;
+`;
+
 const Overlay = styled.div`
-  margin-left: 7.5rem;
   margin-top: -2.675rem;
   position: absolute;
 `;
@@ -59,11 +64,13 @@ export default function (props: Props) {
           />),
         )}
       </Gallery>
-      <Overlay>
-        <Button>
-          {plural(images.length, true)}
-        </Button>
-      </Overlay>
+      <ButtonGrid fluid>
+        <Overlay>
+          <Button>
+            {plural(images.length, true)}
+          </Button>
+        </Overlay>
+      </ButtonGrid>
     </div>
   );
 }

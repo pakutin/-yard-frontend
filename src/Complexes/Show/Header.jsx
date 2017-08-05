@@ -4,12 +4,17 @@ import React from 'react';
 import styled from 'styled-components';
 import { Grid } from 'react-flexbox-grid';
 import type { LocationType } from '../types';
+import media from '../../media';
 
 const Title = styled.div`
+  margin: 0 auto;
+  max-width: 76rem;
   padding-top: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  ${media.md`
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  `};
 `;
 
 const Complex = styled.div`margin-bottom: 1rem;`;
@@ -35,16 +40,20 @@ const Address = styled.h1`
 `;
 
 const Button = styled.button`
-  padding: 0.4rem 0.8rem;
-  font-weight: 300;
-  font-size: 0.625rem;
-  font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
-  text-decoration: none;
-  color: #00779a;
-  background: #fff;
-  border: 1px solid #e0e0e1;
-  border-radius: 2px;
-  cursor: pointer;
+  display: none;
+  ${media.md`
+    display: block;
+    padding: 0.4rem 0.8rem;
+    font-weight: 300;
+    font-size: 0.625rem;
+    font-family: "Fira Sans", "Helvetica Neue", "Lucida Sans Unicode", sans-serif;
+    text-decoration: none;
+    color: #00779a;
+    background: #fff;
+    border: 1px solid #e0e0e1;
+    border-radius: 2px;
+    cursor: pointer;
+  `};
 `;
 
 type Props = {
@@ -53,11 +62,11 @@ type Props = {
 };
 
 export default (props: Props) =>
-  (<Grid>
+  (<Grid fluid>
     <Title>
       <Complex>
         <Name>
-          {props.name}
+          Жилой&nbsp;комплекс «{props.name}»
         </Name>
         <Address>
           Район {props.location.subLocalityName}, {props.location.street}, дом{' '}

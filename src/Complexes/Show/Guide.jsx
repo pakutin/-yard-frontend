@@ -3,32 +3,56 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import media from '../../media';
 
-const Guide = styled.section`
+const Background = styled.section`background-color: #3e4247;`;
+
+const Guide = styled.div`
+  ${media.md`
   padding-bottom: 13.5rem;
-  background-color: #3e4247;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  `};
 `;
 
 const Text = styled.div`
-  margin-top: 11rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding-left: 1rem;
+  order: 2;
+  ${media.md`
+    margin-top: 11rem;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 1rem;
+    order: 1;
+  `};
   font-family: "Philosopher", "Iowan", serif;
 `;
 
 const District = styled.p`
-  margin-bottom: 2.75rem;
-  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #a9afb6;
+  ${media.lg`
+    font-size: 1.5rem;
+    margin-bottom: 2.75rem;
+  `};
 `;
 
 const Tagline = styled.p`
   margin-top: 0;
-  margin-bottom: 3rem;
-  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
   line-height: 1.25;
   font-weight: 700;
   color: #ffffff;
+  ${media.lg`
+    margin-bottom: 3rem;
+    font-size: 3rem;
+  `};
 `;
 
 const GuideLink = styled(Link)`
@@ -39,9 +63,19 @@ const GuideLink = styled(Link)`
   text-decoration: none;
 `;
 
-const Cover = styled.img`
-  margin-top: 4rem;
-  padding-top: 1px;
+const Cover = styled.div`
+  order: 1;
+  ${media.md`
+    order: 2;
+  `};
+`;
+
+const Picture = styled.img`
+  width: 100%;
+  height: auto;
+  ${media.md`
+    margin-top: 4rem;
+  `};
 `;
 
 type Props = {
@@ -53,29 +87,27 @@ type Props = {
 const url: string = process.env.PUBLIC_URL || '';
 
 export default (props: Props) =>
-  (<Guide>
-    <Grid>
-      <Row>
-        <Col lg={6}>
-          <Text>
-            <District>
-              {props.district}
-            </District>
-            <Tagline>
-              {props.tagline}
-            </Tagline>
-            <GuideLink to="/">
-              {props.link} →
-            </GuideLink>
-          </Text>
-        </Col>
-        <Col lg={6}>
-          <Cover
+  (<Background>
+    <Guide className="altfbg">
+      <div className="altfbg-row">
+        <Text className="altfbg-col6-xs altfbg-col6-md">
+          <District>
+            {props.district}
+          </District>
+          <Tagline>
+            {props.tagline}
+          </Tagline>
+          <GuideLink to="/">
+            {props.link} →
+          </GuideLink>
+        </Text>
+        <Cover className="altfbg-col6-xs altfbg-col6-md">
+          <Picture
             alt=""
             src={`${url}/polyankaPhoto.jpg`}
             srcSet={`${`${url}/polyankaPhoto@2x.jpg`} 2x, ${`${url}/polyankaPhoto@3x.jpg`} 3x`}
           />
-        </Col>
-      </Row>
-    </Grid>
-  </Guide>);
+        </Cover>
+      </div>
+    </Guide>
+  </Background>);

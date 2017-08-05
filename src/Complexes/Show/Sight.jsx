@@ -2,11 +2,15 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import media from '../../media';
 
 const Sight = styled.div`
-  padding-left: 1.5rem;
+  padding-left: 1rem;
   padding-top: 1.5rem;
   padding-bottom: 1.625rem;
+  ${media.md`
+    padding-left: 1.5rem;
+  `};
   border-bottom: solid 1px #e0e0e1;
 `;
 
